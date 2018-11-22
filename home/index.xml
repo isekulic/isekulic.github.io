@@ -2,150 +2,150 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on NLPenguin</title>
-    <link>https://isekulic.github.io/home.html</link>
+    <link>/home.html</link>
     <description>Recent content in Homes on NLPenguin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="https://isekulic.github.io/home/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://isekulic.github.io/home/hero_carousel.html</link>
+      <link>/home/hero_carousel.html</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://isekulic.github.io/home/hero_carousel.html</guid>
+      <guid>/home/hero_carousel.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Academic</title>
-      <link>https://isekulic.github.io/home/hero.html</link>
+      <link>/home/hero.html</link>
       <pubDate>Sun, 15 Oct 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://isekulic.github.io/home/hero.html</guid>
+      <guid>/home/hero.html</guid>
       <description>The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes 🚀 Latest release   Star</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://isekulic.github.io/home/about.html</link>
+      <link>/home/about.html</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://isekulic.github.io/home/about.html</guid>
+      <guid>/home/about.html</guid>
       <description>Biography I am a recent graduate in Computer Science from a small town near Zagreb, Croatia. I&amp;rsquo;m currently taking a dive into the wonderful world of academia as a Research Associate (or if you like &amp;ndash; an Intern) at Heidelberg Institute for Theoretical Studies.
 My research topic is a continuation of the master thesis, where I studied the language of authors affected by bipolar disorder on Reddit. We&amp;rsquo;ve provided a benchmark results for bipolar disorder prediction and analyzed significant differences in psycholinguistic and emotion-related features between the bipolar and the control group.</description>
     </item>
     
     <item>
       <title>Skills</title>
-      <link>https://isekulic.github.io/home/skills.html</link>
+      <link>/home/skills.html</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://isekulic.github.io/home/skills.html</guid>
+      <guid>/home/skills.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Experience</title>
-      <link>https://isekulic.github.io/home/experience.html</link>
+      <link>/home/experience.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://isekulic.github.io/home/experience.html</guid>
+      <guid>/home/experience.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Selected Publications</title>
-      <link>https://isekulic.github.io/home/publications_selected.html</link>
+      <link>/home/publications_selected.html</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://isekulic.github.io/home/publications_selected.html</guid>
+      <guid>/home/publications_selected.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent Publications</title>
-      <link>https://isekulic.github.io/home/publications.html</link>
+      <link>/home/publications.html</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://isekulic.github.io/home/publications.html</guid>
+      <guid>/home/publications.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Selected Talks</title>
-      <link>https://isekulic.github.io/home/talks_selected.html</link>
+      <link>/home/talks_selected.html</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://isekulic.github.io/home/talks_selected.html</guid>
+      <guid>/home/talks_selected.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent &amp; Upcoming Talks</title>
-      <link>https://isekulic.github.io/home/talks.html</link>
+      <link>/home/talks.html</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://isekulic.github.io/home/talks.html</guid>
+      <guid>/home/talks.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recent Posts</title>
-      <link>https://isekulic.github.io/home/posts.html</link>
+      <link>/home/posts.html</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://isekulic.github.io/home/posts.html</guid>
+      <guid>/home/posts.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>https://isekulic.github.io/home/projects.html</link>
+      <link>/home/projects.html</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://isekulic.github.io/home/projects.html</guid>
+      <guid>/home/projects.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Custom Section</title>
-      <link>https://isekulic.github.io/home/teaching.html</link>
+      <link>/home/teaching.html</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://isekulic.github.io/home/teaching.html</guid>
+      <guid>/home/teaching.html</guid>
       <description>This is an example of using the custom widget to create your own homepage section.
 To remove this section, either delete content/home/teaching.md or edit the frontmatter of the file to deactivate the widget by setting active = false.</description>
     </item>
     
     <item>
       <title>Tags</title>
-      <link>https://isekulic.github.io/home/tags.html</link>
+      <link>/home/tags.html</link>
       <pubDate>Wed, 20 Sep 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://isekulic.github.io/home/tags.html</guid>
+      <guid>/home/tags.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Search</title>
-      <link>https://isekulic.github.io/home/search.html</link>
+      <link>/home/search.html</link>
       <pubDate>Mon, 23 Jul 2018 00:00:00 +0200</pubDate>
       
-      <guid>https://isekulic.github.io/home/search.html</guid>
+      <guid>/home/search.html</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://isekulic.github.io/home/contact.html</link>
+      <link>/home/contact.html</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>https://isekulic.github.io/home/contact.html</guid>
+      <guid>/home/contact.html</guid>
       <description></description>
     </item>
     
