@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 3.1.0">
+  <meta name="generator" content="Hugo 0.51" />
+  <meta name="author" content="Ivan Sekulic">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="I&rsquo;ve returned from EMNLP, my first big NLP conference, full of ideas, impressions and inspiration. I went there to present my paper on bipolar disorder prediction on Reddit at WASSA and, of course, to learn as much as I can! You can find my paper here. And yes, my talk went great, thanks for asking.
+Here I&rsquo;d like to share my notes from all the talks I&rsquo;ve attended. These were initially meant just for me, but when I started transcripting them on a computer, I got an idea to share them as well.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://isekulic.github.io/post/emnlp2018/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="https://isekulic.github.io/index.xml" type="application/rss+xml" title="NLPenguin">
+  <link rel="feed" href="https://isekulic.github.io/index.xml" type="application/rss+xml" title="NLPenguin">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://isekulic.github.io/post/emnlp2018/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@puding_p">
+  <meta property="twitter:creator" content="@puding_p">
+  
+  <meta property="og:site_name" content="NLPenguin">
+  <meta property="og:url" content="https://isekulic.github.io/post/emnlp2018/">
+  <meta property="og:title" content="Notes from EMNLP 2018 | NLPenguin">
+  <meta property="og:description" content="I&rsquo;ve returned from EMNLP, my first big NLP conference, full of ideas, impressions and inspiration. I went there to present my paper on bipolar disorder prediction on Reddit at WASSA and, of course, to learn as much as I can! You can find my paper here. And yes, my talk went great, thanks for asking.
+Here I&rsquo;d like to share my notes from all the talks I&rsquo;ve attended. These were initially meant just for me, but when I started transcripting them on a computer, I got an idea to share them as well.">
+  
+  
+    
+  <meta property="og:image" content="https://isekulic.github.io/img/ja.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-11-11T18:18:19&#43;01:00">
+  
+  <meta property="article:modified_time" content="2018-11-11T18:18:19&#43;01:00">
+  
+
+  
+
+  
+
+  <title>Notes from EMNLP 2018 | NLPenguin</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">NLPenguin</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications_selected">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/files/isekulic_cv.pdf">
+            
+            <span>CV</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Notes from EMNLP 2018</h1>
+
+  
+
+  
+    
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Ivan Sekulic">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2018-11-11 18:18:19 &#43;0100 CET" itemprop="datePublished">
+    <time datetime="2018-11-11 18:18:19 &#43;0100 CET" itemprop="dateModified">
+      Nov 11, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Ivan Sekulic">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    10 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Notes%20from%20EMNLP%202018&amp;url=https%3a%2f%2fisekulic.github.io%2fpost%2femnlp2018%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fisekulic.github.io%2fpost%2femnlp2018%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fisekulic.github.io%2fpost%2femnlp2018%2f&amp;title=Notes%20from%20EMNLP%202018"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fisekulic.github.io%2fpost%2femnlp2018%2f&amp;title=Notes%20from%20EMNLP%202018"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Notes%20from%20EMNLP%202018&amp;body=https%3a%2f%2fisekulic.github.io%2fpost%2femnlp2018%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>I&rsquo;ve returned from EMNLP, my first big NLP conference, full of ideas, impressions and inspiration. I went there to present my paper on bipolar disorder prediction on Reddit at WASSA and, of course, to learn as much as I can! You can find my paper <a href="https://arxiv.org/abs/1811.04655" target="_blank">here</a>. And yes, my talk went great, thanks for asking.</p>
+
+<p>Here I&rsquo;d like to share my notes from all the talks I&rsquo;ve attended. These were initially meant just for me, but when I started transcripting them on a computer, I got an idea to share them as well.</p>
+
+<p>Table of Contents:</p>
+
+<ol>
+<li><p><a href="#day1">Day 1</a></p>
+
+<ul>
+<li><p><a href="#julia">Keynote by Julia Hirschberg</a></p></li>
+
+<li><p><a href="#s1">Session 1: Social Applications 1</a></p></li>
+
+<li><p><a href="#s2">Session 2: Social Media</a></p></li>
+
+<li><p><a href="#s3">Session 3: Machine Learning</a></p></li>
+
+<li><p><a href="#s4">Session 4: Language Models</a></p></li>
+</ul></li>
+
+<li><p><a href="#day2">Day 2</a></p>
+
+<ul>
+<li><p><a href="#s5">Session 5: Machine Learning 2</a></p></li>
+
+<li><p><a href="#s7">Session 7: Social Application 2</a></p></li>
+
+<li><p><a href="#gideon">Keynote by Gideon Mann</a></p></li>
+
+<li><p><a href="#s8">Session 8: Text Categorization</a></p></li>
+</ul></li>
+</ol>
+
+<h2 id="day-1-a-name-day1-a">DAY 1 <a name="day1"></a></h2>
+
+<h6 id="julia-hirschberg-keynote-truth-or-lie-spoken-indicators-of-deception-in-speech-a-name-julia-a">Julia Hirschberg Keynote: &ldquo;Truth or Lie? Spoken Indicators of Deception in Speech&rdquo; <a name="julia"></a></h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	notes
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>deceptive speech &ndash; deliberate choice to mislead</li>
+<li>criminals are better than police, judges and similar in detecting it</li>
+<li>there are acoustic-prosodic and lexical cues</li>
+<li>system should take individual differences into account: gender, ethinicity&hellip;</li>
+<li>existing dataset: Columbia SRI Colorado Deception corpus (7h of speech, 32 subjects, 70% acc)</li>
+<li><strong>created a cross-lingual dataset</strong>: 340 subjects, 122h of speech, native english speakers
+questioning native chinese speakers who know english (and vice versa)</li>
+<li><strong>features</strong>: n-grams, LIWC, word embeddings, speech-based (openSMILE, ISO9), gender, native language,
+NEO-FFIs personality scores, syntactic features</li>
+<li>Methods: Random Forest, SVM, DL &ndash; BiLSTM-lexical + DNN-speech yielding 0.65 F1</li>
+<li>Best model: Multi-Task Learning with personality traits <strong>74.4 F1</strong></li>
+<li>Significant differences in deceptive speech: Men are loud with higher pich when lying;
+Woman are just loud, but have jitter when telling the truth</li>
+<li>Human accuracy: 56.76%</li>
+</ul>
+
+    </div>
+</div>
+
+<h3 id="session-1-social-applications-1-a-name-s1-a">Session 1: Social Applications 1 <a name="s1"></a></h3>
+
+<h6 id="privacy-preserving-neural-representations-of-text">Privacy-preserving Neural Representations of Text</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Coavoux, Narayan, and Cohen
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>explicit private information can be preprocessed, but implicit (age, authorship) can&rsquo;t</li>
+<li><strong>Can attacker guess about input text based on hidden representation?</strong></li>
+<li>Target private variables: age, gender, named entities that occur in the text</li>
+<li>attacker eavesdrops while learning the model &ndash; attacker beats the baseline for age and gender just based on hidden r</li>
+<li>defence: double objective (loss_clf = -logP(y|x) - loss_attacker) or adversarial generation (LM)</li>
+<li>conclusion: latent representations contain a signal for private information</li>
+<li>code on <a href="https://github.com/mcoavoux/pnet" target="_blank">github</a></li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="adversarial-removal-of-demographic-attributes-from-text-data">Adversarial Removal of Demographic Attributes from Text Data</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Elazar and Goldberg
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>while learning DeepEmoji attacker eavesdrops &ndash;&gt; hich leakage</li>
+<li>Actively reduce leakage with adversarial setup (Ganing and Lempitsy, 2015) &ndash;&gt; remove stuff from representation, but still some leakage</li>
+<li>Their method: use more layers for adversarial reversal layer; bigger \lambda to reverse with; &gt; 1 adversaries &ndash;&gt; they learned diff features</li>
+<li>still not perfect!</li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="declare-debunking-fake-news-and-false-claims-using-evidence-aware-deep-learning">DeClarE: Debunking Fake News and False Claims using Evidence-Aware Deep Learning</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Popat, Mukherjee, Yates, and Weikum
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>prior work: supervised learning (doesn&rsquo;t use external knowledge) &amp; external sources (require feature modeling and lexicons). Why people don&rsquo;t like feature modeling any more? :)</li>
+<li><em>overcame flaws</em> with: end-to-end NN that takes the external resources into account without human intervention</li>
+<li>Approach:
+
+<ul>
+<li>external evidence &ndash; <em>search engine</em></li>
+<li>language style, semantics &ndash; <em>BiLSTM</em></li>
+<li>interaction claim-external &ndash; <em>Attention</em></li>
+<li>credibility score based on all of that</li>
+</ul></li>
+<li>beat the baseline on 4 datasets</li>
+<li>analysis showed clear clusters of Fake and Trusted websites (CNN&hellip;)</li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="it-s-going-to-be-okay-measuring-access-to-support-in-online-communities">It&rsquo;s going to be okay: Measuring Access to Support in Online Communities</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Wang and Jurgens
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>minimal identity cues are important &ndash; username that reveals gender or interests (catlady22, pizzamaniac&hellip;)</li>
+<li>support is more than encouragement (14 strategies: validation, advice&hellip;)</li>
+<li>dataset: post-reply from Reddit, Wiki, Stack Exchange</li>
+<li>goal: <strong>rate the reply as</strong>: <em>support, polite, agree, offensive</em></li>
+<li>most important features are from LIWC &ndash;&gt; support in theory</li>
+<li>constructed massive gender-performance DS from usernames</li>
+<li><strong>Who recieves support?</strong> &ndash; woman get more support, but also more disparagement</li>
+<li>code and data on <a href="https://github.com/davidjurgens/support" target="_blank">github</a></li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="detecting-gang-involved-escalation-on-social-media-using-context">Detecting Gang-Involved Escalation on Social Media Using Context</h6>
+
+<p><em>Chang et al.</em></p>
+
+<h3 id="session-2-social-media-a-name-s2-a">Session 2: Social Media <a name="s2"></a></h3>
+
+<h6 id="joint-learning-for-emotion-classification-and-emotion-cause-detection">Joint Learning for Emotion Classification and Emotion Cause Detection</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Chen, Hou, Cheng, and Li
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>two tasks: (1) emotion classification and (2) emotion cause detection</li>
+<li>they argue <strong>it&rsquo;s not hard to label cause while you are labeling for emotions</strong></li>
+<li>joint encoder &amp; linear decoder</li>
+<li>joint learning improves F1 (is it significant? &ndash;&gt; check paper)</li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="exploring-optimism-and-pessimism-in-twitter-using-deep-learning">Exploring Optimism and Pessimism in Twitter Using Deep Learning</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Caragea, Dinu, and Dumitru
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>they argue <strong>there is a difference between sentiment and optimisim/pessimism</strong></li>
+<li>Dataset: 10k tweets labeled between -3 (most pessimistic) to 3 (most optimistic)</li>
+<li>when 0 is treshold &ndash;&gt; 80% Acc; when (-1) and 1 are &ndash;&gt; 90% Acc</li>
+<li>deep learning architecture</li>
+<li>different from sentiment: when trained on sentiment dataset, they get poor results. Q: They trained only Stanford analyzer, what when you train a NN like for the main task?</li>
+<li>verb tense analysis</li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="predicting-news-headline-popularity-with-syntactic-and-semantic-knowledge-using-multi-task-learning">Predicting News Headline Popularity with Syntactic and Semantic Knowledge Using Multi-Task Learning</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Lamprinidis, Hardt, and Hovy
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>why do you <strong>click on a Facebook post?</strong></li>
+<li>modeling reader&rsquo;s knowledge &ndash; lexical, syntactic, topical</li>
+<li>Dataset: 82k headlines with click numbers. Then make it a binary classification &gt;50% median are often clicked ones, &lt;50% rarely clicked. Q: Seems kinda random.</li>
+<li><strong>Auxiliary task: POS tagging</strong></li>
+<li>GRU-MTL with pretrained embeddings yields better performance than the task alone</li>
+<li>Q: Why does POS matter for this? How to know which aux task will help? Also, position of a post, image of a post?</li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="hybrid-neural-attention-for-agreement-disagreement-inference-in-online-debates">Hybrid Neural Attention for Agreement/Disagreement Inference in Online Debates</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Chen, Du, Bing, and Xu
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>does a reply agree or disagree with the comment?</li>
+<li>two factors:
+
+<ul>
+<li><strong>self-attention</strong> &ndash;&gt; focuses on important parts inside a comment</li>
+<li><strong>cross-comment-attention</strong> &ndash;&gt; reply focused</li>
+</ul></li>
+<li>connect both with something, idk what because they show huge NN for 2 sec :(</li>
+<li>Attention visualisation &amp; Cross Matrix Product Visualisation &ndash;&gt; TODO: Learn how to do that!</li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="increasing-in-class-similarity-by-retrofitting-embeddings-with-demographic-information">Increasing In-Class Similarity by Retrofitting Embeddings with Demographic Information</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Hovy and Fornaciari
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>Homophily?</li>
+<li>retrofitting &ndash; moving the points of distinct classes away from each other (x&rsquo;, y&rsquo;) = a(x, y) + b(mean)</li>
+<li>for test data use translation matrix calculated from the train set</li>
+<li>benefit in gender and age performance</li>
+<li>Q: Not different than just learning the embeddings? If you train your embeddings, you&rsquo;re sepperating classes?</li>
+</ul>
+
+    </div>
+</div>
+
+<h3 id="session-3-machine-learning-a-name-s3-a">Session 3: Machine Learning <a name="s3"></a></h3>
+
+<h6 id="self-governing-neural-networks-for-on-device-short-text-classification">Self-Governing Neural Networks for On-Device Short Text Classification</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Ravi and Kozareva
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>the only presentation I&rsquo;ve seen with multiple people :)</li>
+<li>TFLite &ndash;&gt; it&rsquo;s a lite Tensorflow</li>
+<li>SGNN - projection based NN &ndash;&gt; <strong>get rid of the embedding layer and use locality sensitive hashing as feature extractor</strong></li>
+<li>on 42 dialog acts they got SOTA. Q: What if they trained that model without memory/performance restrictions? SOTA on a bunch of other things?</li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="supervised-domain-enablement-attention-for-personalized-domain-classification">Supervised Domain Enablement Attention for Personalized Domain Classification</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Kim and Kim
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>didn&rsquo;t catch much</li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="a-deep-neural-network-sentence-level-classification-method-with-context-information">A Deep Neural Network Sentence Level Classification Method with Context Information</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Song, Petrak, and Roberts
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>sucidal classification in medical data &ndash;&gt; from a text, predict <strong>if a specific sentence expresses suicidal thoughts</strong>.</li>
+<li>BiLSTM + CNN on focus sentences</li>
+<li>provide right + left context &ndash; FOFE (fixed-size ordinally forgetting encoding)</li>
+<li>reports significant improvements</li>
+<li>takeaway: <strong>context is important</strong> (who&rsquo;d say right :)</li>
+</ul>
+
+    </div>
+</div>
+
+<h3 id="session-4-language-models-a-name-s4-a">Session 4: Language Models <a name="s4"></a></h3>
+
+<h6 id="efficient-contextualized-representation-language-model-pruning-for-sequence-labeling">Efficient Contextualized Representation: Language Model Pruning for Sequence Labeling</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Liu et al.
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>ELMo is great, but it contains sufficent information &ndash;&gt; prune it w.r.t. the task you&rsquo;re solving</li>
+<li>dense connectivity &ndash; alows better layer selection via layer-wise dropout</li>
+<li>sequence labeling with contextualized representations (PPL?)</li>
+<li>nice experiments, <strong>results comparable with SOTA</strong></li>
+<li><strong>size reduced x10, speed goes up x5-6</strong>, Acc down by just 1%</li>
+<li>integrated &amp; pruned plug-and-play model</li>
+</ul>
+
+    </div>
+</div>
+
+<h2 id="day-2-a-name-day2-a">DAY 2 <a name="day2"></a></h2>
+
+<h3 id="session-5-machine-learning-2-a-name-s5-a">Session 5: Machine Learning 2 <a name="s5"></a></h3>
+
+<h6 id="deriving-machine-attention-from-human-rationales">Deriving Machine Attention from Human Rationales</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Bao, Chang, Yu, and Barzilay
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>they wanna <strong>train NN with less data</strong></li>
+<li>rationales &ndash; part of a sentence that directs sentiment &ndash;&gt; use them to direct attention</li>
+<li>Rationale2Attention &ndash; transformable from task to task
+
+<ul>
+<li>train R2A on source task</li>
+<li>use R2A to generate attention for target task</li>
+<li>train a target classifier with R2A attention</li>
+</ul></li>
+<li><strong>domain-ivariant encoder</strong> &ndash;&gt; <strong>Attention Generator</strong> (shared BiLSTM, att.sumarizer) &ndash;&gt; <strong>MTL</strong> (shared BiLSTM, task-specific Attention and MLP)</li>
+<li>200 examples + rationales gets the same results as 3100 examples &ndash;&gt; <strong>cheaper annotation</strong></li>
+<li>code on <a href="https://github.com/YujiaBao/R2A" target="_blank">github</a></li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="semi-supervised-sequence-modeling-with-cross-view-training">Semi-Supervised Sequence Modeling with Cross-View Training</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Clark, Luong, Manning, and Le
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>revisit self-training (older method) with NN</li>
+<li>Blum 1998. idea: 2 models teach each other</li>
+<li>alternate labeled and unlabeled batches &ndash;&gt; how to use it?</li>
+<li>Cross-View Training &ndash; not just exchange predictions like Blum, but use NN shared parameters
+
+<ul>
+<li>2 models (auxiliary models) + Main Predictor</li>
+<li>Forward LSTM &ndash;&gt; Forward prediction; Backward LSTM &ndash;&gt; Backward prediction</li>
+<li>Main Predictor teaches Forward</li>
+<li>4 aux tasks</li>
+</ul></li>
+<li>CVT + MTL on 1B unlabeled data create all labels for all tasks on one example</li>
+<li>4 sequence tagging, dependency parsing, machine translation</li>
+<li>significant improvement for CVT + MTL (over ELMo too)</li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="tacl-comparing-bayesian-models-of-annotation">[TACL] Comparing Bayesian Models of Annotation</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Paun et al.
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>probabilistic models of annotation are better than majority vote and similar</li>
+</ul>
+
+    </div>
+</div>
+
+<h3 id="session-7-social-applications-2-a-name-s7-a">Session 7: Social Applications 2 <a name="s7"></a></h3>
+
+<h6 id="gideon-mann-keynote-understanding-the-news-that-moves-markets-a-name-gideon-a">Gideon Mann Keynote: Understanding the News that Moves Markets <a name="gideon"></a></h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	notes
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>we live in a scary world where one headline crashes the stock market</li>
+<li>some systems react in miliseconds after some article is published (buy/sell stocks)</li>
+</ul>
+
+    </div>
+</div>
+
+<h3 id="session-8-text-categorization-a-name-s8-a">Session 8: Text Categorization <a name="s8"></a></h3>
+
+<h6 id="zero-shot-user-intent-detection-via-capsule-neural-networks">Zero-shot User Intent Detection via Capsule Neural Networks</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Xia et al.
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>how to handle emerging intents?</li>
+<li>would be nice if he explained what zero-shot detection and capsules are :D (I managed to figure out for zero-shot, but capsule&hellip;note to myself: never assume an audiance knows something)</li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="hierarchical-neural-networks-for-sequential-sentence-classification-in-medical-scientific-abstracts">Hierarchical Neural Networks for Sequential Sentence Classification in Medical Scientific Abstracts</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Jin and Szolovits
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>sequentialy label each sentence in a paragraph (abstract): Background, Methods, Results&hellip;</li>
+<li>contextual sentence features have not been looked into. What is done is CRF which considers context labels</li>
+<li>they pre-trained word embeddings on scientific papers</li>
+<li>architecture: embedding layer &ndash;&gt; LSTM on sentence level &ndash;&gt; LSTM on paragraph level</li>
+<li>new sota for the task</li>
+<li>ablation study &ndash;&gt; context is the most important</li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="investigating-capsule-networks-with-dynamic-routing-for-text-classification">Investigating Capsule Networks with Dynamic Routing for Text Classification</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Yang et al.
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>kinda figured out what a capsule is. Standard CNN kernel output is a scalar, while a capsule outputs a vector (with orientation, length and everything) &ndash; somehow this is useful :)</li>
+<li>they propose a capsule net for text classification</li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="topic-memory-networks-for-short-text-classification">Topic Memory Networks for Short Text Classification</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Zeng et al.
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>topic model &ndash; each topic is a distribution of words</li>
+<li>Neural topic model &ndash; generative model</li>
+<li>put topic memory mechanism on top of NTM, then classifier</li>
+<li>topic coherence</li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="few-shot-and-zero-shot-multi-label-learning-for-structured-label-spaces">Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Rios and Kavuluru
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>medical coding &ndash; one EMR has 15 codes, 1000 code combinations to chose from</li>
+<li>graph convolution label embeddings? GCNN over descriptors hierarchy &ndash;&gt; concat word vectors and final GCNN layer</li>
+<li>2 components: <strong>text &ndash;&gt; CNN &amp; descriptors &ndash;&gt; GCNN</strong></li>
+<li><strong>conect them with label-wise attention</strong> (otherwise, finding relevant subtext would be finding a needle in a haystack)</li>
+<li>they test few label groups: frequent (&gt; 5 ocurrances), few-shot (&gt;= 1), zero-shot (=0)</li>
+<li>train jointly, evaluate seperately R@k</li>
+<li><strong>TODO</strong>: read the paper</li>
+</ul>
+
+    </div>
+</div>
+
+<h1 id="sunday-a-name-day3-a">Sunday <a name="day3"></a></h1>
+
+<h3 id="session-9-sentiment-1-a-name-s9-a">Session 9: Sentiment 1 <a name="s9"></a></h3>
+
+<h6 id="sentiment-classification-towards-question-answering-with-hierarchical-matching-network">Sentiment Classification towards Question-Answering with Hierarchical Matching Network</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Shen et al.
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>BiLSTM to get encoding of a Question and an Answer</li>
+<li>row-wise Answer-to-Question attention &amp; Question-to-Answer</li>
+<li>Bidirectional Matching Vectors + self-attention</li>
+<li>sentence segmentation helps to extract relevant subtext</li>
+<li>Q&amp;A attentions contribute in both ways</li>
+<li>dataset on <a href="https://github.com/clshenNLP/QASC/" target="_blank">github</a></li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="cross-topic-argument-mining-from-heterogeneous-sources">Cross-topic Argument Mining from Heterogeneous Sources</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Stab et al.
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>information seeking perspective &ndash;&gt; extract pros and cons</li>
+<li>apply model to heterogeneous texts (<strong>8 topics, 25k docs</strong>, blogs/news/social media etc.)</li>
+<li>Labels: pro, con, no-argument</li>
+<li>200 random sentences for each topic for calibration (0.72 Kappa) &ndash;&gt; 25k sentences with crowdsourcing annotation</li>
+<li>Bi Contextual LSTM (Gogh et al, 2017)</li>
+<li>Tried transfer learning &amp; MTL (topic_main &amp; topic_otherdataset)</li>
+<li>train on 7, test on 1 topic</li>
+<li><strong>the more you add, the more you get</strong></li>
+<li>online demo (couldn&rsquo;t find it)</li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="summarizing-opinions-aspect-extraction-meets-sentiment-prediction-and-they-are-both-weekly-supervised">Summarizing Opinions: Aspect Extraction Meets Sentiment Prediction and They Are Both Weekly Supervised</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Angelidis and Lapata
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>I like the title</li>
+<li>extract small number of reviews of a product with different aspects and summarize it (and add sentiment)</li>
+<li>not enought data &ndash;&gt; inject prior knowledge with seed words</li>
+<li>Multi-Seed Aspect Extractor (MATE) &ndash; init seed matrices for each aspect (image, sound of a TV&hellip;)</li>
+<li>add MTL</li>
+<li>Sentiment prediction: multiple instance learning network</li>
+<li>dataset: aspect labels, opinion salience labels, find summaries</li>
+<li><strong>TODO</strong>: read the paper</li>
+</ul>
+
+    </div>
+</div>
+
+<h3 id="session-9-machine-learning-3-a-name-s91-a">Session 9: Machine Learning 3 <a name="s91"></a></h3>
+
+<h6 id="phrase-level-self-attention-networks-for-universal-sentence-encoding">Phrase-level Self-Attention Networks for Universal Sentence Encoding</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Wu, Wang, Liu, and Ma
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>pre-trained embedding options:
+
+<ul>
+<li>LM &ndash; ELMo, BERT</li>
+<li>supervised learning &ndash; their choice &ndash;&gt; <strong>smaller model, faster training</strong></li>
+<li>incorporate syntax into fully-attention network &ndash; compose sentence representation on phrased from the dependency tree
+&ndash;&gt; phrase-level self-attention</li>
+</ul></li>
+</ul>
+
+    </div>
+</div>
+
+<h6 id="banditsum-extractive-summarization-as-a-contextual-bandit">BanditSum: Extractive Summarization as a Contextual Bandit</h6>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Dong et al.
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <ul>
+<li>how to select the right sentence to include in a summary?</li>
+<li>Problem: from continuous NN to discrete (N sent, ROUGE)</li>
+<li>Sequential Tagging with Reinforcment Learning (proposed before) &ndash;&gt; probl: stop sampling once M sentences are selected</li>
+<li>Approach: treat extractive summarization as contextual Bandit (Context-Arm-Reward)
+
+<ul>
+<li>smaller search space</li>
+<li>no heuristics needed</li>
+<li>SOTA</li>
+</ul></li>
+</ul>
+
+    </div>
+</div>
+
+<p>######
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        
+    </div>
+</div></p>
+
+<p>######
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        
+    </div>
+</div></p>
+
+<p>######
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        
+    </div>
+</div></p>
+
+<p>######
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        
+    </div>
+</div></p>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/nlp/">NLP</a>
+  
+  <a class="badge badge-light" href="/tags/emnlp2018/">emnlp2018</a>
+  
+  <a class="badge badge-light" href="/tags/first-conference/">first conference</a>
+  
+</div>
+
+
+
+    
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  <img class="portrait mr-3" src="/img/ja.png" itemprop="image" alt="Avatar">
+  
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/">Ivan Sekulic</a></h5>
+    <h6 class="card-subtitle">Research Associate</h6>
+    
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      <li>
+        <a itemprop="sameAs" href="mailto:ivan.sekulic@h-its.org" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://twitter.com/puding_p" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://www.linkedin.com/in/isekulic/" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/isekulic" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+
+    
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    &copy; 2018 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "Search Results",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    <script src="/js/search.js"></script>
+    
+
+    
+    
+
+  </body>
+</html>
+
