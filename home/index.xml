@@ -59,24 +59,6 @@ My research topic is a continuation of the master thesis, where I studied the la
     </item>
     
     <item>
-      <title>Selected Publications</title>
-      <link>/home/publications_selected.html</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
-      
-      <guid>/home/publications_selected.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recent Publications</title>
-      <link>/home/publications.html</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
-      
-      <guid>/home/publications.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Selected Talks</title>
       <link>/home/talks_selected.html</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
@@ -109,6 +91,15 @@ My research topic is a continuation of the master thesis, where I studied the la
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>/home/projects.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selected Publications</title>
+      <link>/home/publications_selected.html</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>/home/publications_selected.html</guid>
       <description></description>
     </item>
     
@@ -146,6 +137,15 @@ To remove this section, either delete content/home/teaching.md or edit the front
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>/home/contact.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Publications</title>
+      <link>/home/publications.html</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
+      
+      <guid>/home/publications.html</guid>
       <description></description>
     </item>
     

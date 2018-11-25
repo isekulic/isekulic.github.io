@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -17,10 +15,10 @@
   
     
   
-  <meta name="description" content="Research Associate">
+  <meta name="description" content="This paper describes our system for the detection of stances in tweets submitted to SemEval 2016 Task 6A. The system uses an ensemble of learning algorithms, fine-tuned using a genetic algorithm. We experiment with various offthe-shelf classifiers and build our model using standard lexical and a number of task-specific features. Our system ranked 3rd among the 19 systems submitted to this task.">
 
   
-  <link rel="alternate" hreflang="en-us" href="../tags/first-conference.html">
+  <link rel="alternate" hreflang="en-us" href="../publication/takelab_at_semeval.html">
 
   
 
@@ -80,15 +78,15 @@
   
 
   
-  <link rel="alternate" href="../tags/first-conference/index.xml" type="application/rss+xml" title="NLPenguin">
-  <link rel="feed" href="../tags/first-conference/index.xml" type="application/rss+xml" title="NLPenguin">
+  <link rel="alternate" href="../index.xml" type="application/rss+xml" title="NLPenguin">
+  <link rel="feed" href="../index.xml" type="application/rss+xml" title="NLPenguin">
   
 
   <link rel="manifest" href="../site.webmanifest">
   <link rel="icon" type="image/png" href="../img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="../img/icon-192.png">
 
-  <link rel="canonical" href="../tags/first-conference.html">
+  <link rel="canonical" href="../publication/takelab_at_semeval.html">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -96,23 +94,25 @@
   <meta property="twitter:creator" content="@puding_p">
   
   <meta property="og:site_name" content="NLPenguin">
-  <meta property="og:url" content="/tags/first-conference.html">
-  <meta property="og:title" content="first conference | NLPenguin">
-  <meta property="og:description" content="Research Associate">
+  <meta property="og:url" content="/publication/takelab_at_semeval.html">
+  <meta property="og:title" content="TakeLab at SemEval-2016 Task 6: Stance Classification in Tweets Using a Genetic Algorithm Based Ensemble | NLPenguin">
+  <meta property="og:description" content="This paper describes our system for the detection of stances in tweets submitted to SemEval 2016 Task 6A. The system uses an ensemble of learning algorithms, fine-tuned using a genetic algorithm. We experiment with various offthe-shelf classifiers and build our model using standard lexical and a number of task-specific features. Our system ranked 3rd among the 19 systems submitted to this task.">
   
   
     
   <meta property="og:image" content="img/ja.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2018-11-11T18:18:19&#43;01:00">
+  <meta property="article:published_time" content="2016-06-16T00:00:00&#43;02:00">
+  
+  <meta property="article:modified_time" content="2016-06-16T00:00:00&#43;02:00">
   
 
   
 
   
 
-  <title>first conference | NLPenguin</title>
+  <title>TakeLab at SemEval-2016 Task 6: Stance Classification in Tweets Using a Genetic Algorithm Based Ensemble | NLPenguin</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -224,8 +224,9 @@
   </div>
 </nav>
 
+<div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
 
-
+  
 
 
 
@@ -242,38 +243,248 @@
 
   
   
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">TakeLab at SemEval-2016 Task 6: Stance Classification in Tweets Using a Genetic Algorithm Based Ensemble</h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">first conference</h1>
+
+<div class="article-metadata">
 
   
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-
   
   
   <div>
-    <h2><a href="../post/emnlp2018.html">Notes from EMNLP 2018</a></h2>
-    <div class="article-style">
-      
-      I&rsquo;ve returned from EMNLP, my first big NLP conference, full of ideas, impressions and inspiration. I went there to present my paper on bipolar disorder prediction on Reddit at WASSA and, of course, to learn as much as I can! You can find my paper here. And yes, my talk went great, thanks for asking.
-Here I&rsquo;d like to share my notes from all the talks I&rsquo;ve attended. These were initially meant just for me, and I am probably the only one that will read them again :).
-      
-    </div>
+    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">Martin Tutek</span>
+    </span>, 
+    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">Ivan Sekulić</span>
+    </span>, 
+    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">Paula Gombar</span>
+    </span>, 
+    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">Ivan Paljak</span>
+    </span>, 
+    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">Filip Čulinović</span>
+    </span>, 
+    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">Filip Boltužić</span>
+    </span>, 
+    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">Mladen Karan</span>
+    </span>, 
+    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">Domagoj Alagić</span>
+    </span>, 
+    <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">Jan Šnajder</span>
+    </span>
+    
   </div>
   
+
+  <span class="article-date">
+    
+    <meta content="2016-06-16 00:00:00 &#43;0200 CEST" itemprop="datePublished">
+    <time datetime="2016-06-16 00:00:00 &#43;0200 CEST" itemprop="dateModified">
+      Jun 16, 2016
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Ivan Sekulić">
+  </span>
+
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=TakeLab%20at%20SemEval-2016%20Task%206%3a%20Stance%20Classification%20in%20Tweets%20Using%20a%20Genetic%20Algorithm%20Based%20Ensemble&amp;url=%2fpublication%2ftakelab_at_semeval.html"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpublication%2ftakelab_at_semeval.html"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpublication%2ftakelab_at_semeval.html&amp;title=TakeLab%20at%20SemEval-2016%20Task%206%3a%20Stance%20Classification%20in%20Tweets%20Using%20a%20Genetic%20Algorithm%20Based%20Ensemble"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpublication%2ftakelab_at_semeval.html&amp;title=TakeLab%20at%20SemEval-2016%20Task%206%3a%20Stance%20Classification%20in%20Tweets%20Using%20a%20Genetic%20Algorithm%20Based%20Ensemble"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=TakeLab%20at%20SemEval-2016%20Task%206%3a%20Stance%20Classification%20in%20Tweets%20Using%20a%20Genetic%20Algorithm%20Based%20Ensemble&amp;body=%2fpublication%2ftakelab_at_semeval.html">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
 
   
 
 </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="../http:/www.aclweb.org/anthology/S16-1075" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    
+    <h3>Abstract</h3>
+    <p class="pub-abstract" itemprop="text">This paper describes our system for the detection of stances in tweets submitted to SemEval 2016 Task 6A. The system uses an ensemble of learning algorithms, fine-tuned using a genetic algorithm. We experiment with various offthe-shelf classifiers and build our model using standard lexical and a number of task-specific features. Our system ranked 3rd among the 19 systems submitted to this task.</p>
+    
+
+    
+
+    
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Publication</div>
+          <div class="col-12 col-md-9"><em>Proceedings of SemEval-2016</em>, pages 464–468, 2016 Association for Computational Linguistics</div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Date</div>
+          <div class="col-12 col-md-9" itemprop="datePublished">
+            June, 2016
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-sm-none space-below"></div>
+
+    <div class="space-below"></div>
+
+    <div class="article-style"></div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="../tags/nlp.html">nlp</a>
+  
+  <a class="badge badge-light" href="../tags/semeval2016.html">semeval2016</a>
+  
+  <a class="badge badge-light" href="../tags/stance-classification.html">stance classification</a>
+  
+</div>
+
+
+
+    
+
+
+
+  
+
+
+
+
+
+
+
+  </div>
+</div>
+
+
+
 <div class="container">
   <footer class="site-footer">
   
@@ -412,6 +623,4 @@ Here I&rsquo;d like to share my notes from all the talks I&rsquo;ve attended. Th
 
   </body>
 </html>
-
-
 

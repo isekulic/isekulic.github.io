@@ -20,7 +20,7 @@
 
 &lt;p&gt;I&amp;rsquo;ve returned from EMNLP, my first big NLP conference, full of ideas, impressions and inspiration. I went there to present my paper on bipolar disorder prediction on Reddit at WASSA and, of course, to learn as much as I can! You can find my paper &lt;a href=&#34;https://arxiv.org/abs/1811.04655&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. And yes, my talk went great, thanks for asking.&lt;/p&gt;
 
-&lt;p&gt;Here I&amp;rsquo;d like to share my notes from all the talks I&amp;rsquo;ve attended. These were initially meant just for me, but when I started transcripting them on a computer, I got an idea to share them as well.&lt;/p&gt;
+&lt;p&gt;Here I&amp;rsquo;d like to share my notes from all the talks I&amp;rsquo;ve attended. These were initially meant just for me, and I am probably the only one that will read them again :).&lt;/p&gt;
 
 &lt;p&gt;Table of Contents:&lt;/p&gt;
 
@@ -49,6 +49,16 @@
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;#gideon&#34;&gt;Keynote by Gideon Mann&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;#s8&#34;&gt;Session 8: Text Categorization&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#day3&#34;&gt;Day 3&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#s9&#34;&gt;Session 9: Sentiment 1 &amp;amp; Machine Learning 3&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#s10&#34;&gt;Session 10: Discourse&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#s11&#34;&gt;Session 11: Analyzing Models &amp;amp; Sentiment 2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -654,7 +664,7 @@ Woman are just loud, but have jitter when telling the truth&lt;/li&gt;
 
 &lt;h1 id=&#34;sunday-a-name-day3-a&#34;&gt;Sunday &lt;a name=&#34;day3&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
 
-&lt;h3 id=&#34;session-9-sentiment-1-a-name-s9-a&#34;&gt;Session 9: Sentiment 1 &lt;a name=&#34;s9&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;session-9-sentiment-1-machine-learning-3-a-name-s9-a&#34;&gt;Session 9: Sentiment 1 &amp;amp; Machine Learning 3 &lt;a name=&#34;s9&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 
 &lt;h6 id=&#34;sentiment-classification-towards-question-answering-with-hierarchical-matching-network&#34;&gt;Sentiment Classification towards Question-Answering with Hierarchical Matching Network&lt;/h6&gt;
 
@@ -736,8 +746,6 @@ Woman are just loud, but have jitter when telling the truth&lt;/li&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&#34;session-9-machine-learning-3-a-name-s91-a&#34;&gt;Session 9: Machine Learning 3 &lt;a name=&#34;s91&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-
 &lt;h6 id=&#34;phrase-level-self-attention-networks-for-universal-sentence-encoding&#34;&gt;Phrase-level Self-Attention Networks for Universal Sentence Encoding&lt;/h6&gt;
 
 &lt;div class=&#34;expand&#34;&gt;
@@ -794,70 +802,290 @@ Woman are just loud, but have jitter when telling the truth&lt;/li&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;######
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        
-    &lt;/div&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;h3 id=&#34;session-10-discourse-a-name-s10-a&#34;&gt;Session 10: Discourse &lt;a name=&#34;s10&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 
-&lt;p&gt;######
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        
-    &lt;/div&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;h6 id=&#34;a-skeleton-based-model-for-promoting-coherence-among-sentences-in-narrative-story-generation&#34;&gt;A Skeleton-Based Model for Promoting Coherence Among Sentences in Narrative Story Generation&lt;/h6&gt;
 
-&lt;p&gt;######
 &lt;div class=&#34;expand&#34;&gt;
     &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
         &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
         &lt;span&gt;
         
     	
-    	
+    	Xu et al.
     	
     	&lt;/span&gt;
     &lt;/div&gt;
     &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        
-    &lt;/div&gt;
-&lt;/div&gt;&lt;/p&gt;
+        &lt;ul&gt;
+&lt;li&gt;narative story generation task &amp;ndash; based on a short input, output a story &amp;ndash;&amp;gt; requires tight semantic connection&lt;/li&gt;
+&lt;li&gt;connection among sentences is in &lt;strong&gt;key phrases (skeleton)&lt;/strong&gt;:
 
-&lt;p&gt;######
+&lt;ul&gt;
+&lt;li&gt;model the relation among skeletons&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;generate a skeleton, then expand to complete a fluent sentence&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Generative module:
+
+&lt;ul&gt;
+&lt;li&gt;input-to-skeleton &amp;ndash; seq2seq&lt;/li&gt;
+&lt;li&gt;skeleton-to-target sentence &amp;ndash; seq2seq&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Skeleton extraction module:
+
+&lt;ul&gt;
+&lt;li&gt;reformulate as a sentence compression problem &amp;ndash; seq2seq&lt;/li&gt;
+&lt;li&gt;improve the quality with reinforcement learning. What&amp;rsquo;s the reward?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Dataset: Visual storytelling &amp;ndash;&amp;gt; based on a first sentence, generate rest&lt;/li&gt;
+&lt;li&gt;BLEU +44.8% baseline&lt;/li&gt;
+&lt;li&gt;G-score? Fluency + Coherence&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h6 id=&#34;nexus-network-connecting-the-preceding-and-the-following-in-dialogue-generation&#34;&gt;Nexus Network: Connecting the Preceding and the Following in Dialogue Generation&lt;/h6&gt;
+
 &lt;div class=&#34;expand&#34;&gt;
     &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
         &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
         &lt;span&gt;
         
     	
-    	
+    	Shen, Su, Li, and Klakow
     	
     	&lt;/span&gt;
     &lt;/div&gt;
     &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        
+        &lt;ul&gt;
+&lt;li&gt;user &amp;ndash;&amp;gt; NLU &amp;ndash;&amp;gt; state tracker &amp;ndash;&amp;gt; dialog policy &amp;ndash;&amp;gt; NLG &amp;ndash;&amp;gt;&lt;/li&gt;
+&lt;li&gt;nexus: good response should connect the preceding dialogue context and the followup, not just stand-alone&lt;/li&gt;
+&lt;li&gt;DailyDialog (Li, 2017): 13k conversations, 10 topics&lt;/li&gt;
+&lt;li&gt;new sota&lt;/li&gt;
+&lt;li&gt;najgori talk, a napravili brutalne stvari&lt;/li&gt;
+&lt;/ul&gt;
+
     &lt;/div&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h6 id=&#34;a-neural-local-coherence-model-for-text-quality-assesment&#34;&gt;A Neural Local Coherence Model for Text Quality Assesment&lt;/h6&gt;
+
+&lt;div class=&#34;expand&#34;&gt;
+    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
+        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
+        &lt;span&gt;
+        
+    	
+    	Mesgar and Strube
+    	
+    	&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
+        &lt;ul&gt;
+&lt;li&gt;local coherence &amp;ndash; relatedness of sentence to the next one&lt;/li&gt;
+&lt;li&gt;so far: entity-based relations &amp;amp; lexical relations &amp;ndash;&amp;gt; connect&lt;/li&gt;
+&lt;li&gt;Model:
+
+&lt;ul&gt;
+&lt;li&gt;pre-train embeddings&lt;/li&gt;
+&lt;li&gt;LSTM context info&lt;/li&gt;
+&lt;li&gt;find max similarity between LSTM features to model topic of 2 proceeding sentences&lt;/li&gt;
+&lt;li&gt;CNN to extract topic changes&lt;/li&gt;
+&lt;li&gt;output is a vector that represents coherence&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;DS: 105 articles, which one is more readable?&lt;/li&gt;
+&lt;li&gt;SOTA, but not significant compared to DeCLark&lt;/li&gt;
+&lt;li&gt;Does coherence representation improve Essey Assesment? (ASAP ds on kaggle) &amp;ndash;&amp;gt; yes, on esseys that are scored by humans with criteria &amp;ldquo;Must be logical sequence of events&amp;rdquo; (narrative prompts)&lt;/li&gt;
+&lt;li&gt;Q: Why only take one word from each sentence with LSTM?&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h6 id=&#34;deep-attentive-sentence-ordering-network&#34;&gt;Deep Attentive Sentence Ordering Network&lt;/h6&gt;
+
+&lt;div class=&#34;expand&#34;&gt;
+    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
+        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
+        &lt;span&gt;
+        
+    	
+    	Cui, Li, Chen, and Zhang
+    	
+    	&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
+        &lt;ul&gt;
+&lt;li&gt;sentence ordering task &amp;ndash; o = [4, 1, 3, 2]; o&amp;rsquo; = [1, 2, 3, 4]&lt;/li&gt;
+&lt;li&gt;RNN models as baseline (previous work)&lt;/li&gt;
+&lt;li&gt;propose self-attention paragraph encoder&lt;/li&gt;
+&lt;li&gt;sentence encoder BiLSTM &amp;ndash;&amp;gt; scaled dot product self-attention &amp;ndash;&amp;gt; pooling &amp;ndash;&amp;gt; decoder &amp;ndash;&amp;gt; softmax as coherence probability&lt;/li&gt;
+&lt;li&gt;use random permutation on training&lt;/li&gt;
+&lt;li&gt;7 different datasets, 3 general topics&lt;/li&gt;
+&lt;li&gt;evaluate tau, accuracy, perfect match ration&lt;/li&gt;
+&lt;li&gt;tons of experiments. SOTA.&lt;/li&gt;
+&lt;li&gt;better in longer texts&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h6 id=&#34;getting-to-hearer-old-charting-referring-expressions-across-time&#34;&gt;Getting to &amp;ldquo;Hearer-old&amp;rdquo;: Charting Referring Expressions Across Time&lt;/h6&gt;
+
+&lt;div class=&#34;expand&#34;&gt;
+    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
+        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
+        &lt;span&gt;
+        
+    	
+    	Staliunaite, Rohde, Webber, and Louis
+    	
+    	&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
+        &lt;ul&gt;
+&lt;li&gt;corpus of reffering expressions (Putin, current presindent of Russia) &amp;ndash;&amp;gt; When does it stop being neccessary?&lt;/li&gt;
+&lt;li&gt;Reffering expression = name + descriptor (becomes shorter over time, &amp;lt;=1 words &amp;ndash;&amp;gt; hearer-old)&lt;/li&gt;
+&lt;li&gt;extracting: NP + NP in syntactic tree&lt;/li&gt;
+&lt;li&gt;52k entities, 200k+ mentions&lt;/li&gt;
+&lt;li&gt;How long until it becomes hearer-old? Outperforms the MCC baseline&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;session-11-analyzing-models-sentiment-2-a-name-s11-a&#34;&gt;Session 11: Analyzing Models &amp;amp; Sentiment 2 &lt;a name=&#34;s11&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h6 id=&#34;understanding-deep-learning-performance-through-an-examination-of-test-set-difficulty-a-psychometric-case-study&#34;&gt;Understanding Deep Learning Performance through an Examination of Test Set Difficulty: A Psychometric Case Study&lt;/h6&gt;
+
+&lt;div class=&#34;expand&#34;&gt;
+    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
+        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
+        &lt;span&gt;
+        
+    	
+    	Lalor, Wu, Munkhadalai, and Yu
+    	
+    	&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
+        &lt;ul&gt;
+&lt;li&gt;psychometric methodology (Item Response Theory for NLP) &amp;ndash;&amp;gt; How difficult are certain examples?&lt;/li&gt;
+&lt;li&gt;IRT tests on fully trained models&lt;/li&gt;
+&lt;li&gt;difficulty score is learned from human responses&lt;/li&gt;
+&lt;li&gt;slike koje ne kuzim&lt;/li&gt;
+&lt;li&gt;easy examples are easy; model learns easy ones faster; task-model-item matter&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jplalor&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h6 id=&#34;lexicosyntactic-inference-in-neural-models&#34;&gt;Lexicosyntactic inference in neural models&lt;/h6&gt;
+
+&lt;div class=&#34;expand&#34;&gt;
+    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
+        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
+        &lt;span&gt;
+        
+    	
+    	White et al.
+    	
+    	&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
+        &lt;ul&gt;
+&lt;li&gt;what type of inference can we model with NN?&lt;/li&gt;
+&lt;li&gt;relation verb - what it&amp;rsquo;s related to&lt;/li&gt;
+&lt;li&gt;English clause-embedding inference&lt;/li&gt;
+&lt;li&gt;event factuality prediction &amp;ndash;&amp;gt; did the action happen? E.g., &amp;ldquo;Forgot to &lt;em&gt;open&lt;/em&gt; doors&amp;rdquo; &amp;ndash;&amp;gt; it didn&amp;rsquo;t happen&lt;/li&gt;
+&lt;li&gt;verb related DS MegaVerdicality2; evaluate on 3 other DSs&lt;/li&gt;
+&lt;li&gt;current SOTA fails at MV2 &amp;ndash;&amp;gt; aren&amp;rsquo;t robust to variation in lexical and syntactic manner&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h6 id=&#34;modeling-empathy-and-distress-in-reaction-to-news-stories&#34;&gt;Modeling Empathy and Distress in Reaction to News Stories&lt;/h6&gt;
+
+&lt;div class=&#34;expand&#34;&gt;
+    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
+        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
+        &lt;span&gt;
+        
+    	
+    	Buechel et al.
+    	
+    	&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
+        &lt;ul&gt;
+&lt;li&gt;prior work &amp;ndash; no gold, no psychological background&lt;/li&gt;
+&lt;li&gt;2 types:
+
+&lt;ul&gt;
+&lt;li&gt;Empathic concern &amp;ndash; positive, other-focused&lt;/li&gt;
+&lt;li&gt;Personal distress &amp;ndash; negative, self-focused&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;annotation as psychological experiment &amp;ndash; read article, then write text and label (1-7) for both types&lt;/li&gt;
+&lt;li&gt;baseline r=0.4 in Empathic and Distress&lt;/li&gt;
+&lt;li&gt;Best is CNN with FastText&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h6 id=&#34;interpretable-emoji-prediction-via-label-wise-attention-lstms&#34;&gt;Interpretable Emoji Prediction via Label-Wise Attention LSTMs&lt;/h6&gt;
+
+&lt;div class=&#34;expand&#34;&gt;
+    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
+        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
+        &lt;span&gt;
+        
+    	
+    	Barbieri et al.
+    	
+    	&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
+        &lt;ul&gt;
+&lt;li&gt;attention block for each label&lt;/li&gt;
+&lt;li&gt;BiLSTM &amp;ndash;&amp;gt; attention &amp;ndash;&amp;gt; linear |s|-&amp;gt;1 &amp;ndash;&amp;gt; softmax&lt;/li&gt;
+&lt;li&gt;helpful for infrequent labels, inhanced interpretability&lt;/li&gt;
+&lt;li&gt;demo on &lt;a href=&#34;https://fvancesco.github.io/label_wise_attention/&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Not Just Depressed: Bipolar Disorder Prediction on Reddit</title>
+      <link>/publication/bipolar.html</link>
+      <pubDate>Wed, 31 Oct 2018 00:00:00 +0100</pubDate>
+      
+      <guid>/publication/bipolar.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TakeLab at SemEval-2016 Task 6: Stance Classification in Tweets Using a Genetic Algorithm Based Ensemble</title>
+      <link>/publication/takelab_at_semeval.html</link>
+      <pubDate>Thu, 16 Jun 2016 00:00:00 +0200</pubDate>
+      
+      <guid>/publication/takelab_at_semeval.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VERBCROCEAN: A Repository of Fine-Grained Semantic Verb Relations for Croatian</title>
+      <link>/publication/verbcrocean.html</link>
+      <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/verbcrocean.html</guid>
+      <description></description>
     </item>
     
   </channel>

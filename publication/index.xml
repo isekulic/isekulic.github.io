@@ -12,5 +12,32 @@
 	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Not Just Depressed: Bipolar Disorder Prediction on Reddit</title>
+      <link>/publication/bipolar.html</link>
+      <pubDate>Wed, 31 Oct 2018 00:00:00 +0100</pubDate>
+      
+      <guid>/publication/bipolar.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TakeLab at SemEval-2016 Task 6: Stance Classification in Tweets Using a Genetic Algorithm Based Ensemble</title>
+      <link>/publication/takelab_at_semeval.html</link>
+      <pubDate>Thu, 16 Jun 2016 00:00:00 +0200</pubDate>
+      
+      <guid>/publication/takelab_at_semeval.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VERBCROCEAN: A Repository of Fine-Grained Semantic Verb Relations for Croatian</title>
+      <link>/publication/verbcrocean.html</link>
+      <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/verbcrocean.html</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
