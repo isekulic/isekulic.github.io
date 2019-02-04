@@ -12,10 +12,10 @@
     
     <item>
       <title>I learned something about Variational Inference in NLP</title>
-      <link>/post/dgms.html</link>
+      <link>/post/dgms/dgms.html</link>
       <pubDate>Sat, 08 Dec 2018 19:30:04 +0100</pubDate>
       
-      <guid>/post/dgms.html</guid>
+      <guid>/post/dgms/dgms.html</guid>
       <description>&lt;p&gt;Last week I had a chance to attend a truly great 2-day tutorial by &lt;a href=&#34;https://github.com/philschultz&#34; target=&#34;_blank&#34;&gt;Philip Schultz&lt;/a&gt; and &lt;a href=&#34;https://wilkeraziz.github.io/&#34; target=&#34;_blank&#34;&gt;Wilker Aziz&lt;/a&gt;. It was held in Mathematikon, Heidelberg and guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official &lt;a href=&#34;https://github.com/philschulz/VITutorial&#34; target=&#34;_blank&#34;&gt;github page&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;This was my first touch with variatoinal inference and DGMs, so my head was spinning from the start. I tried to keep up as long as I can, finally losing a grip on the second day. Nevertheless, I managed to gather my thoughts over the weekend, by going through &lt;a href=&#34;./files/vitutorial_notes.pdf&#34;&gt;my notes&lt;/a&gt; and finishing the coding part of the tutorial. You can find the solved jupyter notebook at my &lt;a href=&#34;https://github.com/isekulic/VITutorial&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;. This post is an attempt to describe what I learned on a very high level, and in the process, wrap my head around it.&lt;/p&gt;
@@ -26,10 +26,10 @@
     
     <item>
       <title>Notes from EMNLP 2018</title>
-      <link>/post/emnlp2018.html</link>
+      <link>/post/emnlp2018/</link>
       <pubDate>Sun, 11 Nov 2018 18:18:19 +0100</pubDate>
       
-      <guid>/post/emnlp2018.html</guid>
+      <guid>/post/emnlp2018/</guid>
       <description>
 
 &lt;p&gt;I&amp;rsquo;ve returned from EMNLP, my first big NLP conference, full of ideas, impressions and inspiration. I went there to present my paper on bipolar disorder prediction on Reddit at WASSA and, of course, to learn as much as I can! You can find my paper &lt;a href=&#34;https://arxiv.org/abs/1811.04655&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. And yes, my talk went great, thanks for asking.&lt;/p&gt;
