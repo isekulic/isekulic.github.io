@@ -16,7 +16,7 @@
     
   
   <meta name="description" content="Last week I had a chance to attend a truly great 2-day tutorial by Philip Schultz and Wilker Aziz. It was held in Mathematikon, Heidelberg and guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official github page.
-This was my first touch with variatoinal inference and DGMs, so my head was spinning from the start. I tried to keep up as long as I can, finally losing a grip on the second day.">
+This was my first touch with Variational Inference and Deep Generative Networks, so my head was spinning from the start. I tried to keep up as long as I can, finally losing a grip on the second day.">
 
   
   <link rel="alternate" hreflang="en-us" href="../../post/dgms/dgms.html">
@@ -98,7 +98,7 @@ This was my first touch with variatoinal inference and DGMs, so my head was spin
   <meta property="og:url" content="/post/dgms/dgms.html">
   <meta property="og:title" content="I learned something about Variational Inference in NLP | NLPenguin">
   <meta property="og:description" content="Last week I had a chance to attend a truly great 2-day tutorial by Philip Schultz and Wilker Aziz. It was held in Mathematikon, Heidelberg and guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official github page.
-This was my first touch with variatoinal inference and DGMs, so my head was spinning from the start. I tried to keep up as long as I can, finally losing a grip on the second day.">
+This was my first touch with Variational Inference and Deep Generative Networks, so my head was spinning from the start. I tried to keep up as long as I can, finally losing a grip on the second day.">
   
   
     
@@ -278,7 +278,7 @@ This was my first touch with variatoinal inference and DGMs, so my head was spin
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    4 min read
   </span>
   
 
@@ -357,11 +357,67 @@ This was my first touch with variatoinal inference and DGMs, so my head was spin
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      <p>Last week I had a chance to attend a truly great 2-day tutorial by <a href="https://github.com/philschultz" target="_blank">Philip Schultz</a> and <a href="https://wilkeraziz.github.io/" target="_blank">Wilker Aziz</a>. It was held in Mathematikon, Heidelberg and guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official <a href="https://github.com/philschulz/VITutorial" target="_blank">github page</a>.</p>
+      
 
-<p>This was my first touch with variatoinal inference and DGMs, so my head was spinning from the start. I tried to keep up as long as I can, finally losing a grip on the second day. Nevertheless, I managed to gather my thoughts over the weekend, by going through <a href="../../files/vitutorial_notes.pdf">my notes</a> and finishing the coding part of the tutorial. You can find the solved jupyter notebook at my <a href="https://github.com/isekulic/VITutorial" target="_blank">github</a>. This post is an attempt to describe what I learned on a very high level, and in the process, wrap my head around it.</p>
+<p>Last week I had a chance to attend a truly great 2-day tutorial by <a href="https://github.com/philschultz" target="_blank">Philip Schultz</a> and <a href="https://wilkeraziz.github.io/" target="_blank">Wilker Aziz</a>. It was held in Mathematikon, Heidelberg and guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official <a href="https://github.com/philschulz/VITutorial" target="_blank">github page</a>.</p>
 
-<p>To be continued&hellip;</p>
+<p>This was my first touch with <strong>Variational Inference</strong> and <strong>Deep Generative Networks</strong>, so my head was spinning from the start. I tried to keep up as long as I can, finally losing a grip on the second day. Nevertheless, I managed to gather my thoughts over the weekend, by going through <a href="../../files/vitutorial_notes.pdf">my notes</a> and finishing the coding part of the tutorial. You can find the solved jupyter notebook at my <a href="https://github.com/isekulic/VITutorial" target="_blank">github</a>. This post is an attempt to describe what I learned on a very high level without too much math, and in the process, wrap my head around it.</p>
+
+<h3 id="why-vi">Why VI?</h3>
+
+<p>One of the most obvious reasons to turn to variational inference is their ability to find the underlying (latent) distribution of the data, without the need of the data to be labeled.
+This is not only important because the majority of available data in the world is not labeled, but also, in many scientists opinions, is a way towards a (more) general artificial intelligence.
+Knowing the underlying distribution of our data can help us distinguish different samples, and at the same time learn specific aspects of the data.
+We know about the autoencoder&rsquo;s ability to learn the latent variables that can represent the data, so why the need of VI?
+Well, <strong>Variational Autoencoders</strong> (VAE) are much more than standard autoencoders, since they learn the real distribution which the data came from, also giving us the ability to create new samples by sampling that distribution, meaning they are a part of generative models family.</p>
+
+<h3 id="what-is-vi">What is VI?</h3>
+
+<p>To start off, it&rsquo;s important to know what Generative Models are.
+ GM is any model of the joint probability distribution on $P(X, Z)$, with $X$ and $Z$ being random variables, observable and target variable, respectively.
+ Another two important terms are <strong>the likelihood</strong> of observed data given the underlying (target) distribution $z$: $p(x|z)$, and <strong>the prior</strong> over $Z$: $p(z)$.
+ By applying a good old Bayes rule, we find our goal to be computing <strong>the posterior</strong> p(z|x) = p(x|z)p(z), which is often impossible due to the unknown functional form of the posterior, or intractable computation.</p>
+
+<p>This is where <strong>Variational Inference</strong> comes in! We approximate uncomputable $p(z|x)$ by an auxiliary distribution $q(z)$ that is as close as possible to $p(z|x)$ and computable.
+ Closeness of two distributions p and q is given with <strong>Kullback-Leibler divergence</strong> $KL(q || p)$, which is one of the backbones of VI.
+ We&rsquo;ll not go into explaining KL-divergence here, just note that it is asymetric and always $&gt;= 0$. You can find a detailed explanation <a href="https://towardsdatascience.com/demystifying-kl-divergence-7ebe4317ee68" target="_blank">here</a>.</p>
+
+<h3 id="how-does-it-work">How does it work?</h3>
+
+<p>As in standard autoencoders, we can think of our model as encoder-decoder architecture.
+We introduce Deep Generative Networks, generative model where mapping from $z$ to $p(x|z)$ is a neural network with parameters $\theta$: $p(x|z,\theta)$.
+This is a <strong>generator (decoder)</strong> part of our model, which is used to generate samples $x$ from the latent representation $z$.
+Since everything in VAE is probabilistic, we are actually modeling mean $\mu_{x|z}$ and covariance $\Sigma_{x|z}$ of $p(x|z)$, assuming we chose Gaussian as our target distribution (we can chose whichever distribution makes sense).
+So, essentialy, we are always <strong>modeling the parameters of distributions</strong>.</p>
+
+<p>Ok, but how do we get the $z$? We use an <strong>inference (encoder)</strong> network to model mean and covariance of $p(z|x,\lambda)$, where $\lambda$ are the parameters of an inference neural network.
+Then we can sample from the distribution defined by $\mu_{z|x}$ and $\Sigma_{z|x}$ and get the latent representation $z$, that we then use as input to generator network.</p>
+
+<h3 id="all-together">All together</h3>
+
+<p>Given the data $x$, we use infrence network to model the latent distribution $p(z|x,\lambda)$. From that distribution, we sample $z$ and using generator network model the likelihood $p(x|z,\theta)$.
+But, how to we train both parts together?
+We have two parts of the loss function, one maximizing the likelihood of original input being reconstructed, and other forcing approximate posterior distribution in inference network close to prior (close means that we use KL-divergence).
+Training is actually maximizing the <strong>ELBO</strong> (Evidence Lower BOund), which we&rsquo;ll not go into here, but the tutorial provides it&rsquo;s derivation.
+Another important component is the <strong>reparametrization trick</strong>, which we use to make our complete network tractable, so we can backpropagate easily. In a nutshell, it just rewrites the problem so the distribution with respect to which we take the gradient is independent of network parameters, by using $\mathcal{N}(0, I)$.</p>
+
+<h3 id="cool-references">Cool references</h3>
+
+<p>If you are interested in learning more, and I&rsquo;m sure you are, I&rsquo;d recomend some of the following references:</p>
+
+<ul>
+<li><p><a href="https://www.youtube.com/watch?v=9zKuYvjFFS8" target="_blank">Arxiv Insights&rsquo;</a> short, but great overview of VAEs.</p></li>
+
+<li><p><a href="https://youtu.be/uaaqyVS9-rM" target="_blank">Ali Ghodsi&rsquo;s lecture</a> that provides clear and intuitive explanation of all the math in VAEs.</p></li>
+
+<li><p><a href="https://www.youtube.com/watch?v=5WoItGTWV54&amp;t=2703s" target="_blank">Stanford&rsquo;s lecture</a> about generative models.</p></li>
+
+<li><p><a href="https://youtu.be/Yr1mOzC93xs" target="_blank">Yoshua Bengio&rsquo;s talk</a> on disentangled representations and the future of AI.</p></li>
+
+<li><p><a href="https://arxiv.org/abs/1601.00670" target="_blank">Blei et al. (2016) paper</a> on Variational Inference.</p></li>
+
+<li><p><a href="http://jmlr.org/papers/v18/16-107.html" target="_blank">Kucukelbir et al. (2017) paper</a> on Automatic Differentiation Variational Inference.</p></li>
+</ul>
 
     </div>
 
@@ -542,6 +598,10 @@ This was my first touch with variatoinal inference and DGMs, so my head was spin
 
     
     
+    
+    
+    <script src="../../js/mathjax-config.500a6cbb2c0f345fcecc21b3116d6637aa78f1f11db8081ea581abe05390c2e8f3bbffe61be3cf0217baf785c40efceabe51050a4f007e69af94efd3643260e8.js" integrity="sha512-UApsuywPNF/OzCGzEW1mN6p48fEduAgepYGr4FOQwujzu//mG&#43;PPAhe694XEDvzqvlEFCk8AfmmvlO/TZDJg6A=="></script>
+    
 
     
     
@@ -559,6 +619,8 @@ This was my first touch with variatoinal inference and DGMs, so my head was spin
       
 
       
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
       
     
 
