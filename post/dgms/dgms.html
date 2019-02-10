@@ -15,8 +15,8 @@
   
     
   
-  <meta name="description" content="Last week I had a chance to attend a truly great 2-day tutorial by Philip Schultz and Wilker Aziz. It was held in Mathematikon, Heidelberg and guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official github page.
-This was my first touch with Variational Inference and Deep Generative Networks, so my head was spinning from the start. I tried to keep up as long as I can, finally losing a grip on the second day.">
+  <meta name="description" content="Last week I had a chance to attend a truly great 2-day tutorial by Philip Schultz and Wilker Aziz. It was held in Mathematikon, Heidelberg and the guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official github page.
+This was my first experience with Variational Inference and Deep Generative Networks, so my head was spinning from the start. I tried to keep up as long as I could, finally losing grip on the second day.">
 
   
   <link rel="alternate" hreflang="en-us" href="../../post/dgms/dgms.html">
@@ -97,8 +97,8 @@ This was my first touch with Variational Inference and Deep Generative Networks,
   <meta property="og:site_name" content="NLPenguin">
   <meta property="og:url" content="/post/dgms/dgms.html">
   <meta property="og:title" content="I learned something about Variational Inference in NLP | NLPenguin">
-  <meta property="og:description" content="Last week I had a chance to attend a truly great 2-day tutorial by Philip Schultz and Wilker Aziz. It was held in Mathematikon, Heidelberg and guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official github page.
-This was my first touch with Variational Inference and Deep Generative Networks, so my head was spinning from the start. I tried to keep up as long as I can, finally losing a grip on the second day.">
+  <meta property="og:description" content="Last week I had a chance to attend a truly great 2-day tutorial by Philip Schultz and Wilker Aziz. It was held in Mathematikon, Heidelberg and the guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official github page.
+This was my first experience with Variational Inference and Deep Generative Networks, so my head was spinning from the start. I tried to keep up as long as I could, finally losing grip on the second day.">
   
   
     
@@ -359,28 +359,28 @@ This was my first touch with Variational Inference and Deep Generative Networks,
     <div class="article-style" itemprop="articleBody">
       
 
-<p>Last week I had a chance to attend a truly great 2-day tutorial by <a href="https://github.com/philschultz" target="_blank">Philip Schultz</a> and <a href="https://wilkeraziz.github.io/" target="_blank">Wilker Aziz</a>. It was held in Mathematikon, Heidelberg and guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official <a href="https://github.com/philschulz/VITutorial" target="_blank">github page</a>.</p>
+<p>Last week I had a chance to attend a truly great 2-day tutorial by <a href="https://github.com/philschultz" target="_blank">Philip Schultz</a> and <a href="https://wilkeraziz.github.io/" target="_blank">Wilker Aziz</a>. It was held in Mathematikon, Heidelberg and the guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official <a href="https://github.com/philschulz/VITutorial" target="_blank">github page</a>.</p>
 
-<p>This was my first touch with <strong>Variational Inference</strong> and <strong>Deep Generative Networks</strong>, so my head was spinning from the start. I tried to keep up as long as I can, finally losing a grip on the second day. Nevertheless, I managed to gather my thoughts over the weekend, by going through <a href="../../files/vitutorial_notes.pdf">my notes</a> and finishing the coding part of the tutorial. You can find the solved jupyter notebook at my <a href="https://github.com/isekulic/VITutorial" target="_blank">github</a>. This post is an attempt to describe what I learned on a very high level without too much math, and in the process, wrap my head around it.</p>
+<p>This was my first experience with <strong>Variational Inference</strong> and <strong>Deep Generative Networks</strong>, so my head was spinning from the start. I tried to keep up as long as I could, finally losing grip on the second day. Nevertheless, I managed to gather my thoughts over the weekend, by going through <a href="../../files/vitutorial_notes.pdf">my notes</a> and finishing the coding part of the tutorial. You can find the solved jupyter notebook at my <a href="https://github.com/isekulic/VITutorial" target="_blank">github</a>. This post is an attempt to describe what I learned at a very high level without too much math, and in the process, wrap my head around it.</p>
 
 <h3 id="why-vi">Why VI?</h3>
 
-<p>One of the most obvious reasons to turn to variational inference is their ability to find the underlying (latent) distribution of the data, without the need of the data to be labeled.
-This is not only important because the majority of available data in the world is not labeled, but also, in many scientists opinions, is a way towards a (more) general artificial intelligence.
+<p>One of the most obvious reasons to turn to variational inference is their ability to find the underlying (latent) distribution of data, without the need for the data to be labeled.
+This is not only important because the majority of available data in the world is not labeled, but also, in many scientists&rsquo; opinions, is a way towards a (more) general artificial intelligence.
 Knowing the underlying distribution of our data can help us distinguish different samples, and at the same time learn specific aspects of the data.
-We know about the autoencoder&rsquo;s ability to learn the latent variables that can represent the data, so why the need of VI?
-Well, <strong>Variational Autoencoders</strong> (VAE) are much more than standard autoencoders, since they learn the real distribution which the data came from, also giving us the ability to create new samples by sampling that distribution, meaning they are a part of generative models family.</p>
+We know about the autoencoder&rsquo;s ability to learn the latent variables that can represent data, so why the need for VI?
+Well, <strong>Variational Autoencoders</strong> (VAE) are much more than standard autoencoders, since they learn the real distribution which the data cames from, giving us the ability to create new samples by sampling that distribution (meaning they are a part of generative models family).</p>
 
 <h3 id="what-is-vi">What is VI?</h3>
 
 <p>To start off, it&rsquo;s important to know what Generative Models are.
- GM is any model of the joint probability distribution on $P(X, Z)$, with $X$ and $Z$ being random variables, observable and target variable, respectively.
+ A GM is any model of the joint probability distribution on $P(X, Z)$, with $X$ and $Z$ being random variables, observable and target variable, respectively.
  Another two important terms are <strong>the likelihood</strong> of observed data given the underlying (target) distribution $z$: $p(x|z)$, and <strong>the prior</strong> over $Z$: $p(z)$.
- By applying a good old Bayes rule, we find our goal to be computing <strong>the posterior</strong> p(z|x) = p(x|z)p(z), which is often impossible due to the unknown functional form of the posterior, or intractable computation.</p>
+ By applying the good old Bayes rule, we find our goal to be computing <strong>the posterior</strong> p(z|x) = p(x|z)p(z), which is often impossible due to the unknown functional form of the posterior, or intractable computation.</p>
 
 <p>This is where <strong>Variational Inference</strong> comes in! We approximate uncomputable $p(z|x)$ by an auxiliary distribution $q(z)$ that is as close as possible to $p(z|x)$ and computable.
  Closeness of two distributions p and q is given with <strong>Kullback-Leibler divergence</strong> $KL(q || p)$, which is one of the backbones of VI.
- We&rsquo;ll not go into explaining KL-divergence here, just note that it is asymetric and always $&gt;= 0$. You can find a detailed explanation <a href="https://towardsdatascience.com/demystifying-kl-divergence-7ebe4317ee68" target="_blank">here</a>.</p>
+ We won&rsquo;t go into explaining KL-divergence here, just note that it is asymetric and always $&gt;= 0$. You can find a detailed explanation <a href="https://towardsdatascience.com/demystifying-kl-divergence-7ebe4317ee68" target="_blank">here</a>.</p>
 
 <h3 id="how-does-it-work">How does it work?</h3>
 
