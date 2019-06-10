@@ -36,8 +36,8 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
       <guid>/home/about.html</guid>
-      <description>Biography I am a recent graduate in Computer Science from a small town near Zagreb, Croatia. I&amp;rsquo;m currently taking a dive into the wonderful world of academia as a Research Associate at Heidelberg Institute for Theoretical Studies.
-My research topic is a continuation of the master thesis, where I studied the language of authors affected by bipolar disorder on Reddit. We&amp;rsquo;ve provided a benchmark results for bipolar disorder prediction and analyzed significant differences in psycholinguistic and emotion-related features between the bipolar and the control group.</description>
+      <description>Biography I am a recent graduate in Computer Science from a small town near Zagreb, Croatia. I&amp;rsquo;m currently taking a dive into the wonderful world of academia as a Research Associate at Heidelberg Institute for Theoretical Studies. I enjoy learning and aspire to pursue a PhD in the near future.
+My research topic is a continuation of the master thesis, where I studied the language of authors affected by bipolar disorder on Reddit.</description>
     </item>
     
     <item>
@@ -77,11 +77,11 @@ My research topic is a continuation of the master thesis, where I studied the la
     </item>
     
     <item>
-      <title>Recent Posts</title>
-      <link>/home/posts.html</link>
+      <title>Publications</title>
+      <link>/home/publications.html</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>/home/posts.html</guid>
+      <guid>/home/publications.html</guid>
       <description></description>
     </item>
     
@@ -141,11 +141,11 @@ To remove this section, either delete content/home/teaching.md or edit the front
     </item>
     
     <item>
-      <title>Publications</title>
-      <link>/home/publications.html</link>
+      <title>Recent Posts</title>
+      <link>/home/posts.html</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
       
-      <guid>/home/publications.html</guid>
+      <guid>/home/posts.html</guid>
       <description></description>
     </item>
     
