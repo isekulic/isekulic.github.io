@@ -40,27 +40,9 @@
     </item>
     
     <item>
-      <title>lrec2016</title>
-      <link>/tags/lrec2016.html</link>
-      <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/lrec2016.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nlp</title>
-      <link>/tags/nlp.html</link>
-      <pubDate>Thu, 16 Jun 2016 00:00:00 +0200</pubDate>
-      
-      <guid>/tags/nlp.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>semeval2016</title>
       <link>/tags/semeval2016.html</link>
-      <pubDate>Thu, 16 Jun 2016 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 16 Jun 2016 00:00:00 +0800</pubDate>
       
       <guid>/tags/semeval2016.html</guid>
       <description></description>
@@ -69,9 +51,18 @@
     <item>
       <title>stance classification</title>
       <link>/tags/stance-classification.html</link>
-      <pubDate>Thu, 16 Jun 2016 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 16 Jun 2016 00:00:00 +0800</pubDate>
       
       <guid>/tags/stance-classification.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lrec2016</title>
+      <link>/tags/lrec2016.html</link>
+      <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lrec2016.html</guid>
       <description></description>
     </item>
     

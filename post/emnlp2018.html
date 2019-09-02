@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Source Themes Academic 3.1.0">
-  <meta name="generator" content="Hugo 0.51" />
+  <meta name="generator" content="Hugo 0.57.2" />
   <meta name="author" content="Ivan Sekulić">
 
   
@@ -33,7 +33,7 @@ Here I&rsquo;d like to share my notes from all the talks I&rsquo;ve attended. Th
   
   
   
-  <meta name="theme-color" content="#3f51b5">
+  <meta name="theme-color" content="#FD6B00">
   
 
   
@@ -76,6 +76,20 @@ Here I&rsquo;d like to share my notes from all the talks I&rsquo;ve attended. Th
 
   
   
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-134626973-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
   
 
   
@@ -102,7 +116,7 @@ Here I&rsquo;d like to share my notes from all the talks I&rsquo;ve attended. Th
   
   
     
-  <meta property="og:image" content="img/ja.png">
+  <meta property="og:image" content="img/ja_pingu2.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2018-11-11T18:18:19&#43;01:00">
@@ -167,7 +181,7 @@ Here I&rsquo;d like to share my notes from all the talks I&rsquo;ve attended. Th
         
 
         <li class="nav-item">
-          <a class="nav-link" href="../#publications_selected">
+          <a class="nav-link" href="../#publications">
             
             <span>Publications</span>
             
@@ -205,7 +219,7 @@ Here I&rsquo;d like to share my notes from all the talks I&rsquo;ve attended. Th
         
 
         <li class="nav-item">
-          <a class="nav-link" href="../files/isekulic_cv.pdf">
+          <a class="nav-link" href="../files/isekulic_cv_Sep_2019.pdf">
             
             <span>CV</span>
             
@@ -266,8 +280,8 @@ Here I&rsquo;d like to share my notes from all the talks I&rsquo;ve attended. Th
 
   <span class="article-date">
     
-    <meta content="2018-11-11 18:18:19 &#43;0100 CET" itemprop="datePublished">
-    <time datetime="2018-11-11 18:18:19 &#43;0100 CET" itemprop="dateModified">
+    <meta content="2018-11-11 18:18:19 &#43;0100 &#43;0100" itemprop="datePublished">
+    <time datetime="2018-11-11 18:18:19 &#43;0100 &#43;0100" itemprop="dateModified">
       Nov 11, 2018
     </time>
   </span>
@@ -341,6 +355,8 @@ Here I&rsquo;d like to share my notes from all the talks I&rsquo;ve attended. Th
 
 
 
+  
+
 
 
 
@@ -412,28 +428,27 @@ Here I&rsquo;d like to share my notes from all the talks I&rsquo;ve attended. Th
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	notes
-    	
-    	</span>
+        
+        notes
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>deceptive speech &ndash; deliberate choice to mislead</li>
-<li>criminals are better than police, judges and similar in detecting it</li>
-<li>there are acoustic-prosodic and lexical cues</li>
-<li>system should take individual differences into account: gender, ethinicity&hellip;</li>
-<li>existing dataset: Columbia SRI Colorado Deception corpus (7h of speech, 32 subjects, 70% acc)</li>
-<li><strong>created a cross-lingual dataset</strong>: 340 subjects, 122h of speech, native english speakers
-questioning native chinese speakers who know english (and vice versa)</li>
-<li><strong>features</strong>: n-grams, LIWC, word embeddings, speech-based (openSMILE, ISO9), gender, native language,
-NEO-FFIs personality scores, syntactic features</li>
-<li>Methods: Random Forest, SVM, DL &ndash; BiLSTM-lexical + DNN-speech yielding 0.65 F1</li>
-<li>Best model: Multi-Task Learning with personality traits <strong>74.4 F1</strong></li>
-<li>Significant differences in deceptive speech: Men are loud with higher pich when lying;
-Woman are just loud, but have jitter when telling the truth</li>
-<li>Human accuracy: 56.76%</li>
-</ul>
+        
+- deceptive speech -- deliberate choice to mislead
+- criminals are better than police, judges and similar in detecting it
+- there are acoustic-prosodic and lexical cues
+- system should take individual differences into account: gender, ethinicity...
+- existing dataset: Columbia SRI Colorado Deception corpus (7h of speech, 32 subjects, 70% acc)
+- **created a cross-lingual dataset**: 340 subjects, 122h of speech, native english speakers 
+questioning native chinese speakers who know english (and vice versa)
+- **features**: n-grams, LIWC, word embeddings, speech-based (openSMILE, ISO9), gender, native language,
+NEO-FFIs personality scores, syntactic features
+- Methods: Random Forest, SVM, DL -- BiLSTM-lexical + DNN-speech yielding 0.65 F1
+- Best model: Multi-Task Learning with personality traits **74.4 F1**
+- Significant differences in deceptive speech: Men are loud with higher pich when lying;
+Woman are just loud, but have jitter when telling the truth
+- Human accuracy: 56.76% 
 
     </div>
 </div>
@@ -447,21 +462,20 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Coavoux, Narayan, and Cohen
-    	
-    	</span>
+        
+        Coavoux, Narayan, and Cohen
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>explicit private information can be preprocessed, but implicit (age, authorship) can&rsquo;t</li>
-<li><strong>Can attacker guess about input text based on hidden representation?</strong></li>
-<li>Target private variables: age, gender, named entities that occur in the text</li>
-<li>attacker eavesdrops while learning the model &ndash; attacker beats the baseline for age and gender just based on hidden r</li>
-<li>defence: double objective (loss_clf = -logP(y|x) - loss_attacker) or adversarial generation (LM)</li>
-<li>conclusion: latent representations contain a signal for private information</li>
-<li>code on <a href="https://github.com/mcoavoux/pnet" target="_blank">github</a></li>
-</ul>
+        
+- explicit private information can be preprocessed, but implicit (age, authorship) can't
+- **Can attacker guess about input text based on hidden representation?**
+- Target private variables: age, gender, named entities that occur in the text
+- attacker eavesdrops while learning the model -- attacker beats the baseline for age and gender just based on hidden r
+- defence: double objective (loss_clf = -logP(y|x) - loss_attacker) or adversarial generation (LM)
+- conclusion: latent representations contain a signal for private information
+- code on [github](https://github.com/mcoavoux/pnet)
 
     </div>
 </div>
@@ -473,49 +487,43 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Elazar and Goldberg
-    	
-    	</span>
+        
+        Elazar and Goldberg
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>while learning DeepEmoji attacker eavesdrops &ndash;&gt; hich leakage</li>
-<li>Actively reduce leakage with adversarial setup (Ganing and Lempitsy, 2015) &ndash;&gt; remove stuff from representation, but still some leakage</li>
-<li>Their method: use more layers for adversarial reversal layer; bigger \lambda to reverse with; &gt; 1 adversaries &ndash;&gt; they learned diff features</li>
-<li>still not perfect!</li>
-</ul>
+        
+- while learning DeepEmoji attacker eavesdrops --> hich leakage
+- Actively reduce leakage with adversarial setup (Ganing and Lempitsy, 2015) --> remove stuff from representation, but still some leakage
+- Their method: use more layers for adversarial reversal layer; bigger \lambda to reverse with; > 1 adversaries --> they learned diff features
+- still not perfect!
+
 
     </div>
 </div>
-
-<h6 id="declare-debunking-fake-news-and-false-claims-using-evidence-aware-deep-learning">DeClarE: Debunking Fake News and False Claims using Evidence-Aware Deep Learning</h6>
-
+###### DeClarE: Debunking Fake News and False Claims using Evidence-Aware Deep Learning
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Popat, Mukherjee, Yates, and Weikum
-    	
-    	</span>
+        
+        Popat, Mukherjee, Yates, and Weikum
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>prior work: supervised learning (doesn&rsquo;t use external knowledge) &amp; external sources (require feature modeling and lexicons). Why people don&rsquo;t like feature modeling any more? :)</li>
-<li><em>overcame flaws</em> with: end-to-end NN that takes the external resources into account without human intervention</li>
-<li>Approach:
-
-<ul>
-<li>external evidence &ndash; <em>search engine</em></li>
-<li>language style, semantics &ndash; <em>BiLSTM</em></li>
-<li>interaction claim-external &ndash; <em>Attention</em></li>
-<li>credibility score based on all of that</li>
-</ul></li>
-<li>beat the baseline on 4 datasets</li>
-<li>analysis showed clear clusters of Fake and Trusted websites (CNN&hellip;)</li>
-</ul>
+        
+- prior work: supervised learning (doesn't use external knowledge) & external sources (require feature modeling and lexicons). Why people don't like feature modeling any more? :)
+- *overcame flaws* with: end-to-end NN that takes the external resources into account without human intervention
+- Approach: 
+    - external evidence -- *search engine*
+    - language style, semantics -- *BiLSTM*
+    - interaction claim-external -- *Attention*
+    - credibility score based on all of that
+- beat the baseline on 4 datasets
+- analysis showed clear clusters of Fake and Trusted websites (CNN...)
 
     </div>
 </div>
@@ -527,22 +535,21 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Wang and Jurgens
-    	
-    	</span>
+        
+        Wang and Jurgens
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>minimal identity cues are important &ndash; username that reveals gender or interests (catlady22, pizzamaniac&hellip;)</li>
-<li>support is more than encouragement (14 strategies: validation, advice&hellip;)</li>
-<li>dataset: post-reply from Reddit, Wiki, Stack Exchange</li>
-<li>goal: <strong>rate the reply as</strong>: <em>support, polite, agree, offensive</em></li>
-<li>most important features are from LIWC &ndash;&gt; support in theory</li>
-<li>constructed massive gender-performance DS from usernames</li>
-<li><strong>Who recieves support?</strong> &ndash; woman get more support, but also more disparagement</li>
-<li>code and data on <a href="https://github.com/davidjurgens/support" target="_blank">github</a></li>
-</ul>
+        
+- minimal identity cues are important -- username that reveals gender or interests (catlady22, pizzamaniac...)
+- support is more than encouragement (14 strategies: validation, advice...)
+- dataset: post-reply from Reddit, Wiki, Stack Exchange
+- goal: **rate the reply as**: *support, polite, agree, offensive*
+- most important features are from LIWC --> support in theory
+- constructed massive gender-performance DS from usernames
+- **Who recieves support?** -- woman get more support, but also more disparagement
+- code and data on [github](https://github.com/davidjurgens/support)
 
     </div>
 </div>
@@ -560,18 +567,17 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Chen, Hou, Cheng, and Li
-    	
-    	</span>
+        
+        Chen, Hou, Cheng, and Li
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>two tasks: (1) emotion classification and (2) emotion cause detection</li>
-<li>they argue <strong>it&rsquo;s not hard to label cause while you are labeling for emotions</strong></li>
-<li>joint encoder &amp; linear decoder</li>
-<li>joint learning improves F1 (is it significant? &ndash;&gt; check paper)</li>
-</ul>
+        
+- two tasks: (1) emotion classification and (2) emotion cause detection
+- they argue **it's not hard to label cause while you are labeling for emotions**
+- joint encoder & linear decoder
+- joint learning improves F1 (is it significant? --> check paper)
 
     </div>
 </div>
@@ -583,20 +589,19 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Caragea, Dinu, and Dumitru
-    	
-    	</span>
+        
+        Caragea, Dinu, and Dumitru
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>they argue <strong>there is a difference between sentiment and optimisim/pessimism</strong></li>
-<li>Dataset: 10k tweets labeled between -3 (most pessimistic) to 3 (most optimistic)</li>
-<li>when 0 is treshold &ndash;&gt; 80% Acc; when (-1) and 1 are &ndash;&gt; 90% Acc</li>
-<li>deep learning architecture</li>
-<li>different from sentiment: when trained on sentiment dataset, they get poor results. Q: They trained only Stanford analyzer, what when you train a NN like for the main task?</li>
-<li>verb tense analysis</li>
-</ul>
+        
+- they argue **there is a difference between sentiment and optimisim/pessimism**
+- Dataset: 10k tweets labeled between -3 (most pessimistic) to 3 (most optimistic)
+- when 0 is treshold --> 80% Acc; when (-1) and 1 are --> 90% Acc
+- deep learning architecture
+- different from sentiment: when trained on sentiment dataset, they get poor results. Q: They trained only Stanford analyzer, what when you train a NN like for the main task?
+- verb tense analysis
 
     </div>
 </div>
@@ -608,20 +613,19 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Lamprinidis, Hardt, and Hovy
-    	
-    	</span>
+        
+        Lamprinidis, Hardt, and Hovy
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>why do you <strong>click on a Facebook post?</strong></li>
-<li>modeling reader&rsquo;s knowledge &ndash; lexical, syntactic, topical</li>
-<li>Dataset: 82k headlines with click numbers. Then make it a binary classification &gt;50% median are often clicked ones, &lt;50% rarely clicked. Q: Seems kinda random.</li>
-<li><strong>Auxiliary task: POS tagging</strong></li>
-<li>GRU-MTL with pretrained embeddings yields better performance than the task alone</li>
-<li>Q: Why does POS matter for this? How to know which aux task will help? Also, position of a post, image of a post?</li>
-</ul>
+        
+- why do you **click on a Facebook post?**
+- modeling reader's knowledge -- lexical, syntactic, topical
+- Dataset: 82k headlines with click numbers. Then make it a binary classification >50% median are often clicked ones, <50% rarely clicked. Q: Seems kinda random.
+- **Auxiliary task: POS tagging**
+- GRU-MTL with pretrained embeddings yields better performance than the task alone
+- Q: Why does POS matter for this? How to know which aux task will help? Also, position of a post, image of a post?
 
     </div>
 </div>
@@ -633,23 +637,19 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Chen, Du, Bing, and Xu
-    	
-    	</span>
+        
+        Chen, Du, Bing, and Xu
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>does a reply agree or disagree with the comment?</li>
-<li>two factors:
-
-<ul>
-<li><strong>self-attention</strong> &ndash;&gt; focuses on important parts inside a comment</li>
-<li><strong>cross-comment-attention</strong> &ndash;&gt; reply focused</li>
-</ul></li>
-<li>connect both with something, idk what because they show huge NN for 2 sec :(</li>
-<li>Attention visualisation &amp; Cross Matrix Product Visualisation &ndash;&gt; TODO: Learn how to do that!</li>
-</ul>
+        
+- does a reply agree or disagree with the comment?
+- two factors:
+    - **self-attention** --> focuses on important parts inside a comment
+    - **cross-comment-attention** --> reply focused
+- connect both with something, idk what because they show huge NN for 2 sec :(
+- Attention visualisation & Cross Matrix Product Visualisation --> TODO: Learn how to do that!
 
     </div>
 </div>
@@ -661,19 +661,18 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Hovy and Fornaciari
-    	
-    	</span>
+        
+        Hovy and Fornaciari
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>Homophily?</li>
-<li>retrofitting &ndash; moving the points of distinct classes away from each other (x&rsquo;, y&rsquo;) = a(x, y) + b(mean)</li>
-<li>for test data use translation matrix calculated from the train set</li>
-<li>benefit in gender and age performance</li>
-<li>Q: Not different than just learning the embeddings? If you train your embeddings, you&rsquo;re sepperating classes?</li>
-</ul>
+        
+- Homophily?
+- retrofitting -- moving the points of distinct classes away from each other (x', y') = a(x, y) + b(mean)
+- for test data use translation matrix calculated from the train set
+- benefit in gender and age performance
+- Q: Not different than just learning the embeddings? If you train your embeddings, you're sepperating classes?
 
     </div>
 </div>
@@ -687,18 +686,17 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Ravi and Kozareva
-    	
-    	</span>
+        
+        Ravi and Kozareva
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>the only presentation I&rsquo;ve seen with multiple people :)</li>
-<li>TFLite &ndash;&gt; it&rsquo;s a lite Tensorflow</li>
-<li>SGNN - projection based NN &ndash;&gt; <strong>get rid of the embedding layer and use locality sensitive hashing as feature extractor</strong></li>
-<li>on 42 dialog acts they got SOTA. Q: What if they trained that model without memory/performance restrictions? SOTA on a bunch of other things?</li>
-</ul>
+        
+- the only presentation I've seen with multiple people :)
+- TFLite --> it's a lite Tensorflow 
+- SGNN - projection based NN --> **get rid of the embedding layer and use locality sensitive hashing as feature extractor**
+- on 42 dialog acts they got SOTA. Q: What if they trained that model without memory/performance restrictions? SOTA on a bunch of other things?
 
     </div>
 </div>
@@ -710,15 +708,14 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Kim and Kim
-    	
-    	</span>
+        
+        Kim and Kim
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>didn&rsquo;t catch much</li>
-</ul>
+        
+- didn't catch much
 
     </div>
 </div>
@@ -730,19 +727,18 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Song, Petrak, and Roberts
-    	
-    	</span>
+        
+        Song, Petrak, and Roberts
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>sucidal classification in medical data &ndash;&gt; from a text, predict <strong>if a specific sentence expresses suicidal thoughts</strong>.</li>
-<li>BiLSTM + CNN on focus sentences</li>
-<li>provide right + left context &ndash; FOFE (fixed-size ordinally forgetting encoding)</li>
-<li>reports significant improvements</li>
-<li>takeaway: <strong>context is important</strong> (who&rsquo;d say right :)</li>
-</ul>
+        
+- sucidal classification in medical data --> from a text, predict **if a specific sentence expresses suicidal thoughts**. 
+- BiLSTM + CNN on focus sentences 
+- provide right + left context -- FOFE (fixed-size ordinally forgetting encoding)
+- reports significant improvements
+- takeaway: **context is important** (who'd say right :)
 
     </div>
 </div>
@@ -756,20 +752,19 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Liu et al.
-    	
-    	</span>
+        
+        Liu et al.
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>ELMo is great, but it contains sufficent information &ndash;&gt; prune it w.r.t. the task you&rsquo;re solving</li>
-<li>dense connectivity &ndash; alows better layer selection via layer-wise dropout</li>
-<li>sequence labeling with contextualized representations (PPL?)</li>
-<li>nice experiments, <strong>results comparable with SOTA</strong></li>
-<li><strong>size reduced x10, speed goes up x5-6</strong>, Acc down by just 1%</li>
-<li>integrated &amp; pruned plug-and-play model</li>
-</ul>
+        
+- ELMo is great, but it contains sufficent information --> prune it w.r.t. the task you're solving
+- dense connectivity -- alows better layer selection via layer-wise dropout
+- sequence labeling with contextualized representations (PPL?)
+- nice experiments, **results comparable with SOTA**
+- **size reduced x10, speed goes up x5-6**, Acc down by just 1%
+- integrated & pruned plug-and-play model
 
     </div>
 </div>
@@ -785,26 +780,22 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Bao, Chang, Yu, and Barzilay
-    	
-    	</span>
+        
+        Bao, Chang, Yu, and Barzilay
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>they wanna <strong>train NN with less data</strong></li>
-<li>rationales &ndash; part of a sentence that directs sentiment &ndash;&gt; use them to direct attention</li>
-<li>Rationale2Attention &ndash; transformable from task to task
-
-<ul>
-<li>train R2A on source task</li>
-<li>use R2A to generate attention for target task</li>
-<li>train a target classifier with R2A attention</li>
-</ul></li>
-<li><strong>domain-ivariant encoder</strong> &ndash;&gt; <strong>Attention Generator</strong> (shared BiLSTM, att.sumarizer) &ndash;&gt; <strong>MTL</strong> (shared BiLSTM, task-specific Attention and MLP)</li>
-<li>200 examples + rationales gets the same results as 3100 examples &ndash;&gt; <strong>cheaper annotation</strong></li>
-<li>code on <a href="https://github.com/YujiaBao/R2A" target="_blank">github</a></li>
-</ul>
+        
+- they wanna **train NN with less data**
+- rationales -- part of a sentence that directs sentiment --> use them to direct attention
+- Rationale2Attention -- transformable from task to task
+    - train R2A on source task
+    - use R2A to generate attention for target task
+    - train a target classifier with R2A attention
+- **domain-ivariant encoder** --> **Attention Generator** (shared BiLSTM, att.sumarizer) --> **MTL** (shared BiLSTM, task-specific Attention and MLP)
+- 200 examples + rationales gets the same results as 3100 examples --> **cheaper annotation**
+- code on [github](https://github.com/YujiaBao/R2A)
 
     </div>
 </div>
@@ -816,28 +807,24 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Clark, Luong, Manning, and Le
-    	
-    	</span>
+        
+        Clark, Luong, Manning, and Le
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>revisit self-training (older method) with NN</li>
-<li>Blum 1998. idea: 2 models teach each other</li>
-<li>alternate labeled and unlabeled batches &ndash;&gt; how to use it?</li>
-<li>Cross-View Training &ndash; not just exchange predictions like Blum, but use NN shared parameters
-
-<ul>
-<li>2 models (auxiliary models) + Main Predictor</li>
-<li>Forward LSTM &ndash;&gt; Forward prediction; Backward LSTM &ndash;&gt; Backward prediction</li>
-<li>Main Predictor teaches Forward</li>
-<li>4 aux tasks</li>
-</ul></li>
-<li>CVT + MTL on 1B unlabeled data create all labels for all tasks on one example</li>
-<li>4 sequence tagging, dependency parsing, machine translation</li>
-<li>significant improvement for CVT + MTL (over ELMo too)</li>
-</ul>
+        
+- revisit self-training (older method) with NN
+- Blum 1998. idea: 2 models teach each other
+- alternate labeled and unlabeled batches --> how to use it?
+- Cross-View Training -- not just exchange predictions like Blum, but use NN shared parameters
+    - 2 models (auxiliary models) + Main Predictor
+    - Forward LSTM --> Forward prediction; Backward LSTM --> Backward prediction
+    - Main Predictor teaches Forward
+    - 4 aux tasks
+- CVT + MTL on 1B unlabeled data create all labels for all tasks on one example
+- 4 sequence tagging, dependency parsing, machine translation
+- significant improvement for CVT + MTL (over ELMo too)
 
     </div>
 </div>
@@ -849,38 +836,34 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Paun et al.
-    	
-    	</span>
+        
+        Paun et al.
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>probabilistic models of annotation are better than majority vote and similar</li>
-</ul>
+        
+- probabilistic models of annotation are better than majority vote and similar
 
     </div>
 </div>
+### Session 7: Social Applications 2 <a name="s7"></a>
 
-<h3 id="session-7-social-applications-2-a-name-s7-a">Session 7: Social Applications 2 <a name="s7"></a></h3>
-
-<h6 id="gideon-mann-keynote-understanding-the-news-that-moves-markets-a-name-gideon-a">Gideon Mann Keynote: Understanding the News that Moves Markets <a name="gideon"></a></h6>
-
+###### Gideon Mann Keynote: Understanding the News that Moves Markets <a name="gideon"></a>
 <div class="expand">
     <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	notes
-    	
-    	</span>
+        
+        notes
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>we live in a scary world where one headline crashes the stock market</li>
-<li>some systems react in miliseconds after some article is published (buy/sell stocks)</li>
-</ul>
+        
+- we live in a scary world where one headline crashes the stock market
+- some systems react in miliseconds after some article is published (buy/sell stocks)
 
     </div>
 </div>
@@ -894,16 +877,15 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Xia et al.
-    	
-    	</span>
+        
+        Xia et al.
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>how to handle emerging intents?</li>
-<li>would be nice if he explained what zero-shot detection and capsules are :D (I managed to figure out for zero-shot, but capsule&hellip;note to myself: never assume an audiance knows something)</li>
-</ul>
+        
+- how to handle emerging intents?
+- would be nice if he explained what zero-shot detection and capsules are :D (I managed to figure out for zero-shot, but capsule...note to myself: never assume an audiance knows something)
 
     </div>
 </div>
@@ -915,20 +897,19 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Jin and Szolovits
-    	
-    	</span>
+        
+        Jin and Szolovits
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>sequentialy label each sentence in a paragraph (abstract): Background, Methods, Results&hellip;</li>
-<li>contextual sentence features have not been looked into. What is done is CRF which considers context labels</li>
-<li>they pre-trained word embeddings on scientific papers</li>
-<li>architecture: embedding layer &ndash;&gt; LSTM on sentence level &ndash;&gt; LSTM on paragraph level</li>
-<li>new sota for the task</li>
-<li>ablation study &ndash;&gt; context is the most important</li>
-</ul>
+        
+- sequentialy label each sentence in a paragraph (abstract): Background, Methods, Results...
+- contextual sentence features have not been looked into. What is done is CRF which considers context labels
+- they pre-trained word embeddings on scientific papers
+- architecture: embedding layer --> LSTM on sentence level --> LSTM on paragraph level 
+- new sota for the task
+- ablation study --> context is the most important
 
     </div>
 </div>
@@ -940,16 +921,15 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Yang et al.
-    	
-    	</span>
+        
+        Yang et al.
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>kinda figured out what a capsule is. Standard CNN kernel output is a scalar, while a capsule outputs a vector (with orientation, length and everything) &ndash; somehow this is useful :)</li>
-<li>they propose a capsule net for text classification</li>
-</ul>
+        
+- kinda figured out what a capsule is. Standard CNN kernel output is a scalar, while a capsule outputs a vector (with orientation, length and everything) -- somehow this is useful :)
+- they propose a capsule net for text classification
 
     </div>
 </div>
@@ -961,18 +941,17 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Zeng et al.
-    	
-    	</span>
+        
+        Zeng et al.
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>topic model &ndash; each topic is a distribution of words</li>
-<li>Neural topic model &ndash; generative model</li>
-<li>put topic memory mechanism on top of NTM, then classifier</li>
-<li>topic coherence</li>
-</ul>
+        
+- topic model -- each topic is a distribution of words
+- Neural topic model -- generative model
+- put topic memory mechanism on top of NTM, then classifier
+- topic coherence
 
     </div>
 </div>
@@ -984,21 +963,20 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Rios and Kavuluru
-    	
-    	</span>
+        
+        Rios and Kavuluru
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>medical coding &ndash; one EMR has 15 codes, 1000 code combinations to chose from</li>
-<li>graph convolution label embeddings? GCNN over descriptors hierarchy &ndash;&gt; concat word vectors and final GCNN layer</li>
-<li>2 components: <strong>text &ndash;&gt; CNN &amp; descriptors &ndash;&gt; GCNN</strong></li>
-<li><strong>conect them with label-wise attention</strong> (otherwise, finding relevant subtext would be finding a needle in a haystack)</li>
-<li>they test few label groups: frequent (&gt; 5 ocurrances), few-shot (&gt;= 1), zero-shot (=0)</li>
-<li>train jointly, evaluate seperately R@k</li>
-<li><strong>TODO</strong>: read the paper</li>
-</ul>
+        
+- medical coding -- one EMR has 15 codes, 1000 code combinations to chose from
+- graph convolution label embeddings? GCNN over descriptors hierarchy --> concat word vectors and final GCNN layer
+- 2 components: **text --> CNN & descriptors --> GCNN**
+- **conect them with label-wise attention** (otherwise, finding relevant subtext would be finding a needle in a haystack)
+- they test few label groups: frequent (> 5 ocurrances), few-shot (>= 1), zero-shot (=0)
+- train jointly, evaluate seperately R@k
+- **TODO**: read the paper
 
     </div>
 </div>
@@ -1014,20 +992,19 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Shen et al.
-    	
-    	</span>
+        
+        Shen et al.
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>BiLSTM to get encoding of a Question and an Answer</li>
-<li>row-wise Answer-to-Question attention &amp; Question-to-Answer</li>
-<li>Bidirectional Matching Vectors + self-attention</li>
-<li>sentence segmentation helps to extract relevant subtext</li>
-<li>Q&amp;A attentions contribute in both ways</li>
-<li>dataset on <a href="https://github.com/clshenNLP/QASC/" target="_blank">github</a></li>
-</ul>
+        
+- BiLSTM to get encoding of a Question and an Answer
+- row-wise Answer-to-Question attention & Question-to-Answer
+- Bidirectional Matching Vectors + self-attention
+- sentence segmentation helps to extract relevant subtext
+- Q&A attentions contribute in both ways
+- dataset on [github](https://github.com/clshenNLP/QASC/)
 
     </div>
 </div>
@@ -1039,23 +1016,22 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Stab et al.
-    	
-    	</span>
+        
+        Stab et al.
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>information seeking perspective &ndash;&gt; extract pros and cons</li>
-<li>apply model to heterogeneous texts (<strong>8 topics, 25k docs</strong>, blogs/news/social media etc.)</li>
-<li>Labels: pro, con, no-argument</li>
-<li>200 random sentences for each topic for calibration (0.72 Kappa) &ndash;&gt; 25k sentences with crowdsourcing annotation</li>
-<li>Bi Contextual LSTM (Gogh et al, 2017)</li>
-<li>Tried transfer learning &amp; MTL (topic_main &amp; topic_otherdataset)</li>
-<li>train on 7, test on 1 topic</li>
-<li><strong>the more you add, the more you get</strong></li>
-<li>online demo (couldn&rsquo;t find it)</li>
-</ul>
+        
+- information seeking perspective --> extract pros and cons
+- apply model to heterogeneous texts (**8 topics, 25k docs**, blogs/news/social media etc.)
+- Labels: pro, con, no-argument
+- 200 random sentences for each topic for calibration (0.72 Kappa) --> 25k sentences with crowdsourcing annotation
+- Bi Contextual LSTM (Gogh et al, 2017)
+- Tried transfer learning & MTL (topic_main & topic_otherdataset)
+- train on 7, test on 1 topic
+- **the more you add, the more you get**
+- online demo (couldn't find it)
 
     </div>
 </div>
@@ -1067,22 +1043,21 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Angelidis and Lapata
-    	
-    	</span>
+        
+        Angelidis and Lapata
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>I like the title</li>
-<li>extract small number of reviews of a product with different aspects and summarize it (and add sentiment)</li>
-<li>not enought data &ndash;&gt; inject prior knowledge with seed words</li>
-<li>Multi-Seed Aspect Extractor (MATE) &ndash; init seed matrices for each aspect (image, sound of a TV&hellip;)</li>
-<li>add MTL</li>
-<li>Sentiment prediction: multiple instance learning network</li>
-<li>dataset: aspect labels, opinion salience labels, find summaries</li>
-<li><strong>TODO</strong>: read the paper</li>
-</ul>
+        
+- I like the title
+- extract small number of reviews of a product with different aspects and summarize it (and add sentiment)
+- not enought data --> inject prior knowledge with seed words
+- Multi-Seed Aspect Extractor (MATE) -- init seed matrices for each aspect (image, sound of a TV...)
+- add MTL
+- Sentiment prediction: multiple instance learning network
+- dataset: aspect labels, opinion salience labels, find summaries
+- **TODO**: read the paper
 
     </div>
 </div>
@@ -1094,22 +1069,18 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Wu, Wang, Liu, and Ma
-    	
-    	</span>
+        
+        Wu, Wang, Liu, and Ma
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>pre-trained embedding options:
-
-<ul>
-<li>LM &ndash; ELMo, BERT</li>
-<li>supervised learning &ndash; their choice &ndash;&gt; <strong>smaller model, faster training</strong></li>
-<li>incorporate syntax into fully-attention network &ndash; compose sentence representation on phrased from the dependency tree
-&ndash;&gt; phrase-level self-attention</li>
-</ul></li>
-</ul>
+        
+- pre-trained embedding options:
+    - LM -- ELMo, BERT
+    - supervised learning -- their choice --> **smaller model, faster training**
+    - incorporate syntax into fully-attention network -- compose sentence representation on phrased from the dependency tree
+--> phrase-level self-attention
 
     </div>
 </div>
@@ -1121,24 +1092,20 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Dong et al.
-    	
-    	</span>
+        
+        Dong et al.
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>how to select the right sentence to include in a summary?</li>
-<li>Problem: from continuous NN to discrete (N sent, ROUGE)</li>
-<li>Sequential Tagging with Reinforcment Learning (proposed before) &ndash;&gt; probl: stop sampling once M sentences are selected</li>
-<li>Approach: treat extractive summarization as contextual Bandit (Context-Arm-Reward)
-
-<ul>
-<li>smaller search space</li>
-<li>no heuristics needed</li>
-<li>SOTA</li>
-</ul></li>
-</ul>
+        
+- how to select the right sentence to include in a summary?
+- Problem: from continuous NN to discrete (N sent, ROUGE)
+- Sequential Tagging with Reinforcment Learning (proposed before) --> probl: stop sampling once M sentences are selected
+- Approach: treat extractive summarization as contextual Bandit (Context-Arm-Reward)
+    - smaller search space
+    - no heuristics needed
+    - SOTA
 
     </div>
 </div>
@@ -1152,36 +1119,26 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Xu et al.
-    	
-    	</span>
+        
+        Xu et al.
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>narative story generation task &ndash; based on a short input, output a story &ndash;&gt; requires tight semantic connection</li>
-<li>connection among sentences is in <strong>key phrases (skeleton)</strong>:
-
-<ul>
-<li>model the relation among skeletons</li>
-<li><strong>generate a skeleton, then expand to complete a fluent sentence</strong></li>
-</ul></li>
-<li>Generative module:
-
-<ul>
-<li>input-to-skeleton &ndash; seq2seq</li>
-<li>skeleton-to-target sentence &ndash; seq2seq</li>
-</ul></li>
-<li>Skeleton extraction module:
-
-<ul>
-<li>reformulate as a sentence compression problem &ndash; seq2seq</li>
-<li>improve the quality with reinforcement learning. What&rsquo;s the reward?</li>
-</ul></li>
-<li>Dataset: Visual storytelling &ndash;&gt; based on a first sentence, generate rest</li>
-<li>BLEU +44.8% baseline</li>
-<li>G-score? Fluency + Coherence</li>
-</ul>
+        
+- narative story generation task -- based on a short input, output a story --> requires tight semantic connection
+- connection among sentences is in **key phrases (skeleton)**:
+    - model the relation among skeletons
+    - **generate a skeleton, then expand to complete a fluent sentence**
+- Generative module:
+    - input-to-skeleton -- seq2seq
+    - skeleton-to-target sentence -- seq2seq
+- Skeleton extraction module:
+    - reformulate as a sentence compression problem -- seq2seq
+    - improve the quality with reinforcement learning. What's the reward?
+- Dataset: Visual storytelling --> based on a first sentence, generate rest
+- BLEU +44.8% baseline
+- G-score? Fluency + Coherence
 
     </div>
 </div>
@@ -1193,19 +1150,18 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Shen, Su, Li, and Klakow
-    	
-    	</span>
+        
+        Shen, Su, Li, and Klakow
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>user &ndash;&gt; NLU &ndash;&gt; state tracker &ndash;&gt; dialog policy &ndash;&gt; NLG &ndash;&gt;</li>
-<li>nexus: good response should connect the preceding dialogue context and the followup, not just stand-alone</li>
-<li>DailyDialog (Li, 2017): 13k conversations, 10 topics</li>
-<li>new sota</li>
-<li>najgori talk, a napravili brutalne stvari</li>
-</ul>
+        
+- user --> NLU --> state tracker --> dialog policy --> NLG -->
+- nexus: good response should connect the preceding dialogue context and the followup, not just stand-alone
+- DailyDialog (Li, 2017): 13k conversations, 10 topics
+- new sota
+- najgori talk, a napravili brutalne stvari
 
     </div>
 </div>
@@ -1217,29 +1173,25 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Mesgar and Strube
-    	
-    	</span>
+        
+        Mesgar and Strube
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>local coherence &ndash; relatedness of sentence to the next one</li>
-<li>so far: entity-based relations &amp; lexical relations &ndash;&gt; connect</li>
-<li>Model:
-
-<ul>
-<li>pre-train embeddings</li>
-<li>LSTM context info</li>
-<li>find max similarity between LSTM features to model topic of 2 proceeding sentences</li>
-<li>CNN to extract topic changes</li>
-<li>output is a vector that represents coherence</li>
-</ul></li>
-<li>DS: 105 articles, which one is more readable?</li>
-<li>SOTA, but not significant compared to DeCLark</li>
-<li>Does coherence representation improve Essey Assesment? (ASAP ds on kaggle) &ndash;&gt; yes, on esseys that are scored by humans with criteria &ldquo;Must be logical sequence of events&rdquo; (narrative prompts)</li>
-<li>Q: Why only take one word from each sentence with LSTM?</li>
-</ul>
+        
+- local coherence -- relatedness of sentence to the next one
+- so far: entity-based relations & lexical relations --> connect
+- Model:
+    - pre-train embeddings
+    - LSTM context info
+    - find max similarity between LSTM features to model topic of 2 proceeding sentences 
+    - CNN to extract topic changes
+    - output is a vector that represents coherence 
+- DS: 105 articles, which one is more readable?
+- SOTA, but not significant compared to DeCLark
+- Does coherence representation improve Essey Assesment? (ASAP ds on kaggle) --> yes, on esseys that are scored by humans with criteria "Must be logical sequence of events" (narrative prompts)
+- Q: Why only take one word from each sentence with LSTM?
 
     </div>
 </div>
@@ -1251,23 +1203,22 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Cui, Li, Chen, and Zhang
-    	
-    	</span>
+        
+        Cui, Li, Chen, and Zhang
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>sentence ordering task &ndash; o = [4, 1, 3, 2]; o&rsquo; = [1, 2, 3, 4]</li>
-<li>RNN models as baseline (previous work)</li>
-<li>propose self-attention paragraph encoder</li>
-<li>sentence encoder BiLSTM &ndash;&gt; scaled dot product self-attention &ndash;&gt; pooling &ndash;&gt; decoder &ndash;&gt; softmax as coherence probability</li>
-<li>use random permutation on training</li>
-<li>7 different datasets, 3 general topics</li>
-<li>evaluate tau, accuracy, perfect match ration</li>
-<li>tons of experiments. SOTA.</li>
-<li>better in longer texts</li>
-</ul>
+        
+- sentence ordering task -- o = [4, 1, 3, 2]; o' = [1, 2, 3, 4]
+- RNN models as baseline (previous work)
+- propose self-attention paragraph encoder
+- sentence encoder BiLSTM --> scaled dot product self-attention --> pooling --> decoder --> softmax as coherence probability
+- use random permutation on training
+- 7 different datasets, 3 general topics
+- evaluate tau, accuracy, perfect match ration
+- tons of experiments. SOTA.
+- better in longer texts
 
     </div>
 </div>
@@ -1279,19 +1230,18 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Staliunaite, Rohde, Webber, and Louis
-    	
-    	</span>
+        
+        Staliunaite, Rohde, Webber, and Louis
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>corpus of reffering expressions (Putin, current presindent of Russia) &ndash;&gt; When does it stop being neccessary?</li>
-<li>Reffering expression = name + descriptor (becomes shorter over time, &lt;=1 words &ndash;&gt; hearer-old)</li>
-<li>extracting: NP + NP in syntactic tree</li>
-<li>52k entities, 200k+ mentions</li>
-<li>How long until it becomes hearer-old? Outperforms the MCC baseline</li>
-</ul>
+        
+- corpus of reffering expressions (Putin, current presindent of Russia) --> When does it stop being neccessary?
+- Reffering expression = name + descriptor (becomes shorter over time, <=1 words --> hearer-old)
+- extracting: NP + NP in syntactic tree
+- 52k entities, 200k+ mentions
+- How long until it becomes hearer-old? Outperforms the MCC baseline
 
     </div>
 </div>
@@ -1305,20 +1255,19 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Lalor, Wu, Munkhadalai, and Yu
-    	
-    	</span>
+        
+        Lalor, Wu, Munkhadalai, and Yu
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>psychometric methodology (Item Response Theory for NLP) &ndash;&gt; How difficult are certain examples?</li>
-<li>IRT tests on fully trained models</li>
-<li>difficulty score is learned from human responses</li>
-<li>slike koje ne kuzim</li>
-<li>easy examples are easy; model learns easy ones faster; task-model-item matter</li>
-<li><a href="https://github.com/jplalor" target="_blank">github</a></li>
-</ul>
+        
+- psychometric methodology (Item Response Theory for NLP) --> How difficult are certain examples?
+- IRT tests on fully trained models
+- difficulty score is learned from human responses
+- slike koje ne kuzim
+- easy examples are easy; model learns easy ones faster; task-model-item matter
+- [github](https://github.com/jplalor)
 
     </div>
 </div>
@@ -1330,20 +1279,19 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	White et al.
-    	
-    	</span>
+        
+        White et al.
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>what type of inference can we model with NN?</li>
-<li>relation verb - what it&rsquo;s related to</li>
-<li>English clause-embedding inference</li>
-<li>event factuality prediction &ndash;&gt; did the action happen? E.g., &ldquo;Forgot to <em>open</em> doors&rdquo; &ndash;&gt; it didn&rsquo;t happen</li>
-<li>verb related DS MegaVerdicality2; evaluate on 3 other DSs</li>
-<li>current SOTA fails at MV2 &ndash;&gt; aren&rsquo;t robust to variation in lexical and syntactic manner</li>
-</ul>
+        
+- what type of inference can we model with NN?
+- relation verb - what it's related to
+- English clause-embedding inference
+- event factuality prediction --> did the action happen? E.g., "Forgot to *open* doors" --> it didn't happen
+- verb related DS MegaVerdicality2; evaluate on 3 other DSs
+- current SOTA fails at MV2 --> aren't robust to variation in lexical and syntactic manner
 
     </div>
 </div>
@@ -1355,24 +1303,20 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Buechel et al.
-    	
-    	</span>
+        
+        Buechel et al.
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>prior work &ndash; no gold, no psychological background</li>
-<li>2 types:
-
-<ul>
-<li>Empathic concern &ndash; positive, other-focused</li>
-<li>Personal distress &ndash; negative, self-focused</li>
-</ul></li>
-<li>annotation as psychological experiment &ndash; read article, then write text and label (1-7) for both types</li>
-<li>baseline r=0.4 in Empathic and Distress</li>
-<li>Best is CNN with FastText</li>
-</ul>
+        
+- prior work -- no gold, no psychological background
+- 2 types:
+    - Empathic concern -- positive, other-focused
+    - Personal distress -- negative, self-focused
+- annotation as psychological experiment -- read article, then write text and label (1-7) for both types
+- baseline r=0.4 in Empathic and Distress
+- Best is CNN with FastText
 
     </div>
 </div>
@@ -1384,18 +1328,17 @@ Woman are just loud, but have jitter when telling the truth</li>
         <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
         <span>
         
-    	
-    	Barbieri et al.
-    	
-    	</span>
+        
+        Barbieri et al.
+        
+        </span>
     </div>
     <div class="expand-content" style="display: none;">
-        <ul>
-<li>attention block for each label</li>
-<li>BiLSTM &ndash;&gt; attention &ndash;&gt; linear |s|-&gt;1 &ndash;&gt; softmax</li>
-<li>helpful for infrequent labels, inhanced interpretability</li>
-<li>demo on <a href="https://fvancesco.github.io/label_wise_attention/" target="_blank">github</a></li>
-</ul>
+        
+- attention block for each label
+- BiLSTM --> attention --> linear |s|->1 --> softmax
+- helpful for infrequent labels, inhanced interpretability
+- demo on [github](https://fvancesco.github.io/label_wise_attention/)
 
     </div>
 </div>
@@ -1411,7 +1354,7 @@ Woman are just loud, but have jitter when telling the truth</li>
   
   <a class="badge badge-light" href="../tags/emnlp2018.html">emnlp2018</a>
   
-  <a class="badge badge-light" href="../tags/first-conference.html">first conference</a>
+  <a class="badge badge-light" href="">first conference</a>
   
 </div>
 
@@ -1426,11 +1369,11 @@ Woman are just loud, but have jitter when telling the truth</li>
 
 <div class="media author-card" itemscope itemtype="http://schema.org/Person">
   
-  <img class="portrait mr-3" src="../img/ja.png" itemprop="image" alt="Avatar">
+  <img class="portrait mr-3" src="../img/ja_pingu2.png" itemprop="image" alt="Avatar">
   
   <div class="media-body">
     <h5 class="card-title" itemprop="name"><a href="../">Ivan Sekulić</a></h5>
-    <h6 class="card-subtitle">Research Associate</h6>
+    <h6 class="card-subtitle">Research fellow</h6>
     
     <ul class="network-icon" aria-hidden="true">
       
