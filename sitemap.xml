@@ -1,18 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
     <url>
     
       <loc>/publication/adapting.html</loc>
-      <lastmod>2019-10-01T00:00:00+08:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/</loc>
-      <lastmod>2019-10-01T00:00:00+08:00</lastmod>
+      <lastmod>2019-10-01T00:00:00+02:00</lastmod>
     </url>
     
   
@@ -27,39 +20,7 @@
     
     <url>
     
-      <loc>/tags/nlp.html</loc>
-      <lastmod>2018-12-08T19:30:04+01:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags.html</loc>
-      <lastmod>2018-12-08T19:30:04+01:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/emnlp2018.html</loc>
-      <lastmod>2018-11-11T18:18:19+01:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/first-conference.html</loc>
-      <lastmod>2018-11-11T18:18:19+01:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/post/emnlp2018.html</loc>
+      <loc>/post/emnlp2018/</loc>
       <lastmod>2018-11-11T18:18:19+01:00</lastmod>
     </url>
     
@@ -68,7 +29,7 @@
     <url>
     
       <loc>/publication/bipolar.html</loc>
-      <lastmod>2018-10-31T00:00:00+08:00</lastmod>
+      <lastmod>2018-10-31T00:00:00+01:00</lastmod>
     </url>
     
   
@@ -76,7 +37,7 @@
     <url>
     
       <loc>/post.html</loc>
-      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
+      <lastmod>2017-01-01T00:00:00+01:00</lastmod>
     </url>
     
   
@@ -84,23 +45,7 @@
     <url>
     
       <loc>/publication.html</loc>
-      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/semeval2016.html</loc>
-      <lastmod>2016-06-16T00:00:00+08:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/stance-classification.html</loc>
-      <lastmod>2016-06-16T00:00:00+08:00</lastmod>
+      <lastmod>2017-01-01T00:00:00+01:00</lastmod>
     </url>
     
   
@@ -108,15 +53,7 @@
     <url>
     
       <loc>/publication/takelab_at_semeval.html</loc>
-      <lastmod>2016-06-16T00:00:00+08:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/tags/lrec2016.html</loc>
-      <lastmod>2016-05-25T00:00:00+00:00</lastmod>
+      <lastmod>2016-06-16T00:00:00+02:00</lastmod>
     </url>
     
   
@@ -132,6 +69,25 @@
     <url>
     
       <loc>/categories.html</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/</loc>
+      <lastmod>2017-10-15T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/nlp.html</loc>
+      <lastmod>2018-12-08T19:30:04+01:00</lastmod>
+      <priority>0</priority>
     </url>
     
   
@@ -139,6 +95,7 @@
     <url>
     
       <loc>/publication_types.html</loc>
+      <priority>0</priority>
     </url>
     
   
@@ -146,6 +103,69 @@
     <url>
     
       <loc>/talk.html</loc>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags.html</loc>
+      <lastmod>2018-12-08T19:30:04+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/emnlp2018.html</loc>
+      <lastmod>2018-11-11T18:18:19+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/first-conference.html</loc>
+      <lastmod>2018-11-11T18:18:19+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/lrec2016.html</loc>
+      <lastmod>2016-05-25T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/nlp.html</loc>
+      <lastmod>2016-06-16T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/semeval2016.html</loc>
+      <lastmod>2016-06-16T00:00:00+02:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/stance-classification.html</loc>
+      <lastmod>2016-06-16T00:00:00+02:00</lastmod>
+      <priority>0</priority>
     </url>
     
   

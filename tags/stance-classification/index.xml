@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>stance classification on NLPenguin</title>
+    <title>stance classification on Ivan Sekulic</title>
     <link>/tags/stance-classification.html</link>
-    <description>Recent content in stance classification on NLPenguin</description>
+    <description>Recent content in stance classification on Ivan Sekulic</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 16 Jun 2016 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jun 2016 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="/tags/stance-classification/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>TakeLab at SemEval-2016 Task 6: Stance Classification in Tweets Using a Genetic Algorithm Based Ensemble</title>
       <link>/publication/takelab_at_semeval.html</link>
-      <pubDate>Thu, 16 Jun 2016 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 16 Jun 2016 00:00:00 +0200</pubDate>
       
       <guid>/publication/takelab_at_semeval.html</guid>
       <description></description>

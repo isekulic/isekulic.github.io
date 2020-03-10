@@ -1,41 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>NLP on NLPenguin</title>
+    <title>nlp on Ivan Sekulic</title>
     <link>/tags/nlp.html</link>
-    <description>Recent content in NLP on NLPenguin</description>
+    <description>Recent content in nlp on Ivan Sekulic</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sat, 08 Dec 2018 19:30:04 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jun 2016 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>I learned something about Variational Inference in NLP</title>
-      <link>/post/dgms/dgms.html</link>
-      <pubDate>Sat, 08 Dec 2018 19:30:04 +0100</pubDate>
-      
-      <guid>/post/dgms/dgms.html</guid>
-      <description>Last week I had a chance to attend a truly great 2-day tutorial by Philip Schultz and Wilker Aziz. It was held in Mathematikon, Heidelberg and the guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official github page.
-This was my first experience with Variational Inference and Deep Generative Networks, so my head was spinning from the start. I tried to keep up as long as I could, finally losing grip on the second day.</description>
-    </item>
-    
-    <item>
-      <title>Notes from EMNLP 2018</title>
-      <link>/post/emnlp2018.html</link>
-      <pubDate>Sun, 11 Nov 2018 18:18:19 +0100</pubDate>
-      
-      <guid>/post/emnlp2018.html</guid>
-      <description>I&amp;rsquo;ve returned from EMNLP, my first big NLP conference, full of ideas, impressions and inspiration. I went there to present my paper on bipolar disorder prediction on Reddit at WASSA and, of course, to learn as much as I can! You can find my paper here. And yes, my talk went great, thanks for asking.
-Here I&amp;rsquo;d like to share my notes from all the talks I&amp;rsquo;ve attended. These were initially meant just for me, and I am probably the only one that will read them again :).</description>
-    </item>
-    
-    <item>
       <title>TakeLab at SemEval-2016 Task 6: Stance Classification in Tweets Using a Genetic Algorithm Based Ensemble</title>
       <link>/publication/takelab_at_semeval.html</link>
-      <pubDate>Thu, 16 Jun 2016 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 16 Jun 2016 00:00:00 +0200</pubDate>
       
       <guid>/publication/takelab_at_semeval.html</guid>
       <description></description>
