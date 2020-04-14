@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Ivan Sekulić">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Last week I had a chance to attend a truly great 2-day tutorial by Philip Schultz and Wilker Aziz. It was held in Mathematikon, Heidelberg and the guys really did an amazing job.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/dgms/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#ba4a71">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono%7CLora:400,700%7CRoboto:400,700&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/post/dgms/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@puding_p">
+  <meta property="twitter:creator" content="@puding_p">
+  
+  <meta property="og:site_name" content="Ivan Sekulić">
+  <meta property="og:url" content="/post/dgms/">
+  <meta property="og:title" content="I learned something about Variational Inference in NLP | Ivan Sekulić">
+  <meta property="og:description" content="Last week I had a chance to attend a truly great 2-day tutorial by Philip Schultz and Wilker Aziz. It was held in Mathematikon, Heidelberg and the guys really did an amazing job."><meta property="og:image" content="/img/avatar.jpg">
+  <meta property="twitter:image" content="/img/avatar.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2018-12-08T19:30:04&#43;01:00">
+    
+    <meta property="article:modified_time" content="2018-12-08T19:30:04&#43;01:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/dgms/"
+  },
+  "headline": "I learned something about Variational Inference in NLP",
+  
+  "datePublished": "2018-12-08T19:30:04+01:00",
+  "dateModified": "2018-12-08T19:30:04+01:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Ivan Sekulić"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Ivan Sekulić",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Last week I had a chance to attend a truly great 2-day tutorial by Philip Schultz and Wilker Aziz. It was held in Mathematikon, Heidelberg and the guys really did an amazing job."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>I learned something about Variational Inference in NLP | Ivan Sekulić</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Ivan Sekulić</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Ivan Sekulić</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/isekulic_cv_Apr_2020.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>I learned something about Variational Inference in NLP</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Dec 8, 2018
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Last week I had a chance to attend a truly great 2-day tutorial by 
+<a href="https://github.com/philschultz" target="_blank" rel="noopener">Philip Schultz</a> and 
+<a href="https://wilkeraziz.github.io/" target="_blank" rel="noopener">Wilker Aziz</a>. It was held in Mathematikon, Heidelberg and the guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official 
+<a href="https://github.com/philschulz/VITutorial" target="_blank" rel="noopener">github page</a>.</p>
+<p>This was my first experience with <strong>Variational Inference</strong> and <strong>Deep Generative Networks</strong>, so my head was spinning from the start. I tried to keep up as long as I could, finally losing grip on the second day. Nevertheless, I managed to gather my thoughts over the weekend, by going through 
+<a href="/files/vitutorial_notes.pdf">my notes</a> and finishing the coding part of the tutorial. You can find the solved jupyter notebook at my 
+<a href="https://github.com/isekulic/VITutorial" target="_blank" rel="noopener">github</a>. This post is an attempt to describe what I learned at a very high level, and in the process, wrap my head around it. The post will mostly be focused on <strong>Variational Autoencoders</strong> (VAE).</p>
+<h3 id="why-vae">Why VAE?</h3>
+<p>One of the most obvious reasons to turn to variational inference is their ability to find the underlying (latent) distribution of data, without the need for the data to be labeled.
+This is not only important because the majority of available data in the world is not labeled, but also, in many scientists&rsquo; opinions, is a way towards a (more) general artificial intelligence.
+Knowing the underlying distribution of our data can help us distinguish different samples, and at the same time learn specific aspects of the data.
+We know about the autoencoder&rsquo;s ability to learn the latent variables that can represent data, so why the need for VI?
+Well, Variational Autoencoders are much more than standard autoencoders, since they learn the real distribution which the data cames from, giving us the ability to create new samples by sampling that distribution &ndash; meaning they are a part of generative models family.</p>
+<h3 id="what-is-vae">What is VAE?</h3>
+<p>To start off, it&rsquo;s important to know what Generative Models are.
+A GM is any model of the joint probability distribution on $P(X, Z)$, with $X$ and $Z$ being random variables, observable and target variable, respectively.
+Another two important terms are <strong>the likelihood</strong> of observed data given the underlying (target) distribution $z$: $p(x|z)$, and <strong>the prior</strong> over $Z$: $p(z)$.
+By applying the good old Bayes rule, we find our goal to be computing <strong>the posterior</strong> p(z|x) = p(x|z)p(z), which is often impossible due to the unknown functional form of the posterior, or intractable computation.</p>
+<p>This is where <strong>Variational Inference</strong> comes in! We approximate uncomputable $p(z|x)$ by an auxiliary distribution $q(z)$ that is as close as possible to $p(z|x)$ and computable.
+Closeness of two distributions p and q is given with <strong>Kullback-Leibler divergence</strong> $KL(q || p)$, which is one of the backbones of VI.
+We won&rsquo;t go into explaining KL-divergence here, just note that it is asymetric and always $&gt;= 0$. You can find a detailed explanation 
+<a href="https://towardsdatascience.com/demystifying-kl-divergence-7ebe4317ee68" target="_blank" rel="noopener">here</a>.</p>
+<h3 id="how-does-it-work">How does it work?</h3>
+<p>As in standard autoencoders, we can think of our model&rsquo;s architecture as encoder-decoder networks.
+We have a <strong>generator (decoder)</strong> part of our model, which is used to generate samples $x$ from the latent representation $z$. It is defined as $p(x|z,\theta)$, where \theta are parameters of a neural network.
+Since everything in VAE is probabilistic, we are actually modeling mean $\mu_{x|z}$ and covariance $\Sigma_{x|z}$ of $p(x|z)$, assuming we chose Gaussian as our target distribution (we can chose whichever distribution makes sense).
+So, essentialy, we are always <strong>modeling the parameters of distributions</strong>.</p>
+<p>Ok, but how do we get the $z$? We use an <strong>inference (encoder)</strong> network to model mean and covariance of $p(z|x,\lambda)$, where $\lambda$ are the parameters of an inference neural network.
+Then we can sample from the distribution defined by $\mu_{z|x}$ and $\Sigma_{z|x}$ and get the latent representation $z$, that we then use as input to generator network.</p>
+<h3 id="all-together">All together</h3>
+<p>Given the data $x$, we use infrence network to model the latent distribution $p(z|x,\lambda)$. From that distribution, we sample $z$ and using generator network model the likelihood $p(x|z,\theta)$.
+But, how to we train both parts together?
+We have two parts of the loss function, one maximizing the likelihood of original input being reconstructed, and other forcing approximate posterior distribution in inference network close to prior (close means that we use KL-divergence).
+Training is actually maximizing the <strong>ELBO</strong> (Evidence Lower BOund), which we&rsquo;ll not go into here, but you can find its derivation in links below.
+Another important component is the <strong>reparametrization trick</strong>, which we use to make our complete network tractable, so we can backpropagate easily. In a nutshell, it just rewrites the problem so the distribution with respect to which we take the gradient is independent of network parameters, by using $\mathcal{N}(0, I)$.</p>
+<h3 id="cool-references">Cool references</h3>
+<p>If you are interested in learning more, and I&rsquo;m sure you are, I&rsquo;d recomend some of the following references:</p>
+<ul>
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=9zKuYvjFFS8" target="_blank" rel="noopener">Arxiv Insights&rsquo;</a> short, but great overview of VAEs.</p>
+</li>
+<li>
+<p>
+<a href="https://arxiv.org/abs/1606.05908" target="_blank" rel="noopener">VAE tutorial</a> by Carl Doersch.</p>
+</li>
+<li>
+<p>
+<a href="https://youtu.be/uaaqyVS9-rM" target="_blank" rel="noopener">Ali Ghodsi&rsquo;s lecture</a> that provides clear and intuitive explanation of all the math in VAEs.</p>
+</li>
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=5WoItGTWV54&amp;t=2703s" target="_blank" rel="noopener">Stanford&rsquo;s lecture</a> about generative models (great pictures).</p>
+</li>
+<li>
+<p>
+<a href="https://youtu.be/Yr1mOzC93xs" target="_blank" rel="noopener">Yoshua Bengio&rsquo;s talk</a> on disentangled representations and the future of AI.</p>
+</li>
+<li>
+<p>
+<a href="https://arxiv.org/abs/1601.00670" target="_blank" rel="noopener">Blei et al. (2016) paper</a> on Variational Inference.</p>
+</li>
+<li>
+<p>
+<a href="http://jmlr.org/papers/v18/16-107.html" target="_blank" rel="noopener">Kucukelbir et al. (2017) paper</a> on Automatic Differentiation Variational Inference.</p>
+</li>
+</ul>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/nlp/">NLP</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/dgms/&amp;text=I%20learned%20something%20about%20Variational%20Inference%20in%20NLP" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/dgms/&amp;t=I%20learned%20something%20about%20Variational%20Inference%20in%20NLP" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=I%20learned%20something%20about%20Variational%20Inference%20in%20NLP&amp;body=/post/dgms/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/dgms/&amp;title=I%20learned%20something%20about%20Variational%20Inference%20in%20NLP" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=I%20learned%20something%20about%20Variational%20Inference%20in%20NLP%20/post/dgms/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/dgms/&amp;title=I%20learned%20something%20about%20Variational%20Inference%20in%20NLP" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu38462b8852989f7755d53b4a0a948352_685449_270x270_fill_lanczos_center_2.png" alt="Ivan Sekulić">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">Ivan Sekulić</a></h5>
+      <h6 class="card-subtitle">PhD Student</h6>
+      <p class="card-text">My research interests include Conversational Information Retrieval and Natural Language Processing.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:ivan.sekulic@usi.ch" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/puding_p" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.de/citations?user=jxKS_4EAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/isekulic" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

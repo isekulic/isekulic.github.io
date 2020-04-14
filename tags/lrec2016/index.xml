@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>lrec2016 on Ivan Sekulic</title>
-    <link>/tags/lrec2016.html</link>
-    <description>Recent content in lrec2016 on Ivan Sekulic</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 25 May 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/lrec2016/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>lrec2016 | Ivan Sekulić</title>
+    <link>/tags/lrec2016/</link>
+      <atom:link href="/tags/lrec2016/index.xml" rel="self" type="application/rss+xml" />
+    <description>lrec2016</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 25 May 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/avatar.jpg</url>
+      <title>lrec2016</title>
+      <link>/tags/lrec2016/</link>
+    </image>
     
     <item>
       <title>VERBCROCEAN: A Repository of Fine-Grained Semantic Verb Relations for Croatian</title>
-      <link>/publication/verbcrocean.html</link>
+      <link>/publication/verbcrocean/</link>
       <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/verbcrocean.html</guid>
+      <guid>/publication/verbcrocean/</guid>
       <description></description>
     </item>
     

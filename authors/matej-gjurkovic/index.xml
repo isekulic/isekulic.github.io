@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Matej Gjurković | Ivan Sekulić</title>
+    <link>/authors/matej-gjurkovic/</link>
+      <atom:link href="/authors/matej-gjurkovic/index.xml" rel="self" type="application/rss+xml" />
+    <description>Matej Gjurković</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 31 Oct 2018 00:00:00 +0100</lastBuildDate>
+    <image>
+      <url>/img/avatar.jpg</url>
+      <title>Matej Gjurković</title>
+      <link>/authors/matej-gjurkovic/</link>
+    </image>
+    
+    <item>
+      <title>Not Just Depressed: Bipolar Disorder Prediction on Reddit</title>
+      <link>/publication/bipolar/</link>
+      <pubDate>Wed, 31 Oct 2018 00:00:00 +0100</pubDate>
+      <guid>/publication/bipolar/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

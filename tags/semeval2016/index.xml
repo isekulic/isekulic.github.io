@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>semeval2016 on Ivan Sekulic</title>
-    <link>/tags/semeval2016.html</link>
-    <description>Recent content in semeval2016 on Ivan Sekulic</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 16 Jun 2016 00:00:00 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/semeval2016/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>semeval2016 | Ivan Sekulić</title>
+    <link>/tags/semeval2016/</link>
+      <atom:link href="/tags/semeval2016/index.xml" rel="self" type="application/rss+xml" />
+    <description>semeval2016</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 16 Jun 2016 00:00:00 +0200</lastBuildDate>
+    <image>
+      <url>/img/avatar.jpg</url>
+      <title>semeval2016</title>
+      <link>/tags/semeval2016/</link>
+    </image>
     
     <item>
       <title>TakeLab at SemEval-2016 Task 6: Stance Classification in Tweets Using a Genetic Algorithm Based Ensemble</title>
-      <link>/publication/takelab_at_semeval.html</link>
+      <link>/publication/takelab_at_semeval/</link>
       <pubDate>Thu, 16 Jun 2016 00:00:00 +0200</pubDate>
-      
-      <guid>/publication/takelab_at_semeval.html</guid>
+      <guid>/publication/takelab_at_semeval/</guid>
       <description></description>
     </item>
     

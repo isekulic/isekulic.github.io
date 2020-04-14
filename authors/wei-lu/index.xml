@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wei Lu | Ivan Sekulić</title>
+    <link>/authors/wei-lu/</link>
+      <atom:link href="/authors/wei-lu/index.xml" rel="self" type="application/rss+xml" />
+    <description>Wei Lu</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0200</lastBuildDate>
+    <image>
+      <url>/img/avatar.jpg</url>
+      <title>Wei Lu</title>
+      <link>/authors/wei-lu/</link>
+    </image>
+    
+    <item>
+      <title>Reasoning with Latent Structure Refinement for Document-Level Relation Extraction (to appear in ACL 2020)</title>
+      <link>/publication/reasoning/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0200</pubDate>
+      <guid>/publication/reasoning/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

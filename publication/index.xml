@@ -1,50 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications on Ivan Sekulic</title>
-    <link>/publication.html</link>
-    <description>Recent content in Publications on Ivan Sekulic</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0100</lastBuildDate>
+    <title>Publications | Ivan Sekulić</title>
+    <link>/publication/</link>
+      <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0200</lastBuildDate>
+    <image>
+      <url>/img/avatar.jpg</url>
+      <title>Publications</title>
+      <link>/publication/</link>
+    </image>
     
-	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Reasoning with Latent Structure Refinement for Document-Level Relation Extraction (to appear in ACL 2020)</title>
+      <link>/publication/reasoning/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0200</pubDate>
+      <guid>/publication/reasoning/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Adapting Deep Learning Methods for Mental Health Prediction on Social Media</title>
-      <link>/publication/adapting.html</link>
+      <link>/publication/adapting/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0200</pubDate>
-      
-      <guid>/publication/adapting.html</guid>
+      <guid>/publication/adapting/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Not Just Depressed: Bipolar Disorder Prediction on Reddit</title>
-      <link>/publication/bipolar.html</link>
+      <link>/publication/bipolar/</link>
       <pubDate>Wed, 31 Oct 2018 00:00:00 +0100</pubDate>
-      
-      <guid>/publication/bipolar.html</guid>
+      <guid>/publication/bipolar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TakeLab at SemEval-2016 Task 6: Stance Classification in Tweets Using a Genetic Algorithm Based Ensemble</title>
-      <link>/publication/takelab_at_semeval.html</link>
+      <link>/publication/takelab_at_semeval/</link>
       <pubDate>Thu, 16 Jun 2016 00:00:00 +0200</pubDate>
-      
-      <guid>/publication/takelab_at_semeval.html</guid>
+      <guid>/publication/takelab_at_semeval/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VERBCROCEAN: A Repository of Fine-Grained Semantic Verb Relations for Croatian</title>
-      <link>/publication/verbcrocean.html</link>
+      <link>/publication/verbcrocean/</link>
       <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/verbcrocean.html</guid>
+      <guid>/publication/verbcrocean/</guid>
       <description></description>
     </item>
     

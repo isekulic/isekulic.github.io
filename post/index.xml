@@ -1,35 +1,90 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Ivan Sekulic</title>
-    <link>/post.html</link>
-    <description>Recent content in Posts on Ivan Sekulic</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0100</lastBuildDate>
-    
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>Posts | Ivan Sekulić</title>
+    <link>/post/</link>
+      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 08 Dec 2018 19:30:04 +0100</lastBuildDate>
+    <image>
+      <url>/img/avatar.jpg</url>
+      <title>Posts</title>
+      <link>/post/</link>
+    </image>
     
     <item>
       <title>I learned something about Variational Inference in NLP</title>
-      <link>/post/dgms/dgms.html</link>
+      <link>/post/dgms/</link>
       <pubDate>Sat, 08 Dec 2018 19:30:04 +0100</pubDate>
-      
-      <guid>/post/dgms/dgms.html</guid>
-      <description>Last week I had a chance to attend a truly great 2-day tutorial by Philip Schultz and Wilker Aziz. It was held in Mathematikon, Heidelberg and the guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official github page.
-This was my first experience with Variational Inference and Deep Generative Networks, so my head was spinning from the start. I tried to keep up as long as I could, finally losing grip on the second day.</description>
-    </item>
-    
-    <item>
-      <title>Notes from EMNLP 2018</title>
-      <link>/post/emnlp2018/</link>
-      <pubDate>Sun, 11 Nov 2018 18:18:19 +0100</pubDate>
-      
-      <guid>/post/emnlp2018/</guid>
-      <description>I&amp;rsquo;ve returned from EMNLP, my first big NLP conference, full of ideas, impressions and inspiration. I went there to present my paper on bipolar disorder prediction on Reddit at WASSA and, of course, to learn as much as I can! You can find my paper here. And yes, my talk went great, thanks for asking.
-Here I&amp;rsquo;d like to share my notes from all the talks I&amp;rsquo;ve attended. These were initially meant just for me, and I am probably the only one that will read them again :).</description>
+      <guid>/post/dgms/</guid>
+      <description>&lt;p&gt;Last week I had a chance to attend a truly great 2-day tutorial by 
+&lt;a href=&#34;https://github.com/philschultz&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Philip Schultz&lt;/a&gt; and 
+&lt;a href=&#34;https://wilkeraziz.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wilker Aziz&lt;/a&gt;. It was held in Mathematikon, Heidelberg and the guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official 
+&lt;a href=&#34;https://github.com/philschulz/VITutorial&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;github page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This was my first experience with &lt;strong&gt;Variational Inference&lt;/strong&gt; and &lt;strong&gt;Deep Generative Networks&lt;/strong&gt;, so my head was spinning from the start. I tried to keep up as long as I could, finally losing grip on the second day. Nevertheless, I managed to gather my thoughts over the weekend, by going through 
+&lt;a href=&#34;/files/vitutorial_notes.pdf&#34;&gt;my notes&lt;/a&gt; and finishing the coding part of the tutorial. You can find the solved jupyter notebook at my 
+&lt;a href=&#34;https://github.com/isekulic/VITutorial&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;github&lt;/a&gt;. This post is an attempt to describe what I learned at a very high level, and in the process, wrap my head around it. The post will mostly be focused on &lt;strong&gt;Variational Autoencoders&lt;/strong&gt; (VAE).&lt;/p&gt;
+&lt;h3 id=&#34;why-vae&#34;&gt;Why VAE?&lt;/h3&gt;
+&lt;p&gt;One of the most obvious reasons to turn to variational inference is their ability to find the underlying (latent) distribution of data, without the need for the data to be labeled.
+This is not only important because the majority of available data in the world is not labeled, but also, in many scientists&amp;rsquo; opinions, is a way towards a (more) general artificial intelligence.
+Knowing the underlying distribution of our data can help us distinguish different samples, and at the same time learn specific aspects of the data.
+We know about the autoencoder&amp;rsquo;s ability to learn the latent variables that can represent data, so why the need for VI?
+Well, Variational Autoencoders are much more than standard autoencoders, since they learn the real distribution which the data cames from, giving us the ability to create new samples by sampling that distribution &amp;ndash; meaning they are a part of generative models family.&lt;/p&gt;
+&lt;h3 id=&#34;what-is-vae&#34;&gt;What is VAE?&lt;/h3&gt;
+&lt;p&gt;To start off, it&amp;rsquo;s important to know what Generative Models are.
+A GM is any model of the joint probability distribution on $P(X, Z)$, with $X$ and $Z$ being random variables, observable and target variable, respectively.
+Another two important terms are &lt;strong&gt;the likelihood&lt;/strong&gt; of observed data given the underlying (target) distribution $z$: $p(x|z)$, and &lt;strong&gt;the prior&lt;/strong&gt; over $Z$: $p(z)$.
+By applying the good old Bayes rule, we find our goal to be computing &lt;strong&gt;the posterior&lt;/strong&gt; p(z|x) = p(x|z)p(z), which is often impossible due to the unknown functional form of the posterior, or intractable computation.&lt;/p&gt;
+&lt;p&gt;This is where &lt;strong&gt;Variational Inference&lt;/strong&gt; comes in! We approximate uncomputable $p(z|x)$ by an auxiliary distribution $q(z)$ that is as close as possible to $p(z|x)$ and computable.
+Closeness of two distributions p and q is given with &lt;strong&gt;Kullback-Leibler divergence&lt;/strong&gt; $KL(q || p)$, which is one of the backbones of VI.
+We won&amp;rsquo;t go into explaining KL-divergence here, just note that it is asymetric and always $&amp;gt;= 0$. You can find a detailed explanation 
+&lt;a href=&#34;https://towardsdatascience.com/demystifying-kl-divergence-7ebe4317ee68&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;how-does-it-work&#34;&gt;How does it work?&lt;/h3&gt;
+&lt;p&gt;As in standard autoencoders, we can think of our model&amp;rsquo;s architecture as encoder-decoder networks.
+We have a &lt;strong&gt;generator (decoder)&lt;/strong&gt; part of our model, which is used to generate samples $x$ from the latent representation $z$. It is defined as $p(x|z,\theta)$, where \theta are parameters of a neural network.
+Since everything in VAE is probabilistic, we are actually modeling mean $\mu_{x|z}$ and covariance $\Sigma_{x|z}$ of $p(x|z)$, assuming we chose Gaussian as our target distribution (we can chose whichever distribution makes sense).
+So, essentialy, we are always &lt;strong&gt;modeling the parameters of distributions&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Ok, but how do we get the $z$? We use an &lt;strong&gt;inference (encoder)&lt;/strong&gt; network to model mean and covariance of $p(z|x,\lambda)$, where $\lambda$ are the parameters of an inference neural network.
+Then we can sample from the distribution defined by $\mu_{z|x}$ and $\Sigma_{z|x}$ and get the latent representation $z$, that we then use as input to generator network.&lt;/p&gt;
+&lt;h3 id=&#34;all-together&#34;&gt;All together&lt;/h3&gt;
+&lt;p&gt;Given the data $x$, we use infrence network to model the latent distribution $p(z|x,\lambda)$. From that distribution, we sample $z$ and using generator network model the likelihood $p(x|z,\theta)$.
+But, how to we train both parts together?
+We have two parts of the loss function, one maximizing the likelihood of original input being reconstructed, and other forcing approximate posterior distribution in inference network close to prior (close means that we use KL-divergence).
+Training is actually maximizing the &lt;strong&gt;ELBO&lt;/strong&gt; (Evidence Lower BOund), which we&amp;rsquo;ll not go into here, but you can find its derivation in links below.
+Another important component is the &lt;strong&gt;reparametrization trick&lt;/strong&gt;, which we use to make our complete network tractable, so we can backpropagate easily. In a nutshell, it just rewrites the problem so the distribution with respect to which we take the gradient is independent of network parameters, by using $\mathcal{N}(0, I)$.&lt;/p&gt;
+&lt;h3 id=&#34;cool-references&#34;&gt;Cool references&lt;/h3&gt;
+&lt;p&gt;If you are interested in learning more, and I&amp;rsquo;m sure you are, I&amp;rsquo;d recomend some of the following references:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=9zKuYvjFFS8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Arxiv Insights&amp;rsquo;&lt;/a&gt; short, but great overview of VAEs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://arxiv.org/abs/1606.05908&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VAE tutorial&lt;/a&gt; by Carl Doersch.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://youtu.be/uaaqyVS9-rM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ali Ghodsi&amp;rsquo;s lecture&lt;/a&gt; that provides clear and intuitive explanation of all the math in VAEs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=5WoItGTWV54&amp;amp;t=2703s&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stanford&amp;rsquo;s lecture&lt;/a&gt; about generative models (great pictures).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://youtu.be/Yr1mOzC93xs&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Yoshua Bengio&amp;rsquo;s talk&lt;/a&gt; on disentangled representations and the future of AI.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://arxiv.org/abs/1601.00670&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Blei et al. (2016) paper&lt;/a&gt; on Variational Inference.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://jmlr.org/papers/v18/16-107.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kucukelbir et al. (2017) paper&lt;/a&gt; on Automatic Differentiation Variational Inference.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
   </channel>

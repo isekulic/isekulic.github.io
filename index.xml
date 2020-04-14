@@ -1,1170 +1,129 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ivan Sekulic on Ivan Sekulic</title>
+    <title>Ivan Sekulić</title>
     <link>/</link>
-    <description>Recent content in Ivan Sekulic on Ivan Sekulic</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0200</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
+      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ivan Sekulić</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0200</lastBuildDate>
+    <image>
+      <url>/img/avatar.jpg</url>
+      <title>Ivan Sekulić</title>
+      <link>/</link>
+    </image>
+    
+    <item>
+      <title>Reasoning with Latent Structure Refinement for Document-Level Relation Extraction (to appear in ACL 2020)</title>
+      <link>/publication/reasoning/</link>
+      <pubDate>Fri, 10 Apr 2020 00:00:00 +0200</pubDate>
+      <guid>/publication/reasoning/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Adapting Deep Learning Methods for Mental Health Prediction on Social Media</title>
-      <link>/publication/adapting.html</link>
+      <link>/publication/adapting/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0200</pubDate>
-      
-      <guid>/publication/adapting.html</guid>
+      <guid>/publication/adapting/</guid>
       <description></description>
     </item>
     
     <item>
       <title>I learned something about Variational Inference in NLP</title>
-      <link>/post/dgms/dgms.html</link>
+      <link>/post/dgms/</link>
       <pubDate>Sat, 08 Dec 2018 19:30:04 +0100</pubDate>
-      
-      <guid>/post/dgms/dgms.html</guid>
-      <description>
-
-&lt;p&gt;Last week I had a chance to attend a truly great 2-day tutorial by &lt;a href=&#34;https://github.com/philschultz&#34; target=&#34;_blank&#34;&gt;Philip Schultz&lt;/a&gt; and &lt;a href=&#34;https://wilkeraziz.github.io/&#34; target=&#34;_blank&#34;&gt;Wilker Aziz&lt;/a&gt;. It was held in Mathematikon, Heidelberg and the guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official &lt;a href=&#34;https://github.com/philschulz/VITutorial&#34; target=&#34;_blank&#34;&gt;github page&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This was my first experience with &lt;strong&gt;Variational Inference&lt;/strong&gt; and &lt;strong&gt;Deep Generative Networks&lt;/strong&gt;, so my head was spinning from the start. I tried to keep up as long as I could, finally losing grip on the second day. Nevertheless, I managed to gather my thoughts over the weekend, by going through &lt;a href=&#34;./files/vitutorial_notes.pdf&#34;&gt;my notes&lt;/a&gt; and finishing the coding part of the tutorial. You can find the solved jupyter notebook at my &lt;a href=&#34;https://github.com/isekulic/VITutorial&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;. This post is an attempt to describe what I learned at a very high level, and in the process, wrap my head around it. The post will mostly be focused on &lt;strong&gt;Variational Autoencoders&lt;/strong&gt; (VAE).&lt;/p&gt;
-
+      <guid>/post/dgms/</guid>
+      <description>&lt;p&gt;Last week I had a chance to attend a truly great 2-day tutorial by 
+&lt;a href=&#34;https://github.com/philschultz&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Philip Schultz&lt;/a&gt; and 
+&lt;a href=&#34;https://wilkeraziz.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wilker Aziz&lt;/a&gt;. It was held in Mathematikon, Heidelberg and the guys really did an amazing job. You can find the slides and a practice notebook on the tutorial’s official 
+&lt;a href=&#34;https://github.com/philschulz/VITutorial&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;github page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This was my first experience with &lt;strong&gt;Variational Inference&lt;/strong&gt; and &lt;strong&gt;Deep Generative Networks&lt;/strong&gt;, so my head was spinning from the start. I tried to keep up as long as I could, finally losing grip on the second day. Nevertheless, I managed to gather my thoughts over the weekend, by going through 
+&lt;a href=&#34;/files/vitutorial_notes.pdf&#34;&gt;my notes&lt;/a&gt; and finishing the coding part of the tutorial. You can find the solved jupyter notebook at my 
+&lt;a href=&#34;https://github.com/isekulic/VITutorial&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;github&lt;/a&gt;. This post is an attempt to describe what I learned at a very high level, and in the process, wrap my head around it. The post will mostly be focused on &lt;strong&gt;Variational Autoencoders&lt;/strong&gt; (VAE).&lt;/p&gt;
 &lt;h3 id=&#34;why-vae&#34;&gt;Why VAE?&lt;/h3&gt;
-
 &lt;p&gt;One of the most obvious reasons to turn to variational inference is their ability to find the underlying (latent) distribution of data, without the need for the data to be labeled.
 This is not only important because the majority of available data in the world is not labeled, but also, in many scientists&amp;rsquo; opinions, is a way towards a (more) general artificial intelligence.
 Knowing the underlying distribution of our data can help us distinguish different samples, and at the same time learn specific aspects of the data.
 We know about the autoencoder&amp;rsquo;s ability to learn the latent variables that can represent data, so why the need for VI?
 Well, Variational Autoencoders are much more than standard autoencoders, since they learn the real distribution which the data cames from, giving us the ability to create new samples by sampling that distribution &amp;ndash; meaning they are a part of generative models family.&lt;/p&gt;
-
 &lt;h3 id=&#34;what-is-vae&#34;&gt;What is VAE?&lt;/h3&gt;
-
 &lt;p&gt;To start off, it&amp;rsquo;s important to know what Generative Models are.
- A GM is any model of the joint probability distribution on $P(X, Z)$, with $X$ and $Z$ being random variables, observable and target variable, respectively.
- Another two important terms are &lt;strong&gt;the likelihood&lt;/strong&gt; of observed data given the underlying (target) distribution $z$: $p(x|z)$, and &lt;strong&gt;the prior&lt;/strong&gt; over $Z$: $p(z)$.
- By applying the good old Bayes rule, we find our goal to be computing &lt;strong&gt;the posterior&lt;/strong&gt; p(z|x) = p(x|z)p(z), which is often impossible due to the unknown functional form of the posterior, or intractable computation.&lt;/p&gt;
-
+A GM is any model of the joint probability distribution on $P(X, Z)$, with $X$ and $Z$ being random variables, observable and target variable, respectively.
+Another two important terms are &lt;strong&gt;the likelihood&lt;/strong&gt; of observed data given the underlying (target) distribution $z$: $p(x|z)$, and &lt;strong&gt;the prior&lt;/strong&gt; over $Z$: $p(z)$.
+By applying the good old Bayes rule, we find our goal to be computing &lt;strong&gt;the posterior&lt;/strong&gt; p(z|x) = p(x|z)p(z), which is often impossible due to the unknown functional form of the posterior, or intractable computation.&lt;/p&gt;
 &lt;p&gt;This is where &lt;strong&gt;Variational Inference&lt;/strong&gt; comes in! We approximate uncomputable $p(z|x)$ by an auxiliary distribution $q(z)$ that is as close as possible to $p(z|x)$ and computable.
- Closeness of two distributions p and q is given with &lt;strong&gt;Kullback-Leibler divergence&lt;/strong&gt; $KL(q || p)$, which is one of the backbones of VI.
- We won&amp;rsquo;t go into explaining KL-divergence here, just note that it is asymetric and always $&amp;gt;= 0$. You can find a detailed explanation &lt;a href=&#34;https://towardsdatascience.com/demystifying-kl-divergence-7ebe4317ee68&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
+Closeness of two distributions p and q is given with &lt;strong&gt;Kullback-Leibler divergence&lt;/strong&gt; $KL(q || p)$, which is one of the backbones of VI.
+We won&amp;rsquo;t go into explaining KL-divergence here, just note that it is asymetric and always $&amp;gt;= 0$. You can find a detailed explanation 
+&lt;a href=&#34;https://towardsdatascience.com/demystifying-kl-divergence-7ebe4317ee68&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;how-does-it-work&#34;&gt;How does it work?&lt;/h3&gt;
-
 &lt;p&gt;As in standard autoencoders, we can think of our model&amp;rsquo;s architecture as encoder-decoder networks.
 We have a &lt;strong&gt;generator (decoder)&lt;/strong&gt; part of our model, which is used to generate samples $x$ from the latent representation $z$. It is defined as $p(x|z,\theta)$, where \theta are parameters of a neural network.
 Since everything in VAE is probabilistic, we are actually modeling mean $\mu_{x|z}$ and covariance $\Sigma_{x|z}$ of $p(x|z)$, assuming we chose Gaussian as our target distribution (we can chose whichever distribution makes sense).
 So, essentialy, we are always &lt;strong&gt;modeling the parameters of distributions&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;p&gt;Ok, but how do we get the $z$? We use an &lt;strong&gt;inference (encoder)&lt;/strong&gt; network to model mean and covariance of $p(z|x,\lambda)$, where $\lambda$ are the parameters of an inference neural network.
 Then we can sample from the distribution defined by $\mu_{z|x}$ and $\Sigma_{z|x}$ and get the latent representation $z$, that we then use as input to generator network.&lt;/p&gt;
-
 &lt;h3 id=&#34;all-together&#34;&gt;All together&lt;/h3&gt;
-
 &lt;p&gt;Given the data $x$, we use infrence network to model the latent distribution $p(z|x,\lambda)$. From that distribution, we sample $z$ and using generator network model the likelihood $p(x|z,\theta)$.
 But, how to we train both parts together?
 We have two parts of the loss function, one maximizing the likelihood of original input being reconstructed, and other forcing approximate posterior distribution in inference network close to prior (close means that we use KL-divergence).
 Training is actually maximizing the &lt;strong&gt;ELBO&lt;/strong&gt; (Evidence Lower BOund), which we&amp;rsquo;ll not go into here, but you can find its derivation in links below.
 Another important component is the &lt;strong&gt;reparametrization trick&lt;/strong&gt;, which we use to make our complete network tractable, so we can backpropagate easily. In a nutshell, it just rewrites the problem so the distribution with respect to which we take the gradient is independent of network parameters, by using $\mathcal{N}(0, I)$.&lt;/p&gt;
-
 &lt;h3 id=&#34;cool-references&#34;&gt;Cool references&lt;/h3&gt;
-
 &lt;p&gt;If you are interested in learning more, and I&amp;rsquo;m sure you are, I&amp;rsquo;d recomend some of the following references:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=9zKuYvjFFS8&#34; target=&#34;_blank&#34;&gt;Arxiv Insights&amp;rsquo;&lt;/a&gt; short, but great overview of VAEs.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1606.05908&#34; target=&#34;_blank&#34;&gt;VAE tutorial&lt;/a&gt; by Carl Doersch.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://youtu.be/uaaqyVS9-rM&#34; target=&#34;_blank&#34;&gt;Ali Ghodsi&amp;rsquo;s lecture&lt;/a&gt; that provides clear and intuitive explanation of all the math in VAEs.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=5WoItGTWV54&amp;amp;t=2703s&#34; target=&#34;_blank&#34;&gt;Stanford&amp;rsquo;s lecture&lt;/a&gt; about generative models (great pictures).&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://youtu.be/Yr1mOzC93xs&#34; target=&#34;_blank&#34;&gt;Yoshua Bengio&amp;rsquo;s talk&lt;/a&gt; on disentangled representations and the future of AI.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://arxiv.org/abs/1601.00670&#34; target=&#34;_blank&#34;&gt;Blei et al. (2016) paper&lt;/a&gt; on Variational Inference.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://jmlr.org/papers/v18/16-107.html&#34; target=&#34;_blank&#34;&gt;Kucukelbir et al. (2017) paper&lt;/a&gt; on Automatic Differentiation Variational Inference.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=9zKuYvjFFS8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Arxiv Insights&amp;rsquo;&lt;/a&gt; short, but great overview of VAEs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://arxiv.org/abs/1606.05908&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VAE tutorial&lt;/a&gt; by Carl Doersch.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://youtu.be/uaaqyVS9-rM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ali Ghodsi&amp;rsquo;s lecture&lt;/a&gt; that provides clear and intuitive explanation of all the math in VAEs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=5WoItGTWV54&amp;amp;t=2703s&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stanford&amp;rsquo;s lecture&lt;/a&gt; about generative models (great pictures).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://youtu.be/Yr1mOzC93xs&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Yoshua Bengio&amp;rsquo;s talk&lt;/a&gt; on disentangled representations and the future of AI.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://arxiv.org/abs/1601.00670&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Blei et al. (2016) paper&lt;/a&gt; on Variational Inference.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://jmlr.org/papers/v18/16-107.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kucukelbir et al. (2017) paper&lt;/a&gt; on Automatic Differentiation Variational Inference.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Notes from EMNLP 2018</title>
-      <link>/post/emnlp2018/</link>
-      <pubDate>Sun, 11 Nov 2018 18:18:19 +0100</pubDate>
-      
-      <guid>/post/emnlp2018/</guid>
-      <description>
-
-&lt;p&gt;I&amp;rsquo;ve returned from EMNLP, my first big NLP conference, full of ideas, impressions and inspiration. I went there to present my paper on bipolar disorder prediction on Reddit at WASSA and, of course, to learn as much as I can! You can find my paper &lt;a href=&#34;https://arxiv.org/abs/1811.04655&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. And yes, my talk went great, thanks for asking.&lt;/p&gt;
-
-&lt;p&gt;Here I&amp;rsquo;d like to share my notes from all the talks I&amp;rsquo;ve attended. These were initially meant just for me, and I am probably the only one that will read them again :).&lt;/p&gt;
-
-&lt;p&gt;Table of Contents:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#day1&#34;&gt;Day 1&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#julia&#34;&gt;Keynote by Julia Hirschberg&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#s1&#34;&gt;Session 1: Social Applications 1&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#s2&#34;&gt;Session 2: Social Media&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#s3&#34;&gt;Session 3: Machine Learning&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#s4&#34;&gt;Session 4: Language Models&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#day2&#34;&gt;Day 2&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#s5&#34;&gt;Session 5: Machine Learning 2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#s7&#34;&gt;Session 7: Social Application 2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#gideon&#34;&gt;Keynote by Gideon Mann&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#s8&#34;&gt;Session 8: Text Categorization&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#day3&#34;&gt;Day 3&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#s9&#34;&gt;Session 9: Sentiment 1 &amp;amp; Machine Learning 3&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#s10&#34;&gt;Session 10: Discourse&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;#s11&#34;&gt;Session 11: Analyzing Models &amp;amp; Sentiment 2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;day-1-a-name-day1-a&#34;&gt;DAY 1 &lt;a name=&#34;day1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h6 id=&#34;julia-hirschberg-keynote-truth-or-lie-spoken-indicators-of-deception-in-speech-a-name-julia-a&#34;&gt;Julia Hirschberg Keynote: &amp;ldquo;Truth or Lie? Spoken Indicators of Deception in Speech&amp;rdquo; &lt;a name=&#34;julia&#34;&gt;&lt;/a&gt;&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	notes
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;deceptive speech &amp;ndash; deliberate choice to mislead&lt;/li&gt;
-&lt;li&gt;criminals are better than police, judges and similar in detecting it&lt;/li&gt;
-&lt;li&gt;there are acoustic-prosodic and lexical cues&lt;/li&gt;
-&lt;li&gt;system should take individual differences into account: gender, ethinicity&amp;hellip;&lt;/li&gt;
-&lt;li&gt;existing dataset: Columbia SRI Colorado Deception corpus (7h of speech, 32 subjects, 70% acc)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;created a cross-lingual dataset&lt;/strong&gt;: 340 subjects, 122h of speech, native english speakers
-questioning native chinese speakers who know english (and vice versa)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;features&lt;/strong&gt;: n-grams, LIWC, word embeddings, speech-based (openSMILE, ISO9), gender, native language,
-NEO-FFIs personality scores, syntactic features&lt;/li&gt;
-&lt;li&gt;Methods: Random Forest, SVM, DL &amp;ndash; BiLSTM-lexical + DNN-speech yielding 0.65 F1&lt;/li&gt;
-&lt;li&gt;Best model: Multi-Task Learning with personality traits &lt;strong&gt;74.4 F1&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Significant differences in deceptive speech: Men are loud with higher pich when lying;
-Woman are just loud, but have jitter when telling the truth&lt;/li&gt;
-&lt;li&gt;Human accuracy: 56.76%&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;session-1-social-applications-1-a-name-s1-a&#34;&gt;Session 1: Social Applications 1 &lt;a name=&#34;s1&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h6 id=&#34;privacy-preserving-neural-representations-of-text&#34;&gt;Privacy-preserving Neural Representations of Text&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Coavoux, Narayan, and Cohen
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;explicit private information can be preprocessed, but implicit (age, authorship) can&amp;rsquo;t&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Can attacker guess about input text based on hidden representation?&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Target private variables: age, gender, named entities that occur in the text&lt;/li&gt;
-&lt;li&gt;attacker eavesdrops while learning the model &amp;ndash; attacker beats the baseline for age and gender just based on hidden r&lt;/li&gt;
-&lt;li&gt;defence: double objective (loss_clf = -logP(y|x) - loss_attacker) or adversarial generation (LM)&lt;/li&gt;
-&lt;li&gt;conclusion: latent representations contain a signal for private information&lt;/li&gt;
-&lt;li&gt;code on &lt;a href=&#34;https://github.com/mcoavoux/pnet&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;adversarial-removal-of-demographic-attributes-from-text-data&#34;&gt;Adversarial Removal of Demographic Attributes from Text Data&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Elazar and Goldberg
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;while learning DeepEmoji attacker eavesdrops &amp;ndash;&amp;gt; hich leakage&lt;/li&gt;
-&lt;li&gt;Actively reduce leakage with adversarial setup (Ganing and Lempitsy, 2015) &amp;ndash;&amp;gt; remove stuff from representation, but still some leakage&lt;/li&gt;
-&lt;li&gt;Their method: use more layers for adversarial reversal layer; bigger \lambda to reverse with; &amp;gt; 1 adversaries &amp;ndash;&amp;gt; they learned diff features&lt;/li&gt;
-&lt;li&gt;still not perfect!&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;declare-debunking-fake-news-and-false-claims-using-evidence-aware-deep-learning&#34;&gt;DeClarE: Debunking Fake News and False Claims using Evidence-Aware Deep Learning&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Popat, Mukherjee, Yates, and Weikum
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;prior work: supervised learning (doesn&amp;rsquo;t use external knowledge) &amp;amp; external sources (require feature modeling and lexicons). Why people don&amp;rsquo;t like feature modeling any more? :)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;overcame flaws&lt;/em&gt; with: end-to-end NN that takes the external resources into account without human intervention&lt;/li&gt;
-&lt;li&gt;Approach:
-
-&lt;ul&gt;
-&lt;li&gt;external evidence &amp;ndash; &lt;em&gt;search engine&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;language style, semantics &amp;ndash; &lt;em&gt;BiLSTM&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;interaction claim-external &amp;ndash; &lt;em&gt;Attention&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;credibility score based on all of that&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;beat the baseline on 4 datasets&lt;/li&gt;
-&lt;li&gt;analysis showed clear clusters of Fake and Trusted websites (CNN&amp;hellip;)&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;it-s-going-to-be-okay-measuring-access-to-support-in-online-communities&#34;&gt;It&amp;rsquo;s going to be okay: Measuring Access to Support in Online Communities&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Wang and Jurgens
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;minimal identity cues are important &amp;ndash; username that reveals gender or interests (catlady22, pizzamaniac&amp;hellip;)&lt;/li&gt;
-&lt;li&gt;support is more than encouragement (14 strategies: validation, advice&amp;hellip;)&lt;/li&gt;
-&lt;li&gt;dataset: post-reply from Reddit, Wiki, Stack Exchange&lt;/li&gt;
-&lt;li&gt;goal: &lt;strong&gt;rate the reply as&lt;/strong&gt;: &lt;em&gt;support, polite, agree, offensive&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;most important features are from LIWC &amp;ndash;&amp;gt; support in theory&lt;/li&gt;
-&lt;li&gt;constructed massive gender-performance DS from usernames&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Who recieves support?&lt;/strong&gt; &amp;ndash; woman get more support, but also more disparagement&lt;/li&gt;
-&lt;li&gt;code and data on &lt;a href=&#34;https://github.com/davidjurgens/support&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;detecting-gang-involved-escalation-on-social-media-using-context&#34;&gt;Detecting Gang-Involved Escalation on Social Media Using Context&lt;/h6&gt;
-
-&lt;p&gt;&lt;em&gt;Chang et al.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;session-2-social-media-a-name-s2-a&#34;&gt;Session 2: Social Media &lt;a name=&#34;s2&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h6 id=&#34;joint-learning-for-emotion-classification-and-emotion-cause-detection&#34;&gt;Joint Learning for Emotion Classification and Emotion Cause Detection&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Chen, Hou, Cheng, and Li
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;two tasks: (1) emotion classification and (2) emotion cause detection&lt;/li&gt;
-&lt;li&gt;they argue &lt;strong&gt;it&amp;rsquo;s not hard to label cause while you are labeling for emotions&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;joint encoder &amp;amp; linear decoder&lt;/li&gt;
-&lt;li&gt;joint learning improves F1 (is it significant? &amp;ndash;&amp;gt; check paper)&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;exploring-optimism-and-pessimism-in-twitter-using-deep-learning&#34;&gt;Exploring Optimism and Pessimism in Twitter Using Deep Learning&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Caragea, Dinu, and Dumitru
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;they argue &lt;strong&gt;there is a difference between sentiment and optimisim/pessimism&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Dataset: 10k tweets labeled between -3 (most pessimistic) to 3 (most optimistic)&lt;/li&gt;
-&lt;li&gt;when 0 is treshold &amp;ndash;&amp;gt; 80% Acc; when (-1) and 1 are &amp;ndash;&amp;gt; 90% Acc&lt;/li&gt;
-&lt;li&gt;deep learning architecture&lt;/li&gt;
-&lt;li&gt;different from sentiment: when trained on sentiment dataset, they get poor results. Q: They trained only Stanford analyzer, what when you train a NN like for the main task?&lt;/li&gt;
-&lt;li&gt;verb tense analysis&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;predicting-news-headline-popularity-with-syntactic-and-semantic-knowledge-using-multi-task-learning&#34;&gt;Predicting News Headline Popularity with Syntactic and Semantic Knowledge Using Multi-Task Learning&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Lamprinidis, Hardt, and Hovy
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;why do you &lt;strong&gt;click on a Facebook post?&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;modeling reader&amp;rsquo;s knowledge &amp;ndash; lexical, syntactic, topical&lt;/li&gt;
-&lt;li&gt;Dataset: 82k headlines with click numbers. Then make it a binary classification &amp;gt;50% median are often clicked ones, &amp;lt;50% rarely clicked. Q: Seems kinda random.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Auxiliary task: POS tagging&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;GRU-MTL with pretrained embeddings yields better performance than the task alone&lt;/li&gt;
-&lt;li&gt;Q: Why does POS matter for this? How to know which aux task will help? Also, position of a post, image of a post?&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;hybrid-neural-attention-for-agreement-disagreement-inference-in-online-debates&#34;&gt;Hybrid Neural Attention for Agreement/Disagreement Inference in Online Debates&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Chen, Du, Bing, and Xu
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;does a reply agree or disagree with the comment?&lt;/li&gt;
-&lt;li&gt;two factors:
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;self-attention&lt;/strong&gt; &amp;ndash;&amp;gt; focuses on important parts inside a comment&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;cross-comment-attention&lt;/strong&gt; &amp;ndash;&amp;gt; reply focused&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;connect both with something, idk what because they show huge NN for 2 sec :(&lt;/li&gt;
-&lt;li&gt;Attention visualisation &amp;amp; Cross Matrix Product Visualisation &amp;ndash;&amp;gt; TODO: Learn how to do that!&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;increasing-in-class-similarity-by-retrofitting-embeddings-with-demographic-information&#34;&gt;Increasing In-Class Similarity by Retrofitting Embeddings with Demographic Information&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Hovy and Fornaciari
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;Homophily?&lt;/li&gt;
-&lt;li&gt;retrofitting &amp;ndash; moving the points of distinct classes away from each other (x&amp;rsquo;, y&amp;rsquo;) = a(x, y) + b(mean)&lt;/li&gt;
-&lt;li&gt;for test data use translation matrix calculated from the train set&lt;/li&gt;
-&lt;li&gt;benefit in gender and age performance&lt;/li&gt;
-&lt;li&gt;Q: Not different than just learning the embeddings? If you train your embeddings, you&amp;rsquo;re sepperating classes?&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;session-3-machine-learning-a-name-s3-a&#34;&gt;Session 3: Machine Learning &lt;a name=&#34;s3&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h6 id=&#34;self-governing-neural-networks-for-on-device-short-text-classification&#34;&gt;Self-Governing Neural Networks for On-Device Short Text Classification&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Ravi and Kozareva
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;the only presentation I&amp;rsquo;ve seen with multiple people :)&lt;/li&gt;
-&lt;li&gt;TFLite &amp;ndash;&amp;gt; it&amp;rsquo;s a lite Tensorflow&lt;/li&gt;
-&lt;li&gt;SGNN - projection based NN &amp;ndash;&amp;gt; &lt;strong&gt;get rid of the embedding layer and use locality sensitive hashing as feature extractor&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;on 42 dialog acts they got SOTA. Q: What if they trained that model without memory/performance restrictions? SOTA on a bunch of other things?&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;supervised-domain-enablement-attention-for-personalized-domain-classification&#34;&gt;Supervised Domain Enablement Attention for Personalized Domain Classification&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Kim and Kim
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;didn&amp;rsquo;t catch much&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;a-deep-neural-network-sentence-level-classification-method-with-context-information&#34;&gt;A Deep Neural Network Sentence Level Classification Method with Context Information&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Song, Petrak, and Roberts
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;sucidal classification in medical data &amp;ndash;&amp;gt; from a text, predict &lt;strong&gt;if a specific sentence expresses suicidal thoughts&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;BiLSTM + CNN on focus sentences&lt;/li&gt;
-&lt;li&gt;provide right + left context &amp;ndash; FOFE (fixed-size ordinally forgetting encoding)&lt;/li&gt;
-&lt;li&gt;reports significant improvements&lt;/li&gt;
-&lt;li&gt;takeaway: &lt;strong&gt;context is important&lt;/strong&gt; (who&amp;rsquo;d say right :)&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;session-4-language-models-a-name-s4-a&#34;&gt;Session 4: Language Models &lt;a name=&#34;s4&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h6 id=&#34;efficient-contextualized-representation-language-model-pruning-for-sequence-labeling&#34;&gt;Efficient Contextualized Representation: Language Model Pruning for Sequence Labeling&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Liu et al.
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;ELMo is great, but it contains sufficent information &amp;ndash;&amp;gt; prune it w.r.t. the task you&amp;rsquo;re solving&lt;/li&gt;
-&lt;li&gt;dense connectivity &amp;ndash; alows better layer selection via layer-wise dropout&lt;/li&gt;
-&lt;li&gt;sequence labeling with contextualized representations (PPL?)&lt;/li&gt;
-&lt;li&gt;nice experiments, &lt;strong&gt;results comparable with SOTA&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;size reduced x10, speed goes up x5-6&lt;/strong&gt;, Acc down by just 1%&lt;/li&gt;
-&lt;li&gt;integrated &amp;amp; pruned plug-and-play model&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;day-2-a-name-day2-a&#34;&gt;DAY 2 &lt;a name=&#34;day2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;session-5-machine-learning-2-a-name-s5-a&#34;&gt;Session 5: Machine Learning 2 &lt;a name=&#34;s5&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h6 id=&#34;deriving-machine-attention-from-human-rationales&#34;&gt;Deriving Machine Attention from Human Rationales&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Bao, Chang, Yu, and Barzilay
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;they wanna &lt;strong&gt;train NN with less data&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;rationales &amp;ndash; part of a sentence that directs sentiment &amp;ndash;&amp;gt; use them to direct attention&lt;/li&gt;
-&lt;li&gt;Rationale2Attention &amp;ndash; transformable from task to task
-
-&lt;ul&gt;
-&lt;li&gt;train R2A on source task&lt;/li&gt;
-&lt;li&gt;use R2A to generate attention for target task&lt;/li&gt;
-&lt;li&gt;train a target classifier with R2A attention&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;domain-ivariant encoder&lt;/strong&gt; &amp;ndash;&amp;gt; &lt;strong&gt;Attention Generator&lt;/strong&gt; (shared BiLSTM, att.sumarizer) &amp;ndash;&amp;gt; &lt;strong&gt;MTL&lt;/strong&gt; (shared BiLSTM, task-specific Attention and MLP)&lt;/li&gt;
-&lt;li&gt;200 examples + rationales gets the same results as 3100 examples &amp;ndash;&amp;gt; &lt;strong&gt;cheaper annotation&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;code on &lt;a href=&#34;https://github.com/YujiaBao/R2A&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;semi-supervised-sequence-modeling-with-cross-view-training&#34;&gt;Semi-Supervised Sequence Modeling with Cross-View Training&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Clark, Luong, Manning, and Le
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;revisit self-training (older method) with NN&lt;/li&gt;
-&lt;li&gt;Blum 1998. idea: 2 models teach each other&lt;/li&gt;
-&lt;li&gt;alternate labeled and unlabeled batches &amp;ndash;&amp;gt; how to use it?&lt;/li&gt;
-&lt;li&gt;Cross-View Training &amp;ndash; not just exchange predictions like Blum, but use NN shared parameters
-
-&lt;ul&gt;
-&lt;li&gt;2 models (auxiliary models) + Main Predictor&lt;/li&gt;
-&lt;li&gt;Forward LSTM &amp;ndash;&amp;gt; Forward prediction; Backward LSTM &amp;ndash;&amp;gt; Backward prediction&lt;/li&gt;
-&lt;li&gt;Main Predictor teaches Forward&lt;/li&gt;
-&lt;li&gt;4 aux tasks&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;CVT + MTL on 1B unlabeled data create all labels for all tasks on one example&lt;/li&gt;
-&lt;li&gt;4 sequence tagging, dependency parsing, machine translation&lt;/li&gt;
-&lt;li&gt;significant improvement for CVT + MTL (over ELMo too)&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;tacl-comparing-bayesian-models-of-annotation&#34;&gt;[TACL] Comparing Bayesian Models of Annotation&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Paun et al.
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;probabilistic models of annotation are better than majority vote and similar&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;session-7-social-applications-2-a-name-s7-a&#34;&gt;Session 7: Social Applications 2 &lt;a name=&#34;s7&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h6 id=&#34;gideon-mann-keynote-understanding-the-news-that-moves-markets-a-name-gideon-a&#34;&gt;Gideon Mann Keynote: Understanding the News that Moves Markets &lt;a name=&#34;gideon&#34;&gt;&lt;/a&gt;&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	notes
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;we live in a scary world where one headline crashes the stock market&lt;/li&gt;
-&lt;li&gt;some systems react in miliseconds after some article is published (buy/sell stocks)&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;session-8-text-categorization-a-name-s8-a&#34;&gt;Session 8: Text Categorization &lt;a name=&#34;s8&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h6 id=&#34;zero-shot-user-intent-detection-via-capsule-neural-networks&#34;&gt;Zero-shot User Intent Detection via Capsule Neural Networks&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Xia et al.
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;how to handle emerging intents?&lt;/li&gt;
-&lt;li&gt;would be nice if he explained what zero-shot detection and capsules are :D (I managed to figure out for zero-shot, but capsule&amp;hellip;note to myself: never assume an audiance knows something)&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;hierarchical-neural-networks-for-sequential-sentence-classification-in-medical-scientific-abstracts&#34;&gt;Hierarchical Neural Networks for Sequential Sentence Classification in Medical Scientific Abstracts&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Jin and Szolovits
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;sequentialy label each sentence in a paragraph (abstract): Background, Methods, Results&amp;hellip;&lt;/li&gt;
-&lt;li&gt;contextual sentence features have not been looked into. What is done is CRF which considers context labels&lt;/li&gt;
-&lt;li&gt;they pre-trained word embeddings on scientific papers&lt;/li&gt;
-&lt;li&gt;architecture: embedding layer &amp;ndash;&amp;gt; LSTM on sentence level &amp;ndash;&amp;gt; LSTM on paragraph level&lt;/li&gt;
-&lt;li&gt;new sota for the task&lt;/li&gt;
-&lt;li&gt;ablation study &amp;ndash;&amp;gt; context is the most important&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;investigating-capsule-networks-with-dynamic-routing-for-text-classification&#34;&gt;Investigating Capsule Networks with Dynamic Routing for Text Classification&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Yang et al.
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;kinda figured out what a capsule is. Standard CNN kernel output is a scalar, while a capsule outputs a vector (with orientation, length and everything) &amp;ndash; somehow this is useful :)&lt;/li&gt;
-&lt;li&gt;they propose a capsule net for text classification&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;topic-memory-networks-for-short-text-classification&#34;&gt;Topic Memory Networks for Short Text Classification&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Zeng et al.
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;topic model &amp;ndash; each topic is a distribution of words&lt;/li&gt;
-&lt;li&gt;Neural topic model &amp;ndash; generative model&lt;/li&gt;
-&lt;li&gt;put topic memory mechanism on top of NTM, then classifier&lt;/li&gt;
-&lt;li&gt;topic coherence&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;few-shot-and-zero-shot-multi-label-learning-for-structured-label-spaces&#34;&gt;Few-Shot and Zero-Shot Multi-Label Learning for Structured Label Spaces&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Rios and Kavuluru
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;medical coding &amp;ndash; one EMR has 15 codes, 1000 code combinations to chose from&lt;/li&gt;
-&lt;li&gt;graph convolution label embeddings? GCNN over descriptors hierarchy &amp;ndash;&amp;gt; concat word vectors and final GCNN layer&lt;/li&gt;
-&lt;li&gt;2 components: &lt;strong&gt;text &amp;ndash;&amp;gt; CNN &amp;amp; descriptors &amp;ndash;&amp;gt; GCNN&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;conect them with label-wise attention&lt;/strong&gt; (otherwise, finding relevant subtext would be finding a needle in a haystack)&lt;/li&gt;
-&lt;li&gt;they test few label groups: frequent (&amp;gt; 5 ocurrances), few-shot (&amp;gt;= 1), zero-shot (=0)&lt;/li&gt;
-&lt;li&gt;train jointly, evaluate seperately R@k&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;TODO&lt;/strong&gt;: read the paper&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&#34;sunday-a-name-day3-a&#34;&gt;Sunday &lt;a name=&#34;day3&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
-&lt;h3 id=&#34;session-9-sentiment-1-machine-learning-3-a-name-s9-a&#34;&gt;Session 9: Sentiment 1 &amp;amp; Machine Learning 3 &lt;a name=&#34;s9&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h6 id=&#34;sentiment-classification-towards-question-answering-with-hierarchical-matching-network&#34;&gt;Sentiment Classification towards Question-Answering with Hierarchical Matching Network&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Shen et al.
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;BiLSTM to get encoding of a Question and an Answer&lt;/li&gt;
-&lt;li&gt;row-wise Answer-to-Question attention &amp;amp; Question-to-Answer&lt;/li&gt;
-&lt;li&gt;Bidirectional Matching Vectors + self-attention&lt;/li&gt;
-&lt;li&gt;sentence segmentation helps to extract relevant subtext&lt;/li&gt;
-&lt;li&gt;Q&amp;amp;A attentions contribute in both ways&lt;/li&gt;
-&lt;li&gt;dataset on &lt;a href=&#34;https://github.com/clshenNLP/QASC/&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;cross-topic-argument-mining-from-heterogeneous-sources&#34;&gt;Cross-topic Argument Mining from Heterogeneous Sources&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Stab et al.
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;information seeking perspective &amp;ndash;&amp;gt; extract pros and cons&lt;/li&gt;
-&lt;li&gt;apply model to heterogeneous texts (&lt;strong&gt;8 topics, 25k docs&lt;/strong&gt;, blogs/news/social media etc.)&lt;/li&gt;
-&lt;li&gt;Labels: pro, con, no-argument&lt;/li&gt;
-&lt;li&gt;200 random sentences for each topic for calibration (0.72 Kappa) &amp;ndash;&amp;gt; 25k sentences with crowdsourcing annotation&lt;/li&gt;
-&lt;li&gt;Bi Contextual LSTM (Gogh et al, 2017)&lt;/li&gt;
-&lt;li&gt;Tried transfer learning &amp;amp; MTL (topic_main &amp;amp; topic_otherdataset)&lt;/li&gt;
-&lt;li&gt;train on 7, test on 1 topic&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;the more you add, the more you get&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;online demo (couldn&amp;rsquo;t find it)&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;summarizing-opinions-aspect-extraction-meets-sentiment-prediction-and-they-are-both-weekly-supervised&#34;&gt;Summarizing Opinions: Aspect Extraction Meets Sentiment Prediction and They Are Both Weekly Supervised&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Angelidis and Lapata
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;I like the title&lt;/li&gt;
-&lt;li&gt;extract small number of reviews of a product with different aspects and summarize it (and add sentiment)&lt;/li&gt;
-&lt;li&gt;not enought data &amp;ndash;&amp;gt; inject prior knowledge with seed words&lt;/li&gt;
-&lt;li&gt;Multi-Seed Aspect Extractor (MATE) &amp;ndash; init seed matrices for each aspect (image, sound of a TV&amp;hellip;)&lt;/li&gt;
-&lt;li&gt;add MTL&lt;/li&gt;
-&lt;li&gt;Sentiment prediction: multiple instance learning network&lt;/li&gt;
-&lt;li&gt;dataset: aspect labels, opinion salience labels, find summaries&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;TODO&lt;/strong&gt;: read the paper&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;phrase-level-self-attention-networks-for-universal-sentence-encoding&#34;&gt;Phrase-level Self-Attention Networks for Universal Sentence Encoding&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Wu, Wang, Liu, and Ma
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;pre-trained embedding options:
-
-&lt;ul&gt;
-&lt;li&gt;LM &amp;ndash; ELMo, BERT&lt;/li&gt;
-&lt;li&gt;supervised learning &amp;ndash; their choice &amp;ndash;&amp;gt; &lt;strong&gt;smaller model, faster training&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;incorporate syntax into fully-attention network &amp;ndash; compose sentence representation on phrased from the dependency tree
-&amp;ndash;&amp;gt; phrase-level self-attention&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;banditsum-extractive-summarization-as-a-contextual-bandit&#34;&gt;BanditSum: Extractive Summarization as a Contextual Bandit&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Dong et al.
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;how to select the right sentence to include in a summary?&lt;/li&gt;
-&lt;li&gt;Problem: from continuous NN to discrete (N sent, ROUGE)&lt;/li&gt;
-&lt;li&gt;Sequential Tagging with Reinforcment Learning (proposed before) &amp;ndash;&amp;gt; probl: stop sampling once M sentences are selected&lt;/li&gt;
-&lt;li&gt;Approach: treat extractive summarization as contextual Bandit (Context-Arm-Reward)
-
-&lt;ul&gt;
-&lt;li&gt;smaller search space&lt;/li&gt;
-&lt;li&gt;no heuristics needed&lt;/li&gt;
-&lt;li&gt;SOTA&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;session-10-discourse-a-name-s10-a&#34;&gt;Session 10: Discourse &lt;a name=&#34;s10&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h6 id=&#34;a-skeleton-based-model-for-promoting-coherence-among-sentences-in-narrative-story-generation&#34;&gt;A Skeleton-Based Model for Promoting Coherence Among Sentences in Narrative Story Generation&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Xu et al.
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;narative story generation task &amp;ndash; based on a short input, output a story &amp;ndash;&amp;gt; requires tight semantic connection&lt;/li&gt;
-&lt;li&gt;connection among sentences is in &lt;strong&gt;key phrases (skeleton)&lt;/strong&gt;:
-
-&lt;ul&gt;
-&lt;li&gt;model the relation among skeletons&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;generate a skeleton, then expand to complete a fluent sentence&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Generative module:
-
-&lt;ul&gt;
-&lt;li&gt;input-to-skeleton &amp;ndash; seq2seq&lt;/li&gt;
-&lt;li&gt;skeleton-to-target sentence &amp;ndash; seq2seq&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Skeleton extraction module:
-
-&lt;ul&gt;
-&lt;li&gt;reformulate as a sentence compression problem &amp;ndash; seq2seq&lt;/li&gt;
-&lt;li&gt;improve the quality with reinforcement learning. What&amp;rsquo;s the reward?&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Dataset: Visual storytelling &amp;ndash;&amp;gt; based on a first sentence, generate rest&lt;/li&gt;
-&lt;li&gt;BLEU +44.8% baseline&lt;/li&gt;
-&lt;li&gt;G-score? Fluency + Coherence&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;nexus-network-connecting-the-preceding-and-the-following-in-dialogue-generation&#34;&gt;Nexus Network: Connecting the Preceding and the Following in Dialogue Generation&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Shen, Su, Li, and Klakow
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;user &amp;ndash;&amp;gt; NLU &amp;ndash;&amp;gt; state tracker &amp;ndash;&amp;gt; dialog policy &amp;ndash;&amp;gt; NLG &amp;ndash;&amp;gt;&lt;/li&gt;
-&lt;li&gt;nexus: good response should connect the preceding dialogue context and the followup, not just stand-alone&lt;/li&gt;
-&lt;li&gt;DailyDialog (Li, 2017): 13k conversations, 10 topics&lt;/li&gt;
-&lt;li&gt;new sota&lt;/li&gt;
-&lt;li&gt;najgori talk, a napravili brutalne stvari&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;a-neural-local-coherence-model-for-text-quality-assesment&#34;&gt;A Neural Local Coherence Model for Text Quality Assesment&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Mesgar and Strube
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;local coherence &amp;ndash; relatedness of sentence to the next one&lt;/li&gt;
-&lt;li&gt;so far: entity-based relations &amp;amp; lexical relations &amp;ndash;&amp;gt; connect&lt;/li&gt;
-&lt;li&gt;Model:
-
-&lt;ul&gt;
-&lt;li&gt;pre-train embeddings&lt;/li&gt;
-&lt;li&gt;LSTM context info&lt;/li&gt;
-&lt;li&gt;find max similarity between LSTM features to model topic of 2 proceeding sentences&lt;/li&gt;
-&lt;li&gt;CNN to extract topic changes&lt;/li&gt;
-&lt;li&gt;output is a vector that represents coherence&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;DS: 105 articles, which one is more readable?&lt;/li&gt;
-&lt;li&gt;SOTA, but not significant compared to DeCLark&lt;/li&gt;
-&lt;li&gt;Does coherence representation improve Essey Assesment? (ASAP ds on kaggle) &amp;ndash;&amp;gt; yes, on esseys that are scored by humans with criteria &amp;ldquo;Must be logical sequence of events&amp;rdquo; (narrative prompts)&lt;/li&gt;
-&lt;li&gt;Q: Why only take one word from each sentence with LSTM?&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;deep-attentive-sentence-ordering-network&#34;&gt;Deep Attentive Sentence Ordering Network&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Cui, Li, Chen, and Zhang
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;sentence ordering task &amp;ndash; o = [4, 1, 3, 2]; o&amp;rsquo; = [1, 2, 3, 4]&lt;/li&gt;
-&lt;li&gt;RNN models as baseline (previous work)&lt;/li&gt;
-&lt;li&gt;propose self-attention paragraph encoder&lt;/li&gt;
-&lt;li&gt;sentence encoder BiLSTM &amp;ndash;&amp;gt; scaled dot product self-attention &amp;ndash;&amp;gt; pooling &amp;ndash;&amp;gt; decoder &amp;ndash;&amp;gt; softmax as coherence probability&lt;/li&gt;
-&lt;li&gt;use random permutation on training&lt;/li&gt;
-&lt;li&gt;7 different datasets, 3 general topics&lt;/li&gt;
-&lt;li&gt;evaluate tau, accuracy, perfect match ration&lt;/li&gt;
-&lt;li&gt;tons of experiments. SOTA.&lt;/li&gt;
-&lt;li&gt;better in longer texts&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;getting-to-hearer-old-charting-referring-expressions-across-time&#34;&gt;Getting to &amp;ldquo;Hearer-old&amp;rdquo;: Charting Referring Expressions Across Time&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Staliunaite, Rohde, Webber, and Louis
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;corpus of reffering expressions (Putin, current presindent of Russia) &amp;ndash;&amp;gt; When does it stop being neccessary?&lt;/li&gt;
-&lt;li&gt;Reffering expression = name + descriptor (becomes shorter over time, &amp;lt;=1 words &amp;ndash;&amp;gt; hearer-old)&lt;/li&gt;
-&lt;li&gt;extracting: NP + NP in syntactic tree&lt;/li&gt;
-&lt;li&gt;52k entities, 200k+ mentions&lt;/li&gt;
-&lt;li&gt;How long until it becomes hearer-old? Outperforms the MCC baseline&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&#34;session-11-analyzing-models-sentiment-2-a-name-s11-a&#34;&gt;Session 11: Analyzing Models &amp;amp; Sentiment 2 &lt;a name=&#34;s11&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h6 id=&#34;understanding-deep-learning-performance-through-an-examination-of-test-set-difficulty-a-psychometric-case-study&#34;&gt;Understanding Deep Learning Performance through an Examination of Test Set Difficulty: A Psychometric Case Study&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Lalor, Wu, Munkhadalai, and Yu
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;psychometric methodology (Item Response Theory for NLP) &amp;ndash;&amp;gt; How difficult are certain examples?&lt;/li&gt;
-&lt;li&gt;IRT tests on fully trained models&lt;/li&gt;
-&lt;li&gt;difficulty score is learned from human responses&lt;/li&gt;
-&lt;li&gt;slike koje ne kuzim&lt;/li&gt;
-&lt;li&gt;easy examples are easy; model learns easy ones faster; task-model-item matter&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/jplalor&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;lexicosyntactic-inference-in-neural-models&#34;&gt;Lexicosyntactic inference in neural models&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	White et al.
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;what type of inference can we model with NN?&lt;/li&gt;
-&lt;li&gt;relation verb - what it&amp;rsquo;s related to&lt;/li&gt;
-&lt;li&gt;English clause-embedding inference&lt;/li&gt;
-&lt;li&gt;event factuality prediction &amp;ndash;&amp;gt; did the action happen? E.g., &amp;ldquo;Forgot to &lt;em&gt;open&lt;/em&gt; doors&amp;rdquo; &amp;ndash;&amp;gt; it didn&amp;rsquo;t happen&lt;/li&gt;
-&lt;li&gt;verb related DS MegaVerdicality2; evaluate on 3 other DSs&lt;/li&gt;
-&lt;li&gt;current SOTA fails at MV2 &amp;ndash;&amp;gt; aren&amp;rsquo;t robust to variation in lexical and syntactic manner&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;modeling-empathy-and-distress-in-reaction-to-news-stories&#34;&gt;Modeling Empathy and Distress in Reaction to News Stories&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Buechel et al.
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;prior work &amp;ndash; no gold, no psychological background&lt;/li&gt;
-&lt;li&gt;2 types:
-
-&lt;ul&gt;
-&lt;li&gt;Empathic concern &amp;ndash; positive, other-focused&lt;/li&gt;
-&lt;li&gt;Personal distress &amp;ndash; negative, self-focused&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;annotation as psychological experiment &amp;ndash; read article, then write text and label (1-7) for both types&lt;/li&gt;
-&lt;li&gt;baseline r=0.4 in Empathic and Distress&lt;/li&gt;
-&lt;li&gt;Best is CNN with FastText&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h6 id=&#34;interpretable-emoji-prediction-via-label-wise-attention-lstms&#34;&gt;Interpretable Emoji Prediction via Label-Wise Attention LSTMs&lt;/h6&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;div class=&#34;expand-label&#34; style=&#34;cursor: pointer;&#34; onclick=&#34;$h = $(this);$h.next(&#39;div&#39;).slideToggle(100,function () {$h.children(&#39;i&#39;).attr(&#39;class&#39;,function () {return $h.next(&#39;div&#39;).is(&#39;:visible&#39;) ? &#39;fas fa-chevron-down&#39; : &#39;fas fa-chevron-right&#39;;});});&#34;&gt;
-        &lt;i style=&#34;font-size:x-small;&#34; class=&#34;fas fa-chevron-right&#34;&gt;&lt;/i&gt;
-        &lt;span&gt;
-        
-    	
-    	Barbieri et al.
-    	
-    	&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-        &lt;ul&gt;
-&lt;li&gt;attention block for each label&lt;/li&gt;
-&lt;li&gt;BiLSTM &amp;ndash;&amp;gt; attention &amp;ndash;&amp;gt; linear |s|-&amp;gt;1 &amp;ndash;&amp;gt; softmax&lt;/li&gt;
-&lt;li&gt;helpful for infrequent labels, inhanced interpretability&lt;/li&gt;
-&lt;li&gt;demo on &lt;a href=&#34;https://fvancesco.github.io/label_wise_attention/&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Not Just Depressed: Bipolar Disorder Prediction on Reddit</title>
-      <link>/publication/bipolar.html</link>
+      <link>/publication/bipolar/</link>
       <pubDate>Wed, 31 Oct 2018 00:00:00 +0100</pubDate>
-      
-      <guid>/publication/bipolar.html</guid>
+      <guid>/publication/bipolar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>TakeLab at SemEval-2016 Task 6: Stance Classification in Tweets Using a Genetic Algorithm Based Ensemble</title>
-      <link>/publication/takelab_at_semeval.html</link>
+      <link>/publication/takelab_at_semeval/</link>
       <pubDate>Thu, 16 Jun 2016 00:00:00 +0200</pubDate>
-      
-      <guid>/publication/takelab_at_semeval.html</guid>
+      <guid>/publication/takelab_at_semeval/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VERBCROCEAN: A Repository of Fine-Grained Semantic Verb Relations for Croatian</title>
-      <link>/publication/verbcrocean.html</link>
+      <link>/publication/verbcrocean/</link>
       <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/verbcrocean.html</guid>
+      <guid>/publication/verbcrocean/</guid>
       <description></description>
     </item>
     

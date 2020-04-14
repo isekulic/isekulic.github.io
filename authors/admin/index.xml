@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ivan Sekulić</title>
+    <link>/authors/admin/</link>
+      <atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ivan Sekulić</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>/authors/admin/avatar_hu38462b8852989f7755d53b4a0a948352_685449_270x270_fill_lanczos_center_2.png</url>
+      <title>Ivan Sekulić</title>
+      <link>/authors/admin/</link>
+    </image>
+    
+  </channel>
+</rss>

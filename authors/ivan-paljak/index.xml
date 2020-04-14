@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ivan Paljak | Ivan Sekulić</title>
+    <link>/authors/ivan-paljak/</link>
+      <atom:link href="/authors/ivan-paljak/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ivan Paljak</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 16 Jun 2016 00:00:00 +0200</lastBuildDate>
+    <image>
+      <url>/img/avatar.jpg</url>
+      <title>Ivan Paljak</title>
+      <link>/authors/ivan-paljak/</link>
+    </image>
+    
+    <item>
+      <title>TakeLab at SemEval-2016 Task 6: Stance Classification in Tweets Using a Genetic Algorithm Based Ensemble</title>
+      <link>/publication/takelab_at_semeval/</link>
+      <pubDate>Thu, 16 Jun 2016 00:00:00 +0200</pubDate>
+      <guid>/publication/takelab_at_semeval/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

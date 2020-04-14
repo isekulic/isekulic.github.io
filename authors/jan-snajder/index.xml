@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jan Šnajder | Ivan Sekulić</title>
+    <link>/authors/jan-snajder/</link>
+      <atom:link href="/authors/jan-snajder/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jan Šnajder</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 31 Oct 2018 00:00:00 +0100</lastBuildDate>
+    <image>
+      <url>/img/avatar.jpg</url>
+      <title>Jan Šnajder</title>
+      <link>/authors/jan-snajder/</link>
+    </image>
+    
+    <item>
+      <title>Not Just Depressed: Bipolar Disorder Prediction on Reddit</title>
+      <link>/publication/bipolar/</link>
+      <pubDate>Wed, 31 Oct 2018 00:00:00 +0100</pubDate>
+      <guid>/publication/bipolar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TakeLab at SemEval-2016 Task 6: Stance Classification in Tweets Using a Genetic Algorithm Based Ensemble</title>
+      <link>/publication/takelab_at_semeval/</link>
+      <pubDate>Thu, 16 Jun 2016 00:00:00 +0200</pubDate>
+      <guid>/publication/takelab_at_semeval/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VERBCROCEAN: A Repository of Fine-Grained Semantic Verb Relations for Croatian</title>
+      <link>/publication/verbcrocean/</link>
+      <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
+      <guid>/publication/verbcrocean/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
