@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts | Ivan Sekulić</title>
-    <link>/post/</link>
-      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    <description>Posts</description>
+    <title>PhD | Ivan Sekulić</title>
+    <link>/tags/phd/</link>
+      <atom:link href="/tags/phd/index.xml" rel="self" type="application/rss+xml" />
+    <description>PhD</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 11 Jul 2021 19:30:04 +0100</lastBuildDate>
     <image>
       <url>/img/avatar.jpg</url>
-      <title>Posts</title>
-      <link>/post/</link>
+      <title>PhD</title>
+      <link>/tags/phd/</link>
     </image>
     
     <item>

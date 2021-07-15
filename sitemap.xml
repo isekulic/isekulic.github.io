@@ -3,163 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/authors/ivan-sekulic/</loc>
-    <lastmod>2020-04-10T00:00:00+02:00</lastmod>
+    <loc>/post/littlephdthings/</loc>
+    <lastmod>2021-07-11T19:30:04+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/acl2020/</loc>
-    <lastmod>2020-04-10T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
-    <lastmod>2020-04-10T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/document-level/</loc>
-    <lastmod>2020-04-10T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/guoshun-nan/</loc>
-    <lastmod>2020-04-10T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2020-04-10T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/nlp/</loc>
-    <lastmod>2020-04-10T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
-    <lastmod>2020-04-10T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/reasoning/</loc>
-    <lastmod>2020-04-10T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/relation-extraction/</loc>
-    <lastmod>2020-04-10T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-04-10T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/wei-lu/</loc>
-    <lastmod>2020-04-10T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/zhijiang-guo/</loc>
-    <lastmod>2020-04-10T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/adapting/</loc>
-    <lastmod>2019-10-01T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/michael-strube/</loc>
-    <lastmod>2019-10-01T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/dgms/</loc>
-    <lastmod>2018-12-08T19:30:04+01:00</lastmod>
+    <loc>/tags/phd/</loc>
+    <lastmod>2021-07-11T19:30:04+01:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-12-08T19:30:04+01:00</lastmod>
+    <lastmod>2021-07-11T19:30:04+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/jan-snajder/</loc>
-    <lastmod>2018-10-31T00:00:00+01:00</lastmod>
+    <loc>/tags/</loc>
+    <lastmod>2021-07-11T19:30:04+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/matej-gjurkovic/</loc>
-    <lastmod>2018-10-31T00:00:00+01:00</lastmod>
+    <loc>/authors/</loc>
+    <lastmod>2021-07-11T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/bipolar/</loc>
-    <lastmod>2018-10-31T00:00:00+01:00</lastmod>
+    <loc>/authors/ivan-sekulic/</loc>
+    <lastmod>2021-07-11T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/domagoj-alagic/</loc>
-    <lastmod>2016-06-16T00:00:00+02:00</lastmod>
+    <loc>/publication/scholar/</loc>
+    <lastmod>2021-07-11T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/filip-boltuzic/</loc>
-    <lastmod>2016-06-16T00:00:00+02:00</lastmod>
+    <loc>/publication/</loc>
+    <lastmod>2021-07-11T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/filip-culinovic/</loc>
-    <lastmod>2016-06-16T00:00:00+02:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/ivan-paljak/</loc>
-    <lastmod>2016-06-16T00:00:00+02:00</lastmod>
+    <loc>/privacy/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/martin-tutek/</loc>
-    <lastmod>2016-06-16T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/mladen-karan/</loc>
-    <lastmod>2016-06-16T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/paula-gombar/</loc>
-    <lastmod>2016-06-16T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/semeval2016/</loc>
-    <lastmod>2016-06-16T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/stance-classification/</loc>
-    <lastmod>2016-06-16T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/takelab_at_semeval/</loc>
-    <lastmod>2016-06-16T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/lrec2016/</loc>
-    <lastmod>2016-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/verbcrocean/</loc>
-    <lastmod>2016-05-25T00:00:00+00:00</lastmod>
+    <loc>/terms/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
   <url>

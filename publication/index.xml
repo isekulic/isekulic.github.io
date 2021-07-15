@@ -5,7 +5,7 @@
     <link>/publication/</link>
       <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 10 Apr 2020 00:00:00 +0200</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 11 Jul 2021 00:00:00 +0200</lastBuildDate>
     <image>
       <url>/img/avatar.jpg</url>
       <title>Publications</title>
@@ -13,42 +13,10 @@
     </image>
     
     <item>
-      <title>Reasoning with Latent Structure Refinement for Document-Level Relation Extraction (to appear in ACL 2020)</title>
-      <link>/publication/reasoning/</link>
-      <pubDate>Fri, 10 Apr 2020 00:00:00 +0200</pubDate>
-      <guid>/publication/reasoning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Adapting Deep Learning Methods for Mental Health Prediction on Social Media</title>
-      <link>/publication/adapting/</link>
-      <pubDate>Tue, 01 Oct 2019 00:00:00 +0200</pubDate>
-      <guid>/publication/adapting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Not Just Depressed: Bipolar Disorder Prediction on Reddit</title>
-      <link>/publication/bipolar/</link>
-      <pubDate>Wed, 31 Oct 2018 00:00:00 +0100</pubDate>
-      <guid>/publication/bipolar/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TakeLab at SemEval-2016 Task 6: Stance Classification in Tweets Using a Genetic Algorithm Based Ensemble</title>
-      <link>/publication/takelab_at_semeval/</link>
-      <pubDate>Thu, 16 Jun 2016 00:00:00 +0200</pubDate>
-      <guid>/publication/takelab_at_semeval/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>VERBCROCEAN: A Repository of Fine-Grained Semantic Verb Relations for Croatian</title>
-      <link>/publication/verbcrocean/</link>
-      <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
-      <guid>/publication/verbcrocean/</guid>
+      <title>Publication list available on Google Scholar.</title>
+      <link>/publication/scholar/</link>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0200</pubDate>
+      <guid>/publication/scholar/</guid>
       <description></description>
     </item>
     
