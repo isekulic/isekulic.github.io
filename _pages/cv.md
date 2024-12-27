@@ -10,4 +10,4 @@ redirect_from:
 {% include base_path %}
 
 Download my latest CV 
-[here]({% link files/CV-Ivan-Sekulic_1page.pdf %})
+[here]({% link files/CV-Ivan-Sekulic_1page.pdf %}).
