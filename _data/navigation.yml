@@ -21,7 +21,7 @@ main:
   #   url: /year-archive/
     
   - title: "CV"
-    url: /files/CV-Ivan-Sekulic_1page.pdf
+    url: /cv/
     
   # - title: "Guide"
   #   url: /markdown/
