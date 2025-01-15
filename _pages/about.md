@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-**Looking for work: I'm seeking opportunities as an Applied Scientist, Research Scientist, or Machine Learning Engineer, specializing in NLP and IR.**
+**I'm seeking opportunities as an Applied Scientist, Research Scientist, or Machine Learning Engineer, specializing in NLP and IR.**
 
 I work at the intersection of **natural language processing (NLP) and information retrieval (IR)**, focusing on areas such as conversational search, task-oriented dialog systems, document retrieval, and generative AI. I leverage state-of-the-art methods like retrieval-augmented generation (RAG), dense retrieval, performance-efficient fine-tuning (PEFT), and in-context learning with large language models (LLMs). I excel in collaborative environments and lead projects from ideation through deployment.
 
@@ -15,7 +15,7 @@ I hold a **Ph.D. in Computer Science** from USI, IDSIA in Lugano, Switzerland, w
 My research was centered on mixed-initiative conversational search. Specifically, I focused on methods for generating clarifying questions with an aim to better understand users' information needs, as well as on LLM-based user simulation for improved conversational search evaluation.
 
 I published in mulple top-tier NLP and IR venues, including SIGIR, ACL, WSDM, TIST, ECIR, COLING (700+ citations, h-index 10). For a full list of my publications, please visit my [Google Scholar](https://scholar.google.com/citations?user=jxKS_4EAAAAJ&hl=en) page.
-I actively contribute to the community as a program committee member for leading conferences such as SIGIR, WSDM, ECIR, CIKM, and EACL
+I actively contribute to the community as a program committee member for leading conferences such as SIGIR, WSDM, ECIR, CIKM, and EACL.
 
 ## Research Interests
 I'm interested in several research areas, related to NLP, IR, and LLMs:
