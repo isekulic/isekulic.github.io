@@ -7,8 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-**I'm seeking opportunities as an Applied Scientist, Research Scientist, or Machine Learning Engineer, specializing in NLP and IR.**
-
 I work at the intersection of **natural language processing (NLP) and information retrieval (IR)**, focusing on areas such as conversational search, task-oriented dialog systems, document retrieval, and generative AI. I leverage state-of-the-art methods like retrieval-augmented generation (RAG), dense retrieval, performance-efficient fine-tuning (PEFT), and in-context learning with large language models (LLMs). I excel in collaborative environments and lead projects from ideation through deployment.
 
 I hold a **Ph.D. in Computer Science** from USI, IDSIA in Lugano, Switzerland, where I conducted research on **conversational AI** under the supervision of Prof. Fabio Crestani.
