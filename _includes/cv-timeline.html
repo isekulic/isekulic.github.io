@@ -1,0 +1,20 @@
+<ol class="cv-timeline">
+  {% for e in include.entries %}{% unless e.hidden %}
+  <li class="cv-item">
+    <div class="cv-item__meta">
+      <span class="cv-item__dates">{{ e.dates }}</span>
+      <span class="cv-item__location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> {{ e.location }}</span>
+    </div>
+    <div class="cv-item__body">
+      <h3 class="cv-item__role">{{ e.role }}</h3>
+      <p class="cv-item__org">{% if e.url %}<a href="{{ e.url }}">{{ e.org }}</a>{% else %}{{ e.org }}{% endif %}</p>
+      {% if e.bullets.size > 0 %}
+      <ul>
+        {% for b in e.bullets %}<li>{{ b | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+      {% if e.tags %}<ul class="chips chips--small">{% for t in e.tags %}<li>{{ t }}</li>{% endfor %}</ul>{% endif %}
+    </div>
+  </li>
+  {% endunless %}{% endfor %}
+</ol>

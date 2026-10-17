@@ -7,18 +7,22 @@ redirect_from:
   - /about.html
 ---
 
+<div class="notice--info" markdown="1">
+**AI consulting & training.** I help companies move from AI experiments to AI in production, through strategy, hands-on engineering and training for managers, product teams and engineers. I also teach the [CAS LLMs and AI Agents](https://www.hslu.ch/de-ch/informatik/weiterbildung/data-and-ai/cas-llms-and-ai-agents/) at HSLU. [See what I offer &rarr;](/consulting/)
+</div>
+
 I work at the intersection of **natural language processing (NLP) and information retrieval (IR)**, focusing on areas such as conversational search, task-oriented dialog systems, document retrieval, and generative AI. I leverage state-of-the-art methods like retrieval-augmented generation (RAG), dense retrieval, performance-efficient fine-tuning (PEFT), and in-context learning with large language models (LLMs). I excel in collaborative environments and lead projects from ideation through deployment.
 
 I hold a **Ph.D. in Computer Science** from USI, IDSIA in Lugano, Switzerland, where I conducted research on **conversational AI** under the supervision of Prof. Fabio Crestani.
 My research was centered on mixed-initiative conversational search. Specifically, I focused on methods for generating clarifying questions with an aim to better understand users' information needs, as well as on LLM-based user simulation for improved conversational search evaluation.
 
-I published in mulple top-tier NLP and IR venues, including SIGIR, ACL, WSDM, TIST, ECIR, COLING (700+ citations, h-index 10). For a full list of my publications, please visit my [Google Scholar](https://scholar.google.com/citations?user=jxKS_4EAAAAJ&hl=en) page.
+I published in multiple top-tier NLP and IR venues, including SIGIR, ACL, WSDM, TIST, ECIR, COLING (700+ citations, h-index 10). For a full list of my publications, please visit my [Google Scholar](https://scholar.google.com/citations?user=jxKS_4EAAAAJ&hl=en) page.
 I actively contribute to the community as a program committee member for leading conferences such as SIGIR, WSDM, ECIR, CIKM, and EACL.
 
 ## Research Interests
 I'm interested in several research areas, related to NLP, IR, and LLMs:
 * **Evaluation of dialog systems** -- Exploring the complexity of user goals, understanding conversational context, and managing the diversity of possible conversational paths to achieve a goal.
-* **LLM-centric user simulation and sythetic data generation** -- Investigating these approaches as solutions for improving dialog system evaluation.
+* **LLM-centric user simulation and synthetic data generation** -- Investigating these approaches as solutions for improving dialog system evaluation.
 * **Information retrieval (dense, hybrid)** -- Addressing challenges in retrieving long texts, product information, and multi-modal data.
 * **Answering complex information needs** -- Advancing conversational search and retrieval-augmented generation to tackle intricate user queries.
 
