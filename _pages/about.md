@@ -7,11 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-<div class="notice--info" markdown="1">
-**AI consulting & training.** I help companies move from AI experiments to AI in production, through strategy, hands-on engineering and training for managers, product teams and engineers. I also teach the [CAS LLMs and AI Agents](https://www.hslu.ch/de-ch/informatik/weiterbildung/data-and-ai/cas-llms-and-ai-agents/) at HSLU. [See what I offer &rarr;](/consulting/)
-</div>
-
-I work at the intersection of **natural language processing (NLP) and information retrieval (IR)**, focusing on areas such as conversational search, task-oriented dialog systems, document retrieval, and generative AI. I leverage state-of-the-art methods like retrieval-augmented generation (RAG), dense retrieval, performance-efficient fine-tuning (PEFT), and in-context learning with large language models (LLMs). I excel in collaborative environments and lead projects from ideation through deployment.
+I build AI systems that real customers use. As a **Senior AI Engineer at bexio**, I lead the engineering of bexio Intelligence, a production **multi-agent platform** being rolled out to **100,000+ Swiss SMEs**. Before that, I owned the retrieval stack of a RAG-based conversational search product at Telepathy Labs and led its move from paid LLM APIs to self-hosted open-source models, cutting cost and latency. I have also shipped production LLM systems as an applied AI consultant for Valence, a New York AI startup. My work spans **multi-agent systems, retrieval-augmented generation (RAG), LLM evaluation and fine-tuning**, and I take projects from first idea to production.
 
 I hold a **Ph.D. in Computer Science** from USI, IDSIA in Lugano, Switzerland, where I conducted research on **conversational AI** under the supervision of Prof. Fabio Crestani.
 My research was centered on mixed-initiative conversational search. Specifically, I focused on methods for generating clarifying questions with an aim to better understand users' information needs, as well as on LLM-based user simulation for improved conversational search evaluation.
