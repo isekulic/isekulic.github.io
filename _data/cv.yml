@@ -32,7 +32,7 @@ experience:
   - org: "Telepathy Labs"
     role: "Senior Research Engineer, NLP/IR"
     location: "Zürich, Switzerland"
-    dates: "Jan 2024 – 2025" # TODO(Ivan): add exact end month
+    dates: "Jan 2024 – Mar 2025"
     bullets:
       - "**Owned the retrieval stack of a RAG-based conversational product search system.** Set up a reliable retrieval evaluation, introduced document expansion for dense retrieval, and merged re-ranking with post-filtering, improving answer quality and latency."
       - "**Led the company's move from pay-per-call closed-source LLMs (OpenAI) to self-hosted open-source models**, cutting cost and latency while matching quality with fine-tuned LoRA adapters."
