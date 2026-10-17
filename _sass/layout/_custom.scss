@@ -217,34 +217,6 @@ $radius      : 12px;
     h2 { margin-top: 0; }
   }
 
-  .pillars {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-    gap: 1.25em;
-  }
-
-  .pillar {
-    padding: 1.5em;
-    background: $tint;
-    border-radius: $radius;
-
-    &__icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 2.6em;
-      height: 2.6em;
-      margin-bottom: 0.75em;
-      font-size: 1.1em;
-      color: #fff;
-      background: var(--global-base-color);
-      border-radius: 50%;
-    }
-
-    ul { margin: 0; padding-left: 1.1em; }
-    li { margin-bottom: 0.5em; }
-  }
-
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
@@ -314,131 +286,72 @@ $radius      : 12px;
       i { color: var(--global-base-color); margin-right: 0.3em; }
     }
 
-    &__q {
-      font-style: italic;
-      color: $muted;
-    }
+    p { margin: 0; font-size: 0.95em; }
 
     ul { margin: 0; padding-left: 1.1em; }
     li { margin-bottom: 0.35em; font-size: 0.95em; }
   }
 
-  .teaching {
-    display: grid;
+  .cards--two {
     grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-    gap: 1.5em;
-    align-items: start;
   }
 
-  .curriculum-wrap {
-    padding: 1.25em 1.5em;
-    border: 1px solid $card-border;
-    border-radius: $radius;
+  p.consult-note {
+    margin: 1.25em 0 0;
+    color: $muted;
+
+    i { margin-right: 0.4em; color: var(--global-base-color); }
   }
 
-  .curriculum__title {
-    margin: 0 0 0.5em;
-    font-size: $type-size-6;
-    font-weight: bold;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--global-base-color);
-  }
-
-  .curriculum {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    counter-reset: module;
-
-    li {
-      position: relative;
-      margin: 0;
-      padding: 0.55em 0 0.55em 2.4em;
-      font-size: $type-size-6;
-      color: $muted;
-      counter-increment: module;
-      border-bottom: 1px dashed var(--global-border-color);
-
-      &:last-child { border-bottom: 0; }
-
-      &::before {
-        content: counter(module);
-        position: absolute;
-        left: 0;
-        top: 0.6em;
-        width: 1.7em;
-        height: 1.7em;
-        font-weight: bold;
-        line-height: 1.7em;
-        text-align: center;
-        color: var(--global-base-color);
-        background: $tint-strong;
-        border-radius: 50%;
-      }
-
-      span {
-        display: block;
-        font-size: 1.2em;
-        font-weight: bold;
-        color: var(--global-text-color);
-      }
-    }
-  }
-
-  .process {
+  .reasons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     gap: 1.25em;
-    margin: 0 0 1.5em;
-    padding: 0;
-    list-style: none;
+  }
 
-    li {
-      margin: 0;
-      padding: 1.25em;
-      border: 1px solid $card-border;
-      border-radius: $radius;
-    }
+  .reason {
+    padding: 1.4em 1.5em;
+    background: $tint;
+    border-radius: $radius;
 
-    h3 { margin: 0.5em 0 0.3em; font-size: $type-size-4; }
-    p { margin: 0; font-size: 0.95em; }
-
-    &__step {
+    > i {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 2em;
-      height: 2em;
-      font-weight: bold;
+      width: 2.4em;
+      height: 2.4em;
+      margin-bottom: 0.75em;
       color: #fff;
       background: var(--global-base-color);
       border-radius: 50%;
     }
+
+    h3 { font-size: $type-size-4; margin-bottom: 0.35em; }
+    p { margin: 0; font-size: 0.95em; }
   }
 
-  .formats {
+  .venues {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
-    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(10.5em, 1fr));
+    gap: 0.9em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
-    > div {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      column-gap: 0.75em;
-      align-items: center;
-      padding: 1em 1.25em;
-      background: $tint;
+    li {
+      margin: 0;
+      padding: 1em 1.2em;
+      border: 1px solid $card-border;
+      border-left: 4px solid var(--global-base-color);
       border-radius: $radius;
     }
 
-    i {
-      grid-row: span 2;
-      font-size: 1.4em;
-      color: var(--global-base-color);
-    }
+    strong { display: block; }
 
-    span { font-size: $type-size-6; color: $muted; }
+    span {
+      font-size: $type-size-6;
+      color: $muted;
+    }
   }
 
   /* ==========================================================================
@@ -570,14 +483,16 @@ $radius      : 12px;
     }
   }
 
-  .cv-awards {
+  .cv-awards,
+  .cv-talks {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
     gap: 1em;
     margin: 1.25em 0;
   }
 
-  .cv-award {
+  .cv-award,
+  .cv-talk {
     display: flex;
     gap: 0.9em;
     align-items: center;
@@ -598,6 +513,10 @@ $radius      : 12px;
   }
 
   .cv-list li { font-size: 0.95em; }
+
+  .cv-talks { margin-top: 0.5em; }
+
+  p.cv-talks__note { font-size: 0.95em; color: $muted; }
 
   .cv-skills {
     display: grid;

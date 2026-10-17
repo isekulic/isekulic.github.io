@@ -17,7 +17,7 @@ redirect_from:
 
 <nav class="cv-jump" aria-label="CV sections">
   <a href="#experience">Experience</a>
-  <a href="#teaching">Teaching</a>
+  <a href="#teaching">Teaching &amp; talks</a>
   <a href="#education">Education</a>
   <a href="#awards">Awards &amp; service</a>
   <a href="#skills">Skills</a>
@@ -26,8 +26,18 @@ redirect_from:
 <h2 id="experience">Experience</h2>
 {% include cv-timeline.html entries=cv.experience %}
 
-<h2 id="teaching">Teaching</h2>
+<h2 id="teaching">Teaching &amp; talks</h2>
 {% include cv-timeline.html entries=cv.teaching %}
+
+<div class="cv-talks">
+  {% for talk in cv.talks %}
+  <div class="cv-talk">
+    <i class="fas fa-microphone-alt" aria-hidden="true"></i>
+    <div><strong>{{ talk.venue }}</strong><span>{{ talk.title }} · {{ talk.location }} · {{ talk.date }}</span></div>
+  </div>
+  {% endfor %}
+</div>
+<p class="cv-talks__note">{{ cv.talks_note }}</p>
 
 <h2 id="education">Education</h2>
 {% include cv-timeline.html entries=cv.education %}
