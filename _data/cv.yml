@@ -1,0 +1,133 @@
+# Structured CV data rendered by _pages/cv.md.
+# Each entry: org, role, location, dates, bullets (Markdown allowed), optional tags.
+# Set `hidden: true` to keep an entry here without showing it on the site.
+
+summary: >-
+  AI researcher and engineer with a PhD in conversational AI and 10 years of hands-on work in
+  NLP, information retrieval and large language models, from academic research labs to production
+  AI products. Lecturer on LLMs and AI agents at Lucerne University of Applied Sciences (HSLU).
+
+experience:
+  # TODO(Ivan): confirm role title, start date and highlights, then remove `hidden`.
+  - org: "Bexio"
+    role: "TODO: role title"
+    location: "Switzerland"
+    dates: "TODO – Present"
+    hidden: true
+    bullets: []
+
+  - org: "Telepathy Labs"
+    role: "Senior Research Engineer, NLP/IR"
+    location: "Zürich, Switzerland"
+    dates: "Jan 2024 – Present" # TODO(Ivan): update end date
+    bullets:
+      - "Improved latency and effectiveness of a **retrieval-augmented generation (RAG)** pipeline for conversational product search: set up a reliable retrieval evaluation, implemented document expansion for better dense retrieval, and merged re-ranking and post-filtering steps."
+      - "Led the **transition from closed-source, pay-per-call LLMs (OpenAI) to self-hosted open-source LLMs**, cutting cost and latency while keeping quality on par through fine-tuned LoRA adapters."
+      - "Initiated and co-supervised a company-wide **internship program** (2 interns since summer 2024)."
+      - "Led the research behind two publications ([SciChat@EACL'24](https://aclanthology.org/2024.scichat-1.3/) and COLING'25)."
+    tags: [RAG, Dense retrieval, LoRA / PEFT, Open-source LLMs, Evaluation]
+
+  - org: "Telepathy Labs"
+    role: "Research Engineer (Intern), NLP/IR"
+    location: "Zürich, Switzerland"
+    dates: "Jun 2023 – Dec 2023"
+    bullets:
+      - "Improved evaluation of task-oriented dialogue systems with an **LLM-based user simulator** ([SciChat@EACL'24](https://aclanthology.org/2024.scichat-1.3/))."
+    tags: [Dialogue systems, User simulation, LLMs]
+
+  - org: "USI Lugano, IDSIA"
+    role: "PhD Candidate in NLP/IR"
+    location: "Lugano, Switzerland"
+    dates: "Mar 2020 – Jan 2024"
+    bullets:
+      - "Research on **mixed-initiative conversational search**: generating clarifying questions and using user simulation to evaluate conversational search systems."
+      - "Research visit to the IAI group, University of Stavanger, Norway, with Prof. Krisztian Balog ([CHIIR'24](https://dl.acm.org/doi/abs/10.1145/3627508.3638300))."
+      - "Research visit to GRILL, University of Glasgow, UK, with Prof. Jeff Dalton ([SIGIR](https://dl.acm.org/doi/abs/10.1145/3539618.3591683) and [preprint](https://arxiv.org/abs/2306.09938))."
+    tags: [Conversational search, Clarifying questions, User simulation]
+
+  - org: "StatNLP, Singapore University of Technology and Design"
+    role: "Research Associate, NLP"
+    location: "Singapore"
+    dates: "Jul 2019 – Dec 2019"
+    bullets:
+      - "Document-level entity relation extraction with Prof. Wei Lu ([ACL'20](https://aclanthology.org/2020.acl-main.141/))."
+    tags: [Relation extraction]
+
+  - org: "Heidelberg Institute for Theoretical Studies (HITS)"
+    role: "Research Associate, NLP"
+    location: "Heidelberg, Germany"
+    dates: "Oct 2018 – Jun 2019"
+    bullets:
+      - "Deep learning methods for predicting mental health status from social media, with Prof. Michael Strube ([W-NUT@EMNLP'19](https://aclanthology.org/D19-5542/))."
+    tags: [Deep learning, Text classification]
+
+  - org: "ReversingLabs"
+    role: "Data Analyst"
+    location: "Zagreb, Croatia"
+    dates: "Aug 2017 – Jul 2018"
+    bullets:
+      - "Data Quality / Program Management team: kept large and diverse datasets consistent and clean."
+    tags: [Data quality]
+
+  - org: "TakeLab, University of Zagreb"
+    role: "Student Project Associate"
+    location: "Zagreb, Croatia"
+    dates: "May 2016 – Sep 2017"
+    bullets:
+      - "Improved customer experience with NLP by predicting users' sentiment, emotions and actions."
+    tags: [Sentiment analysis, NLP]
+
+teaching:
+  - org: "Lucerne University of Applied Sciences and Arts (HSLU), School of Computer Science and Information Technology"
+    role: "Lecturer, CAS LLMs and AI Agents"
+    location: "Rotkreuz, Switzerland"
+    dates: "2 editions"
+    url: "https://www.hslu.ch/de-ch/informatik/weiterbildung/data-and-ai/cas-llms-and-ai-agents/"
+    bullets:
+      - "Teaching in the Certificate of Advanced Studies (15 ECTS) on building production-ready LLM systems, for professionals and managers."
+      - "Topics range from **foundations of LLMs** through RAG and evaluation to **AI agents and multi-agent systems**."
+
+education:
+  - org: "USI Lugano, IDSIA"
+    role: "PhD in Informatics"
+    location: "Lugano, Switzerland"
+    dates: "2024"
+    bullets:
+      - "Dissertation: *Clarification and user simulation in mixed-initiative conversational search*, supervised by Prof. Fabio Crestani."
+
+  - org: "University of Zagreb, Faculty of Electrical Engineering and Computing (FER)"
+    role: "MSc in Computer Science"
+    location: "Zagreb, Croatia"
+    dates: "2018"
+    bullets:
+      - "Thesis: *Text-based mental disorder prediction from online discussion texts*, supervised by Prof. Jan Šnajder."
+
+  - org: "University of Zagreb, Faculty of Electrical Engineering and Computing (FER)"
+    role: "BSc in Computer Science"
+    location: "Zagreb, Croatia"
+    dates: "2015"
+    bullets:
+      - "Thesis: *Automatic extraction of verb relations in Croatian*, supervised by Prof. Jan Šnajder."
+
+awards:
+  - title: "Best Paper Runner-Up Award, WSDM 2022"
+    date: "Aug 2022"
+  - title: "USI Doctoral Mobility Grant"
+    date: "Jan 2022"
+
+publications_note: >-
+  Publications at SIGIR, ACL, WSDM, ACM TIST, ECIR, COLING, CHIIR and EACL workshops
+  (700+ citations, h-index 10).
+
+service:
+  - "Program committee member for SIGIR, WSDM, ECIR, CIKM and EACL"
+
+skills:
+  - group: "Languages & ML"
+    items: [Python, PyTorch, Hugging Face, DeepSpeed, pandas, scikit-learn, C/C++, R, Java]
+  - group: "LLMs & retrieval"
+    items: [RAG, Dense & hybrid retrieval, Fine-tuning (LoRA / PEFT), In-context learning, AI agents, LLM evaluation]
+  - group: "Platforms & MLOps"
+    items: [Databricks, Docker, Kubernetes, Helm, Terraform, Azure AKS]
+
+languages: [English, German, Croatian]

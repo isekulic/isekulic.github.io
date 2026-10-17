@@ -1,0 +1,71 @@
+---
+layout: single
+title: "CV"
+permalink: /cv/
+author_profile: true
+classes: wide
+redirect_from:
+  - /resume
+---
+
+{% include base_path %}
+{% assign cv = site.data.cv %}
+
+<div class="cv">
+
+<p class="cv-summary">{{ cv.summary }}</p>
+
+<nav class="cv-jump" aria-label="CV sections">
+  <a href="#experience">Experience</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#education">Education</a>
+  <a href="#awards">Awards &amp; service</a>
+  <a href="#skills">Skills</a>
+</nav>
+
+<h2 id="experience">Experience</h2>
+{% include cv-timeline.html entries=cv.experience %}
+
+<h2 id="teaching">Teaching</h2>
+{% include cv-timeline.html entries=cv.teaching %}
+
+<h2 id="education">Education</h2>
+{% include cv-timeline.html entries=cv.education %}
+
+<h2 id="awards">Awards &amp; service</h2>
+<div class="cv-awards">
+  {% for award in cv.awards %}
+  <div class="cv-award">
+    <i class="fas fa-award" aria-hidden="true"></i>
+    <div><strong>{{ award.title }}</strong><span>{{ award.date }}</span></div>
+  </div>
+  {% endfor %}
+</div>
+<ul class="cv-list">
+  <li>{{ cv.publications_note }} Full list on <a href="{{ site.author.googlescholar }}">Google Scholar</a>.</li>
+  {% for item in cv.service %}<li>{{ item }}</li>{% endfor %}
+</ul>
+
+<h2 id="skills">Skills</h2>
+<div class="cv-skills">
+  {% for group in cv.skills %}
+  <div class="cv-skills__group">
+    <h3>{{ group.group }}</h3>
+    <ul class="chips">{% for s in group.items %}<li>{{ s }}</li>{% endfor %}</ul>
+  </div>
+  {% endfor %}
+  <div class="cv-skills__group">
+    <h3>Spoken languages</h3>
+    <ul class="chips">{% for s in cv.languages %}<li>{{ s }}</li>{% endfor %}</ul>
+  </div>
+</div>
+
+<div class="cta-box">
+  <div>
+    <h3>Looking for help with AI in your team?</h3>
+    <p>I advise and train companies on LLMs, RAG and AI agents.</p>
+  </div>
+  <a class="btn btn--primary btn--large" href="{{ base_path }}/consulting/">See consulting &amp; training</a>
+</div>
+
+</div>
